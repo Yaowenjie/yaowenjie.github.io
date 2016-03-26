@@ -9,10 +9,10 @@ imagefeature: wj/13.JPG
 ---
 ###### 本文源自对文章[Layman’s understanding of Networking & UDP/TCP/IP（点击进入原文）](http://www.microshell.com/sysadmin/networking/laymans-understanding-of-networking-udptcpip/)的翻译。
 
-<!--more-->
-
 <br/>
 &emsp;&emsp;本文，我将以一个门外汉的角度来解释电脑网络工作的原理，特别是TCP/IP这个用于因特网的协议。这里将涵括因特网编址、域名、以及端口等内容。希望通过阅读此文，你可以更好的理解电脑间的信息传输。在第（1）节，主要讨论计算机网络的基础。第（2）节主要讨论域名，而在第（3）节讨论端口。
+
+<!--more-->
 
 ## 计算机网络的基本内容(它就像一个邮局)
 - - -

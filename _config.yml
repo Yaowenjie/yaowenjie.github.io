@@ -68,7 +68,7 @@ highlighter: rouge
 markdown:    kramdown
 excerpt_separator: "<!--more-->"
 
-paginate:    6
+paginate:    5
 paginate_path: "page:num"
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
