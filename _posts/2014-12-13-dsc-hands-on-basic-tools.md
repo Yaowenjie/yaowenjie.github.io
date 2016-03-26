@@ -5,7 +5,7 @@ date: 2014-12-13 00:07
 comments: true
 category: PowerShell
 tags: [powershell, DSC, vagrant, Chocolatey, 自动化部署, virtualbox]
-imagefeature: wj/16.jpg
+imagefeature: wj/16.JPG
 ---
 <center><h3>DSC? Who are you？</h3></center><hr/>
 &emsp;&emsp;DSC（Desired Stated Configuration）是微软2013年发布的PowerShell4.0携带的一项新功能，稍微检索了一下，貌似没有发现统一标准的中文译名，google翻译给的直译结果是“理想状态配置”，嗯嗯，靠谱。

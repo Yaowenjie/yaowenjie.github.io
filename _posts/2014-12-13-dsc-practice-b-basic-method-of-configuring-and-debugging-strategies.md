@@ -5,7 +5,7 @@ date: 2014-12-13 22:31
 comments: true
 category: PowerShell
 tags: [powershell, DSC, resource]
-imagefeature: wj/16.jpg
+imagefeature: wj/16.JPG
 ---
 <center><h3>Let's Start!</h3></center><hr/>
 &emsp;&emsp;在一切工作开始之前，我们必须把Powershell版本升到4.0，具体的升级方法推荐下载安装[Chocolatey](chocolatey.org)后，利用cinst命令安装（安装成功后需重启机器），通过在Powershell窗口输入$PsVersiontable命令查看当前版本,如下方所示:
