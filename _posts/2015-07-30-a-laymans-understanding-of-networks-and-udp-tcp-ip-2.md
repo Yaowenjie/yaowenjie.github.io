@@ -9,6 +9,7 @@ imagefeature: wj/20.jpg
 ---
 ###### 本文源自对文章[Layman’s understanding of Networking & UDP/TCP/IP（点击进入原文）](http://www.microshell.com/sysadmin/networking/laymans-understanding-of-networking-udptcpip/2//)的翻译。
 
+<!--more-->
 
 ## 域名是什么
 - - -

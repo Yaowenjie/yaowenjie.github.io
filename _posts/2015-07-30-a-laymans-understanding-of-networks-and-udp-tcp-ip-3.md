@@ -9,6 +9,8 @@ imagefeature: wj/20.jpg
 ---
 ###### 本文源自对文章[Layman’s understanding of Networking & UDP/TCP/IP（点击进入原文）](http://www.microshell.com/sysadmin/networking/laymans-understanding-of-networking-udptcpip/3/)的翻译。
 
+<!--more-->
+
 ## 理解端口
 - - -
 &emsp;&emsp;既然你理解了两台电脑之间如何对话，那么接下来我们会进一步探讨这个。在大多数情况下，你会在同一个时刻有很多种网络连接。或许你正在网页上听音乐，又或许你是在163或者qq登陆电子邮箱浏览内容。对于所有的这些连接，一个数据包是如何知道它是指向哪个应用的呢？当然，你肯定不想在你浏览网页的中间看到音频数据包。谁知道那玩意是啥样的呢。

@@ -9,6 +9,9 @@ imagefeature: wj/16.JPG
 ---
 <center><h3>DSC? Who are you？</h3></center><hr/>
 &emsp;&emsp;DSC（Desired Stated Configuration）是微软2013年发布的PowerShell4.0携带的一项新功能，稍微检索了一下，貌似没有发现统一标准的中文译名，google翻译给的直译结果是“理想状态配置”，嗯嗯，靠谱。
+
+<!--more-->
+
 &emsp;&emsp;DSC提供了对Powershell语言的扩展、新的Cmdlet，以及可以用来配置各种软件环境的Resource。最大的好处是用户可以根据自身的需求编写自己量身定制的Resource，编写用户定制的具体流程将在之后的博客中展示。
 &emsp;&emsp;DSC可以干什么？部署新的软件，启动和关闭服务与进程，管理User和Group、环境变量、文件与目录、注册表设置，甚至可以运行powershell脚本，还有等等等等。但是可能发布时间不长，物有所长，必有所短，在使用过程中还是发现诸多小问题，这也将在之后讨论。[  欲了解更多DSC官方信息，请戳这儿.](http://technet.microsoft.com/en-us/library/dn249912.aspx)
 &emsp;&emsp;好了！说了这些，看了官方文档，你是否对DSC有了一定了解？

@@ -12,6 +12,7 @@ share: true
 ---
 ###### 本文翻译自[Cloud Academy](http://cloudacademy.com/blog/aws-vpc-configuration-five-kick-yourself-mistakes/)
 
+<!--more-->
 
 <!-- AWS VPC配置：让它变得更好。 -->
 
