@@ -5,7 +5,7 @@ date: 2015-07-30 14:01
 comments: true
 category: 网络基础
 tags: [TCP, ip, UDP, 计算机网络]
-imagefeature: wj/13.JPG
+imagefeature: wj/13.jpg
 ---
 ###### 本文源自对文章[Layman’s understanding of Networking & UDP/TCP/IP（点击进入原文）](http://www.microshell.com/sysadmin/networking/laymans-understanding-of-networking-udptcpip/)的翻译。
 

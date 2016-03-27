@@ -5,7 +5,7 @@ date: 2015-07-30 11:49
 comments: true
 category: PowerShell
 tags: [powershell, DSC, TheDSCBook, penflip, 自动化配置管理]
-imagefeature: wj/16.JPG
+imagefeature: wj/16.jpg
 ---
 ## 续言
 - - -
