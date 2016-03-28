@@ -1,4 +1,14 @@
 ## Yao Wenjie的博客
+> ### ---------------快捷方式-----------------
+>
+> [主页](http://yaowenjie.github.io) <br/>
+> [归档](http://yaowenjie.github.io/categories) <br/>
+> [标签](http://yaowenjie.github.io/tags) <br/>
+> [留言板](http://yaowenjie.github.io/message-board) <br/>
+> [关于作者](http://yaowenjie.github.io/about-author)
+>
+> ### -----------------------------------------
+
 
 ####  To Do list
 > ~~1. 修改md部分显示问题~~
@@ -11,7 +21,7 @@
 >
 > ~~4. 添加留言区~~ - 已添加message-board
 >
-> 5.Readme.md显示标题超链接
+> ~~5.Readme.md显示标题超链接~~ - 可显示快捷方式（hard code）
 >
 >>> #### Backlog
 >>
@@ -20,3 +30,5 @@
 >> 2. 删除feed
 >>
 >> 3. Knowing Client Info Plan (KCIP)
+>>
+>> 4. 添加functional/regression Test,确保各个页面没问题
