@@ -53,18 +53,20 @@ bing_verify:
 # Links to include in footer navigation
 # For external links add external: true
 links:
-  - title: <i class="icon-home"></i> Home | 主页
+  - title: <i class="icon-home"></i> 主页
     url: /
     external: false
     icon: home
   # - title: <i class="icon-book"></i> Documentation
   #   url: /documentation
-  - title: <i class="icon-list"></i> Categories | 分类
+  - title: <i class="icon-list"></i> 分类
     url: /categories
-  - title: <i class="icon-tags"></i> Tags | 标签
+  - title: <i class="icon-tags"></i> 标签
     url: /tags
-  - title: <i class="icon-user"></i> Author | 作者的废话
+  - title: <i class="icon-user"></i> 关于作者
     url: /about-author
+  - title: <i class="icon-comment"></i> 留言板
+    url: /message-board
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Shanghai
