@@ -9,12 +9,14 @@
 >
 > ~~3. UI微调及文字修正~~ - 调整菜单及search的button
 >
-> 4.添加留言区，删除feed
+> ~~4. 添加留言区~~ - 已添加message-board
 >
-> 5.Readme.md显示标题及链接（可自动化）
+> 5.Readme.md显示标题超链接
 >
 >>> #### Backlog
 >>
 >> 1. Home背景随机（按周几）切换 <br/>
 >>
->> 2. Knowing Client Info Plan (KCIP)
+>> 2. 删除feed
+>>
+>> 3. Knowing Client Info Plan (KCIP)
