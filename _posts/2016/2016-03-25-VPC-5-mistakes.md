@@ -12,7 +12,6 @@ share: true
 ---
 ###### 本文翻译自[Cloud Academy](http://cloudacademy.com/blog/aws-vpc-configuration-five-kick-yourself-mistakes/)。
 
-<!-- AWS VPC配置：让它变得更好。 -->
 <br/>
 &emsp;&emsp;AWS VPC最厉害的是它那令人难以置信的灵活性和安全性。亚马逊的VPC能够你在它的独立虚拟网络中重新分配计算资源，例如EC2实例以及RDS部署，让你全权控制所有的进出流量。你也可以选择IP地址范围，子网关联，以及路由表以及网关配置。一切尽在你的掌握之中。
 
