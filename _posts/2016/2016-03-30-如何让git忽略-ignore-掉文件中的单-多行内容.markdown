@@ -19,7 +19,7 @@ share: true
 url:       		    http://localhost:4000
 ```
 
-&emsp;&emsp;很显然，这条配置表明了本地调试时使用的地址，博客的子路径、资源等都是基于localhost:4000这个地址，但是要把放在github上托管的话，这个地址就必须改为我实际对应的博客地址:yaowenjie.github.io，要不这么做的话，到时候github上托管的静态博客就会可能会出现取localhost:4000/images/1.jpg这种情况了，这必然是不可行的（虽然我曾经这么愚蠢的干过，然后自己在自己的机器上试居然没问题,苦笑ing）。所以每次push代码之前，我都需要把这段代码改为如下
+&emsp;&emsp;很显然，这条配置表明了本地调试时使用的地址，博客的子路径、资源等都是基于localhost:4000这个地址，但是要把放在github上托管的话，这个地址就必须改为我实际对应的博客地址:yaowenjie.github.io，要不这么做的话，到时候github上托管的静态博客就会可能会出现取localhost:4000/images/1.jpg这种情况了，这必然是不可行的（虽然我曾经这么愚蠢地干过，然后自己在本地机器上试居然没问题，实际上换台机器样式啥的就都挂了，苦笑ing）。所以每次push代码之前，我都需要把这段代码改为如下
 
 ```
 url:       		    http://yaoenjie.github.io
