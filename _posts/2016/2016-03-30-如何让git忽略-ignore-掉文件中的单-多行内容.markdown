@@ -5,7 +5,7 @@ date: "2016-03-30 20:59"
 description: Git ignore specific lines
 comments: true
 category: 编程相关
-tags: [Git, ignore, gitattributes]
+tags: [Git, ignore, gitattributes, filter]
 imagefeature: wj/20.jpg
 mathjax: true
 share: true
