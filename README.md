@@ -26,10 +26,12 @@
 >>> #### Backlog
 >>
 >> 1.Home背景随机（按周几）切换 <br/>
->> - 需js实现
+>> - 需js实现，jstl为服务器端语言，jekyll只在生成时有效。
 >>
 >> ~~2.删除feed - feed有存在的必要~~
 >>
 >> 3.Knowing Client Info Plan (KCIP)
 >>
 >> 4.添加functional/regression Test,确保各个页面没问题
+>>
+>> 5.上主流js框架
