@@ -34,4 +34,7 @@
 >>
 >> 4.添加functional/regression Test,确保各个页面没问题
 >>
->> 5.上主流js框架
+>> 5.上主流js框架,webpack等
+
+
+
