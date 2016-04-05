@@ -25,16 +25,13 @@
 >
 >>> #### Backlog
 >>
->> 1.Home背景随机（按周几）切换 <br/>
->> - 需js实现，jstl为服务器端语言，jekyll只在生成时有效。
+>> 1.添加更多平台的分享按钮
 >>
->> ~~2.删除feed - feed有存在的必要~~
+>> 2.Home背景随机（按周几）切换 <br/>
+>> - PainPoint: jstl读取yml中属性，jstl属于后端语言，jekyll每次生成静态文件为
 >>
->> 3.Knowing Client Info Plan (KCIP)
+>> ~~3.删除feed - feed有存在的必要~~
 >>
->> 4.添加functional/regression Test,确保各个页面没问题
+>> 4.Knowing Client Info Plan (KCIP)
 >>
->> 5.上主流js框架,webpack等
-
-
-
+>> 5.添加functional/regression Test,确保各个页面没问题

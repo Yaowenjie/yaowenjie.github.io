@@ -1,6 +1,6 @@
 <div class="post-share text-center">
     <p class="light small">
-        Share this post
+        Share this post | 分享该文
     </p>
     <ul class="social-mini">
         <li>
@@ -21,5 +21,25 @@
                 <i class="icon-google-plus"></i>
             </a>
         </li>
+        <li>
+          <a class="jiathis_button_tsina" onclick="window.open(this.href, 'sina-weibo-share', 'width=490,height=530');return false;" data-toggle="tooltip"
+           title="分享至新浪微博" itemprop="SinaWeibo"><i class="icon-weibo"></i></a>
+        </li>
+        <li>
+          <a class="jiathis_button_weixin" onclick="window.open(this.href, 'wechat-moment-share', 'width=490,height=530');return false;" data-toggle="tooltip"
+           title="分享至朋友圈" itemprop="WechatMoment"><i class="icon-wechat"></i></a>
+        </li>
+        <li>
+          <a class="jiathis_button_qzone" onclick="window.open(this.href, 'qzone-share', 'width=490,height=530');return false;" data-toggle="tooltip"
+           title="分享至QQ空间" itemprop="Qzone"><i class="icon-qq"></i></a>
+        </li>
+        <li>
+          <a href="http://www.jiathis.com/share?uid=2093332" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"><i class="icon-caret-down"></i></a>
+        </li>
     </ul>
 </div>
+
+<script type="text/javascript">
+  var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2093332" charset="utf-8"></script>

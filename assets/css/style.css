@@ -867,7 +867,8 @@ h6.lighter {
   transform: translateY(0%);
 }
 /*!
- *  Font Awesome 3.2.1
+ *  Current Version: 4.5.0
+ *  Font Awesome 3.2.1 (Original Version)
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
  *  The full suite of pictographic icons, examples, and documentation can be
@@ -895,8 +896,8 @@ h6.lighter {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../font/fontawesome-webfontf77b.eot?v=3.2.1');
-  src: url('../font/fontawesome-webfontd41d.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../font/fontawesome-webfontf77b.woff?v=3.2.1') format('woff'), url('../font/fontawesome-webfontf77b.ttf?v=3.2.1') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('../font/fontawesome-webfont.eot?v=4.5.0');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=4.5.0') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2359,6 +2360,12 @@ a .icon-flip-vertical:before {
 }
 .icon-renren:before {
   content: "\f18b";
+}
+.icon-qq:before {
+  content: "\f1d6";
+}
+.icon-wechat:before {
+  content: "\f1d7";
 }
 
 /*--search--*/
