@@ -12,6 +12,21 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 ====================================================
 -->
 <head>
+  <script type="text/javascript">
+    window.onload = function() {
+      function GetRandomNum(Min,Max)
+      {
+        var Range = Max - Min;
+        var Rand = Math.random();
+        return(Min + Math.round(Rand * Range));
+      }
+      var bg_img_size = {{ site.default_bg_size }};
+      var bg_img_name = GetRandomNum(1,bg_img_size) + ".jpg";
+      var bg_img_style = 'url({{ site.url }}/images/wj/' + bg_img_name + ')';
+      document.getElementById("masthead").style["background-image"]= bg_img_style;
+      document.getElementById("footer").style["background-image"]= bg_img_style;
+    }
+  </script>
 {% include head.html %}
 </head>
 <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
@@ -35,7 +50,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 </aside>
 {% if page.imagefeature %}<header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom"  style="background-image: url({{ site.url }}/images/{{ page.imagefeature }})" itemscope itemtype="http://schema.org/Organization">
 {% else %}
-<header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom"  style="background-image: url({{ site.url }}/images/{{ site.default_bg }})" itemscope itemtype="http://schema.org/Organization">
+<header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom" itemscope itemtype="http://schema.org/Organization">
 {% endif %}
 {% if site.search %}
     <button class="menu-button animated fade dosearch">
