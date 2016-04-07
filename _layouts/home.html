@@ -23,8 +23,8 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
       var bg_img_size = {{ site.default_bg_size }};
       var bg_img_name = GetRandomNum(1,bg_img_size) + ".jpg";
       var bg_img_style = 'url({{ site.url }}/images/wj/' + bg_img_name + ')';
-      document.getElementById("masthead").style["background-image"]= bg_img_style;
-      document.getElementById("footer").style["background-image"]= bg_img_style;
+      document.getElementById("masthead").style.setProperty("background-image", bg_img_style);
+      document.getElementById("footer").style.setProperty("background-image", bg_img_style);
     }
   </script>
 {% include head.html %}
