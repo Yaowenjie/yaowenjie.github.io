@@ -2,7 +2,7 @@
 layout: page
 title: 作者的闲言碎语
 tags: [Wenjie]
-imagefeature: wj/9.jpg
+imagefeature: wj/99.jpg
 ---
 <figure>
   <img src="{{ site.url }}/images/wj/head1.jpg" alt="Wenjie Yao">
