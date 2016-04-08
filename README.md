@@ -27,8 +27,8 @@
 >>
 >> ~~1.添加更多平台的分享按钮~~ - 添加微博、微信、qq空间等国内分享按钮，通过JiaThis。
 >>
->> 2.Home背景随机（按周几）切换 <br/>
->> - PainPoint: jstl读取yml中属性，jstl属于后端语言，jekyll每次生成静态文件为
+>> ~~2.Home背景随机（按周几）切换~~ - 现可在1~n.jpg间随机切换（refresh主页后） <br/>
+>> - PainPoint: jstl读取yml中属性，jstl属于后端语言，jekyll每次生成静态文件
 >>
 >> ~~3.删除feed - feed有存在的必要~~
 >>
