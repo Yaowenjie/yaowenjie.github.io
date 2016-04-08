@@ -35,3 +35,5 @@
 >> 4.Knowing Client Info Plan (KCIP)
 >>
 >> 5.添加functional/regression Test,确保各个页面没问题
+>>
+>> 6.添加/替换主流js框架
