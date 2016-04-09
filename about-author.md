@@ -11,7 +11,7 @@ imagefeature: wj/99.jpg
 
 > Developer ・ 开发猿
 >
-> Consutant ・ 咨询师
+> Consultant ・ 咨询师
 >
 > Engineer ・ 工程师
 >
