@@ -32,8 +32,14 @@
 >>
 >> ~~3.删除feed - feed有存在的必要~~
 >>
->> 4.Knowing Client Info Plan (KCIP)
+>> 4.Knowing Client Info Plan (KCIP) - 5+
 >>
->> 5.添加functional/regression Test,确保各个页面没问题
+>> 5.添加functional/regression Test,确保各个页面没问题 - 5+
 >>
->> 6.添加/替换主流js框架
+>> 6.添加/替换主流js框架 - 8+
+>>
+>> 7.添加页面用于分享有意思的链接 - 2+
+>>
+>> 8.添加WebChat功能可参与实时聊天？？？- 8+
+>>
+>>
