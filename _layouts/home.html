@@ -13,6 +13,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 -->
 <head>
   <script type="text/javascript">
+
     window.onload = function() {
       function GetRandomNum(Min,Max)
       {
@@ -26,12 +27,46 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
       document.getElementById("masthead").style.setProperty("background-image", bg_img_style);
       document.getElementById("footer").style.setProperty("background-image", bg_img_style);
     }
+
+    function getUserInfo() {
+      var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_='+Math.random();
+		  $.getJSON(url, function(data){
+           var userInfo = "显示：IP【"+data.Ip+"】 地址【"+data.Isp+"】 浏览器【"+data.Browser+"】 系统【"+data.OS+"】";
+			     console.log(userInfo);
+
+          //  $.ajax({
+          //   type: 'POST',
+          //   url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+          //   data: {
+          //       'key': "4af790ee375d1a017052a6d05abd711d-us13",
+          //       'message': {
+          //       'from_email': "xxxxxx@tww.com",
+          //       'to': [
+          //       {
+          //       'email': "876362048@qq.com",
+          //       'name': '876362048',
+          //       'type': 'to'
+          //       }
+          //       ],
+          //       'autotext': 'true',
+          //       'subject': 'TEST! TEST!',
+          //       'html': 'Data: ' + userInfo // and use it!
+          //       }
+          //   }
+          // }).done(function(response) {
+          //     console.log(response);
+          //     alert("You send an email!"); // if you're into that sorta thing
+          // });
+
+      });
+    }
+
   </script>
 {% include head.html %}
 </head>
 <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
 <div id="fade"></div>
-<a id="slide" class="animated fade"></a>
+<a id="slide" class="animated fade" onclick="getUserInfo()"></a>
 <aside id="sidebar">
     <nav id="navigation">
     <h2>MENU</h2>
@@ -53,7 +88,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 <header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom" itemscope itemtype="http://schema.org/Organization">
 {% endif %}
 {% if site.search %}
-    <button class="menu-button animated fade dosearch">
+    <button class="menu-button animated fade dosearch" onclick="getUserInfo()">
         <i class="icon-search"></i>
     </button>
 {% endif %}
