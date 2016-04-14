@@ -12,6 +12,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 ====================================================
 -->
 <head>
+  <script type="text/javascript" src="https://script.opentracker.net/?site={{site.url}} "></script>
   <script type="text/javascript">
 
     window.onload = function() {
@@ -33,6 +34,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 		  $.getJSON(url, function(data){
            var userInfo = "显示：IP【"+data.Ip+"】 地址【"+data.Isp+"】 浏览器【"+data.Browser+"】 系统【"+data.OS+"】";
 			     console.log(userInfo);
+           OTLogService.sendEvent(userInfo);
       });
     }
 
