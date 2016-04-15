@@ -13,7 +13,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 -->
 <head>
   {% if site.url contains 'yaowenjie.github' %}
-    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
+    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io&onload=map"></script>
   {% endif %}
   <script type="text/javascript">
 
@@ -53,7 +53,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 </head>
 <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
 <div id="fade"></div>
-<a id="slide" class="animated fade" onclick="getUserInfo('menuButton')"></a>
+<a id="slide" class="animated fade" onclick="getUserInfo('menu-button')"></a>
 <aside id="sidebar">
     <nav id="navigation">
     <h2>MENU</h2>
@@ -75,7 +75,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 <header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom" itemscope itemtype="http://schema.org/Organization">
 {% endif %}
 {% if site.search %}
-    <button class="menu-button animated fade dosearch" onclick="getUserInfo('searchButton')">
+    <button class="menu-button animated fade dosearch" onclick="getUserInfo('search-button')">
         <i class="icon-search"></i>
     </button>
 {% endif %}
