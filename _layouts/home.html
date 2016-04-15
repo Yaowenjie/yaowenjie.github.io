@@ -34,11 +34,11 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
     function getUserInfo(inputEvent) {
       var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random();
 		  $.getJSON(url, function(data){
-           var userInfo = "Event 【" + inputEvent
-                          + "】 IP【" + data.Ip
-                          + "】 地址【" + data.Isp
-                          + "】 浏览器【" + data.Browser
-                          + "】 系统【" + data.OS + "】";
+           var userInfo = "Event 【" + inputEvent +
+                           "】 IP【" + data.Ip +
+                           "】 地址【" + data.Isp +
+                           "】 浏览器【" + data.Browser +
+                           "】 系统【" + data.OS + "】";
 			     console.log(userInfo);
            {% if site.url contains 'yaowenjie.github' %}
               OTLogService.sendEvent(userInfo);
