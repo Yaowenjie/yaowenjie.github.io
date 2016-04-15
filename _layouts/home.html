@@ -12,9 +12,6 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 ====================================================
 -->
 <head>
-  {% if site.url contains 'yaowenjie.github' %}
-    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
-  {% endif %}
   <script type="text/javascript">
 
     window.onload = function() {
@@ -29,21 +26,6 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
       var bg_img_style = 'url({{ site.url }}/images/wj/' + bg_img_name + ')';
       document.getElementById("masthead").style.setProperty("background-image", bg_img_style);
       document.getElementById("footer").style.setProperty("background-image", bg_img_style);
-    }
-
-    function getUserInfo(inputEvent) {
-      var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random();
-		  $.getJSON(url, function(data){
-           var userInfo = "Event 【" + inputEvent +
-                           "】 IP【" + data.Ip +
-                           "】 地址【" + data.Isp +
-                           "】 浏览器【" + data.Browser +
-                           "】 系统【" + data.OS + "】";
-			     console.log(userInfo);
-           {% if site.url contains 'yaowenjie.github' %}
-              OTLogService.sendEvent(userInfo);
-           {% endif %}
-      });
     }
 
   </script>

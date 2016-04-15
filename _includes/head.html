@@ -88,3 +88,25 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.url }}/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
+
+
+{% if site.url contains 'yaowenjie.github' %}
+  <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
+{% endif %}
+
+<script type="text/javascript">
+  function getUserInfo(inputEvent) {
+    var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random();
+    $.getJSON(url, function(data){
+         var userInfo = "Event 【" + inputEvent +
+                         "】 IP【" + data.Ip +
+                         "】 地址【" + data.Isp +
+                         "】 浏览器【" + data.Browser +
+                         "】 系统【" + data.OS + "】";
+         console.log(userInfo);
+         {% if site.url contains 'yaowenjie.github' %}
+            OTLogService.sendEvent(userInfo);
+         {% endif %}
+    });
+  }
+</script>
