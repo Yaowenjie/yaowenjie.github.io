@@ -12,8 +12,9 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 ====================================================
 -->
 <head>
-  <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
-  <!-- <script type="text/javascript" src="https://script.opentracker.net/?site={{site.url}} "></script> -->
+  {% if site.url contains 'yaowenjie.github' %}
+    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
+  {% endif %}
   <script type="text/javascript">
 
     window.onload = function() {
@@ -30,12 +31,20 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
       document.getElementById("footer").style.setProperty("background-image", bg_img_style);
     }
 
-    function getUserInfo() {
-      var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_='+Math.random();
+    function getUserInfo(inputEvent) {
+      var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random();
 		  $.getJSON(url, function(data){
            var userInfo = "显示：IP【"+data.Ip+"】 地址【"+data.Isp+"】 浏览器【"+data.Browser+"】 系统【"+data.OS+"】";
 			     console.log(userInfo);
-           OTLogService.sendEvent(userInfo);
+           {% if site.url contains 'yaowenjie.github' %}
+              var userInfoMap = new OTMap();
+              userInfoMap.put("IP", data.Ip);
+              userInfoMap.put("Address", data.Isp);
+              userInfoMap.put("Browser", data.Browser);
+              userInfoMap.put("OS", data.OS);
+              OTLogService.sendEvent(inputEvent, userInfoMap);
+            // OTLogService.sendEvent(userInfo);
+           {% endif %}
       });
     }
 
@@ -44,7 +53,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 </head>
 <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
 <div id="fade"></div>
-<a id="slide" class="animated fade" onclick="getUserInfo()"></a>
+<a id="slide" class="animated fade" onclick="getUserInfo('menuButton')"></a>
 <aside id="sidebar">
     <nav id="navigation">
     <h2>MENU</h2>
@@ -66,7 +75,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 <header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom" itemscope itemtype="http://schema.org/Organization">
 {% endif %}
 {% if site.search %}
-    <button class="menu-button animated fade dosearch" onclick="getUserInfo()">
+    <button class="menu-button animated fade dosearch" onclick="getUserInfo('searchButton')">
         <i class="icon-search"></i>
     </button>
 {% endif %}
