@@ -13,7 +13,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 -->
 <head>
   {% if site.url contains 'yaowenjie.github' %}
-    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io&onload=map"></script>
+    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
   {% endif %}
   <script type="text/javascript">
 
@@ -34,16 +34,14 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
     function getUserInfo(inputEvent) {
       var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random();
 		  $.getJSON(url, function(data){
-           var userInfo = "显示：IP【"+data.Ip+"】 地址【"+data.Isp+"】 浏览器【"+data.Browser+"】 系统【"+data.OS+"】";
+           var userInfo = "Event 【" + inputEvent
+                          + "】 IP【" + data.Ip
+                          + "】 地址【" + data.Isp
+                          + "】 浏览器【" + data.Browser
+                          + "】 系统【" + data.OS + "】";
 			     console.log(userInfo);
            {% if site.url contains 'yaowenjie.github' %}
-              var userInfoMap = new OTMap();
-              userInfoMap.put("IP", data.Ip);
-              userInfoMap.put("Address", data.Isp);
-              userInfoMap.put("Browser", data.Browser);
-              userInfoMap.put("OS", data.OS);
-              OTLogService.sendEvent(inputEvent, userInfoMap);
-            // OTLogService.sendEvent(userInfo);
+              OTLogService.sendEvent(userInfo);
            {% endif %}
       });
     }
