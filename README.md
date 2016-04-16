@@ -32,7 +32,7 @@
 >>
 >> ~~3.删除feed - feed有存在的必要~~
 >>
->> 4.Knowing Client Info Plan (KCIP) - 5+
+>> ~~4.Knowing Client Info Plan (KCIP) - 5+ Finished using third-party platform.~~
 >>
 >> 5.添加functional/regression Test,确保各个页面没问题 - 5+
 >>
