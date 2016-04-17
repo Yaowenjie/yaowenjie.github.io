@@ -60,8 +60,9 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
     </button>
 {% endif %}
 {% if site.description %}
-    <div class="inner">
-        <div class="container">
+    <div id="large-header" class="inner large-header">
+      <canvas id="demo-canvas"></canvas>
+        <div class="container main-title">
             <a class="brand light" href="{{ site.url }}" role="banner" itemprop="url">
 
                 {% if site.logo %}<img itemprop="logo" src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} Logo" />{% endif %}
@@ -136,6 +137,6 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 </div>
     {% include footer.html %}
 
-{% include scripts.html %}
+    {% include scripts.html %}
 </body>
 </html>
