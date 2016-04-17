@@ -18,6 +18,8 @@
     largeHeader = document.getElementById('large-header');
     largeHeader.style['height'] = height + 'px';
 
+    overflowHeight = document.getElementById('header-decor').height.animVal.value / 2 + 20;
+    // console.log(overflowHeight);
     canvas = document.getElementById('demo-canvas');
     canvas.width = width;
     canvas.height = height;
