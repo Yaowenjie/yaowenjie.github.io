@@ -69,6 +69,11 @@ links:
   - title: <i class="icon-comment"></i> 留言板
     url: /message-board
 
+features:
+    afs_tracker:    true
+    opentracker:    true
+    antimated_bg:   false
+
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Shanghai
 future:      true

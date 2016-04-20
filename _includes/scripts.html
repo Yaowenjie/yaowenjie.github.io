@@ -90,5 +90,7 @@ $("a#click-pages").click(function(){
 
 <!-- AFS ANALYTICS Asynchronous Tracking Code  V6 -->
 <!-- For: http://yaowenjie.github.io -->
-<div id='addfreestats'></div>
+{% if site.features.afs_tracker %}
+  <div id='addfreestats'></div>
+{% endif %}
 <!-- END- AFSANALYTICS.com AUTOCODE V6 -->
