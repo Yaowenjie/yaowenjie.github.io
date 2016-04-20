@@ -46,7 +46,7 @@ owner:
   google_plus:
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   UA-39365944-7
+google_analytics:   UA-76657848-1
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
@@ -98,8 +98,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://hmfaysal.github.io/'
-  relativeLinks: 'http://hmfaysal.github.io/links.jsonp'
+  # siteurl: 'http://hmfaysal.github.io/'
+  # relativeLinks: 'http://hmfaysal.github.io/links.jsonp'
   media: 'images'
   metadata:
     _posts:
