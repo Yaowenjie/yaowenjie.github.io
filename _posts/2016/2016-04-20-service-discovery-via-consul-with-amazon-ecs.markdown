@@ -39,19 +39,68 @@ published: false
   <center><img class="center" src="{{ site.url }}/images/2016/consul.png" alt="consul.png"></center>
 
 ## DNS配置
-&emsp;&emsp;Consul最大的特性之一就是允许客户使用标准DNS查询来查找服务。
+&emsp;&emsp;Consul最大的特性之一就是允许客户使用标准DNS查询来查找服务。它可以通过正常的DNS A记录查询或者使用DNS SRV记录查询来发现IP地址以及运行该服务的服务器端口。对于运行在同一个实例上的所有Docker容器来说，需要确保Consul代理被用作为了DNS解析器，这种Docker进程的配置方式非常有用。
+
+&emsp;&emsp;比如说，假设这个Consul代理安装在一个EC2实例上，并且监听着用于DNS请求的53端口，你可以通过以下的NS查询来查找名为“hello-world”的服务。
+```
+$dig @0.0.0.0 –t SRV hello-world.service.consul
+```
+&emsp;&emsp;这会返回IP地址和运行该服务的服务器端口。结构看起来应该和下面的差不多：
+```
+;; QUESTION SECTION:
+;hello-world.service.consul.   IN	SRV
+;; ANSWER SECTION:
+hello-world.service.consul.	0  IN	SRV  1 1 80 i-28cdc8ce.node.eu1.consul.
+;; ADDITIONAL SECTION:
+i-28cdc8ce.node.eu1.consul. 0	IN	A	10.0.1.93
+```
 
 ## Consul和ECS
+&emsp;&emsp;每个提供服务的节点都需要启动一台Consul代理。在亚马逊ECS中，你需要为每个ECS集群中的每个ECS实例启动一个Consul代理。通过容器化Consul代理软件你可以很容易实现这些，在ECS实例已经启动了的时候通过条用EC2用户数据脚本就可以启动它。这个代理需要和保存服务目录的Consul服务器通信。也可以在同一个进程中启动Consul服务器和代理进行测试。
 
 ## 示例应用
+&emsp;&emsp;解释Consul和ECS之间是如何一起运作的最好方式，还是通过一个由三个组件或者说微服务的实例应用：
+- "股票价格"服务，它返回目前的股票价格以及给定股票代码的公司名。该服务为一个HTTP服务，并在HTTP响应中提供了一段JSON文档。
+- “天气”服务，它返回给定城市的当前温度。该服务也是一个HTTP服务，并在HTTP响应中提供了一段JSON文档。
+- “门户”服务，它提供给了包含其他两个服务的用户端网页，可以发送用于查找SRV记录类型的DNS查询，获取该服务的DNS A记录名和端口号。
+
+下图为它的架构：
+  <center><img class="center" src="{{ site.url }}/images/2016/consul-arch.png" alt="consul-arch.png"></center>
+
+&emsp;&emsp;在这个例子的架构中，有两个运行着Consul代理的ECS实例，和一个运行着Consul服务器（Consul服务数据保存的地方）的EC2实例。因为只有一个Consul服务器，这一步是为了开发&测试环境而设计的。在产品环境中，一般推荐使用3到5个服务器，用于避免一些错误场景导致的数据丢失。
+
+&emsp;&emsp;ECS集群内含运行着微服务的ECS实例。“股票价格”，“天气”，以及“门户”这三个ECS服务被部署到ECS集群中的实例当中。每个ECS实例在实例启动时都会运行两个Docker容器，其中包括一个Consul代理（consul-agent），它提供了通过HTTP的服务发现能力，以及连接到运行在这个实例上所有Docker容器的DNS。Consul代理和Consul服务器通信以获取集群的最新状态。
+
+&emsp;&emsp;另一个容器是一个注册器代理，它可以基于已经发布的端口和定义在ECS任务定义中的容器环境变量元数据，为ECS任务或ECS服务自动注册/注销服务。它可以在没有任何用户定义的元数据的情况下注册服务，但可以让用户重写或者自己定制Consul服务的定义。更多关于注册器的内容，请参考 [Github 项目](https://github.com/gliderlabs/registrator/commit/1098fc63857a357e6ebea9971c41aa397a24381b)。
 
 ## 运行该示例应用
+&emsp;&emsp;要追随这个实例应用的内容，你需要保证你的AWS账号有以下内容：
+- 一个VPC，并支持DNS（DNS support处于enabled），而且至少有一个公共子网
+- 一个IAM用户，拥有登陆EC2实例和创建IAM策略/角色的权限
+- 一个EC2秘钥对，用户可以访问的私有密钥文件(.pem文件)
+
+&emsp;&emsp;同时，你应当有一个[Docker Hub](http://registry.hub.docker.com)的账号和对应仓库（比如说仓库的名字叫“my_docker_hub_repo”。）
+
+*注意:确保在必要的文档内键入你定义的值（比如说，用你自己Docker Hub仓库名来代替“my_docker_hub_repo”）。*
 
 ## 创建ECS集群
+&emsp;&emsp;1.首先到[ECS控制台](https://console.aws.amazon.com/ecs/home)并选择创建集群(Create cluster)。为这个集群起一个独立的名字然后选择创建(Create)。
 
 ## 创建Consul服务器以及ECS实例
+&emsp;&emsp;你需要创建多个AWS资源来让着个示例应用运行起来。为了使这个过程更加简单，可以使用如下所述的CloudFormation脚本：
+- 为ECS和Consul服务器创建IAM role
+- 创建
+
+
+2.打开[CloudFormation控制台](https://console.aws.amazon.com/cloudformation/home)，然后从[提供的模板](https://github.com/awslabs/service-discovery-ecs-consul/blob/master/service-discovery-blog-template)中启动一个新的CloudFormation堆。你需要输入一些参数，包括已存的EC2密钥对米子，VPC ID，子网ID，可用区，等等。
+
+请注意
+
 
 ## 构建Docker镜像
+3.通过SSH登录到Consul服务器公共DNS名。这将
+
+4.下载[这三个微服务的源码]()
 
 ## 创建任务定义
 
