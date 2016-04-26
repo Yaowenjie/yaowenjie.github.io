@@ -82,16 +82,16 @@ i-28cdc8ce.node.eu1.consul. 0	IN	A	10.0.1.93
 &emsp;&emsp;1.首先到[ECS控制台](https://console.aws.amazon.com/ecs/home)并选择创建集群(Create cluster)。为这个集群起一个独立的名字然后选择创建(Create)。
 
 ## 创建Consul服务器以及ECS实例
-&emsp;&emsp;你需要创建多个AWS资源来让着个示例应用运行起来。为了使这个过程更加简单，可以使用如下所述的CloudFormation脚本：
+&emsp;&emsp;你需要创建多个AWS资源来让这个示例应用运行起来。为了使这个过程更加简单，可以使用如下所述的CloudFormation脚本：
 
 - 为ECS和Consul服务器创建IAM role。
-- 创建必要的安全组，用于允许ECS节点和Consul服务器之间的通信，以及允许来自定义的CIDR IP段的SSH请求，
+- 创建必要的安全组，用于允许ECS节点和Consul服务器之间的通信，以及允许来自定义的CIDR IP段的SSH请求。
 - 登录到Consul服务器的EC2实例，安装Git和Docker，并且启动一个运行Consul服务器软件的Docker容器。
-- 使用针对ECS优化过的AMI，登录到ECS实例集群自动伸缩功能组。
+- 使用针对ECS优化过的AMI，登录到ECS实例集群自动伸缩功能组(Auto Scaling Group)。
 - 启动一个Consul代理的Docker容器，并且连接到Consul服务器实例上。
 - 启动Consul注册器代理，以使用Consul服务发现目录，来自动注册在这台实例上运行的ECS任务和服务。Docker守护进程可以使用Consul代理和用于DNS查询的亚马逊DNS服务器。
 
-&emsp;&emsp;2.打开[CloudFormation控制台](https://console.aws.amazon.com/cloudformation/home)，然后从[提供的模板](https://github.com/awslabs/service-discovery-ecs-consul/blob/master/service-discovery-blog-template)中启动一个新的CloudFormation堆。你需要输入一些参数，包括已存的EC2密钥对米子，VPC ID，子网ID，可用区，等等。
+&emsp;&emsp;2.打开[CloudFormation控制台](https://console.aws.amazon.com/cloudformation/home)，然后从[提供的模板](https://github.com/awslabs/service-discovery-ecs-consul/blob/master/service-discovery-blog-template)中启动一个新的CloudFormation堆。你需要输入一些参数，包括已存的EC2密钥对，VPC ID，子网ID，可用区，等等。
 
 &emsp;&emsp;请注意输入参数AmazonDnsIp必须是运行在一个保留IP地址上，在VPC网络范围”加2“内的DNS服务器。想了解更多关于VPC内亚马逊DNS服务器的内容，请看DHCP选项话题下的[亚马逊DNS服务器](http://docs.aws.amazon.com/zh_cn/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS)章节。
 
@@ -137,9 +137,9 @@ $ sudo docker push my_docker_hub_repo/portal
 
 ```
 def lookup_service(service_name)
-resolver = Resolv::DNS.open
-record = resolver.getresource(service_name, Resolv::DNS::Resource::IN::SRV)
-return resolver.getaddress(record.target), record.port
+  resolver = Resolv::DNS.open
+  record = resolver.getresource(service_name, Resolv::DNS::Resource::IN::SRV)
+  return resolver.getaddress(record.target), record.port
 end
 ```
 
