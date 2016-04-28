@@ -23,7 +23,7 @@ published: true
 npm install -g browser-sync
 ```
 
-&emsp;&emsp;当然你也可以结合gulpjs或gruntjs构建工具来使用：
+&emsp;&emsp;当然你也可以结合gulpjs或gruntjs构建工具来安装：
 
 ``` shell
 npm install --save-dev browser-sync
@@ -50,8 +50,8 @@ browser-sync start -p http://yaowenjie.github.io
  --------------------------------------
 ```
 
-&emsp;&emsp;同时，它还会打开电脑上的默认浏览器（比如说Chrome），访问localhost:3000，实际上就像是访问yaowenjie.github.io的一个本地镜像。你可以在其他本机的其他浏览器（比如firefox）打开localhost:3000,然后你在其中任何一个浏览器上对这个网站的操作都会同步到另一个浏览器上。 <br/>
-&emsp;&emsp;远远不止这些，或许你也注意到了上面的信息中国，除了Local的URL，我们还有一个External的URL（192.168.1.139:3000，感兴趣的可以看3001端口的URL又是什么），它就是用于其他设备（其他电脑，平板，智能手机）访问这个网页的，当然，前提是你的设备和启动Browsersync的机器处于同一个网段内，也就是说可以访问这个IP。然后，你在任何一个设备上对这个网站的操作都会同步到所有打开的浏览器上，下面就是我做的一个简单效果图（其中涉及pad，手机，电脑端chrome和firefox），是不是很酷？
+&emsp;&emsp;同时，它还会打开电脑上的默认浏览器（比如说Chrome），访问localhost:3000，实际上就像是访问yaowenjie.github.io的一个本地镜像。你可以在本机的其他浏览器（比如firefox）打开localhost:3000,然后你在其中任何一个浏览器上对这个网站的操作都会同步到另一个浏览器上。 <br/>
+&emsp;&emsp;远远不止这些，或许你也注意到了上面的信息中，除了Local的URL，我们还有一个External的URL（192.168.1.139:3000，感兴趣的可以看3001端口的URL又是什么），它就是用于其他设备（其他电脑，平板，智能手机）访问这个网页的，当然，前提是你的设备和启动Browsersync的机器处于同一个网段内，也就是说可以访问这个IP。然后，你在任何一个设备上对这个网站的操作都会同步到所有打开的浏览器上，下面就是我做的一个简单动态效果图（其中涉及pad，手机，电脑端chrome和firefox），是不是很酷？
 <center><img class="center" src="{{ site.url }}/images/2016/browser-sync.gif" alt="browser-sync.gif"></center>
 
 &emsp;&emsp;援引Browsersync官网的话：
