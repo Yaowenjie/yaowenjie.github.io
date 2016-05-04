@@ -24,16 +24,6 @@ repositories {
 }
 
 dependencies {
-    // If using Spock, need to depend on geb-spock
-    testCompile "org.gebish:geb-spock:$gebVersion"
-    testCompile("org.spockframework:spock-core:1.0-groovy-2.4") {
-        exclude group: "org.codehaus.groovy"
-    }
-    testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
-
-    // If using JUnit, need to depend on geb-junit (3 or 4)
-    testCompile "org.gebish:geb-junit4:$gebVersion"
-
     // Drivers
     testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
     testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
