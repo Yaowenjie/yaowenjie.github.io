@@ -37,23 +37,23 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 <a id="slide" class="animated fade" onclick="getUserInfo('menu-button')"></a>
 <aside id="sidebar">
     <nav id="navigation">
-    <h2>MENU</h2>
-    <hr>
-{% for link in site.links %}
-            <li>{% if link.external %}
-                    <a href="{{ link.url }}">{{ link.title }}</a>
-                {% else %}
-                    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
-                {% endif %} </li>
-{% endfor %}
-           <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+      <h2>MENU</h2>
+      <hr>
+      {% for link in site.links %}
+          <li>{% if link.external %}
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+              {% else %}
+                  <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+              {% endif %}
+          </li>
+      {% endfor %}
+      <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
     </nav>
-
-
 </aside>
-{% if page.imagefeature %}<header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom"  style="background-image: url({{ site.url }}/images/{{ page.imagefeature }})" itemscope itemtype="http://schema.org/Organization">
+{% if page.imagefeature %}
+  <header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom"  style="background-image: url({{ site.url }}/images/{{ page.imagefeature }})" itemscope itemtype="http://schema.org/Organization">
 {% else %}
-<header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom" itemscope itemtype="http://schema.org/Organization">
+  <header id="masthead" class="blog-background overlay align-center align-middle animated from-bottom" itemscope itemtype="http://schema.org/Organization">
 {% endif %}
 {% if site.search %}
     <button class="menu-button animated fade dosearch" onclick="getUserInfo('search-button')">
@@ -65,7 +65,7 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
         <div class="container">
             <a class="brand light" href="{{ site.url }}" role="banner" itemprop="url">
 
-                {% if site.logo %}<img itemprop="logo" src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} Logo" />{% endif %}
+            {% if site.logo %}<img itemprop="logo" src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} Logo" />{% endif %}
 
             <h1 class="blog-title light" itemprop="name">
                 {{ site.title }}
@@ -124,8 +124,6 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
     {% endif %}
 </header>
 
-
-
 <div id="main" class="content" role="main" itemprop="mainContentOfPage">
     <div class="container">
         <div class="row">
@@ -135,8 +133,9 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
         </div>
     </div>
 </div>
-    {% include footer.html %}
 
+{% include footer.html %}
 {% include scripts.html %}
+
 </body>
 </html>
