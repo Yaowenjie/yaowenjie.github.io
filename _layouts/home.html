@@ -13,18 +13,21 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 -->
 <head>
   <script type="text/javascript">
+    function GetRandomNum(Min,Max) {
+      var Range = Max - Min;
+      var Rand = Math.random();
+      return(Min + Math.round(Rand * Range));
+    }
+    function setBgImage(Id, BgImage) {
+      document.getElementById(Id).style.setProperty("background-image", BgImage);
+    }
+
     window.onload = function() {
-      function GetRandomNum(Min,Max)
-      {
-        var Range = Max - Min;
-        var Rand = Math.random();
-        return(Min + Math.round(Rand * Range));
-      }
       var bg_img_size = {{ site.default_bg_size }};
       var bg_img_name = GetRandomNum(1,bg_img_size) + ".jpg";
       var bg_img_style = 'url({{ site.url }}/images/wj/' + bg_img_name + ')';
-      document.getElementById("masthead").style.setProperty("background-image", bg_img_style);
-      document.getElementById("footer").style.setProperty("background-image", bg_img_style);
+      setBgImage("masthead", bg_img_style);
+      setBgImage("footer", bg_img_style);
     }
   </script>
 {% include head.html %}
