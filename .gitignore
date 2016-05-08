@@ -1,2 +1,8 @@
 _site
 cucumber-test/build
+cucumber-test/.gradle
+cucumber-test/out
+cucumber-test/gradle
+*/*.iml
+*/*.ipr
+*/*.iws
