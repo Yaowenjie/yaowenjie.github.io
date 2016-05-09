@@ -15,6 +15,7 @@ public class BaseSteps implements En {
     private PostPage postPage;
 
     public BaseSteps() {
+
         Given("^I go to My Blog Home page$", () -> {
             driver.get("http://localhost:4000");
         });
@@ -28,6 +29,15 @@ public class BaseSteps implements En {
             postPage = initElements(driver, PostPage.class);
             assertContainsIngoreCase(postPage.getArticleTitle(), keyword);
         });
+
+        Then("^I refresh the current page$", () -> {
+            driver.navigate().refresh();
+        });
+
+        Then("^I close the current window$", () -> {
+            driver.close();
+        });
+
     }
 
 
