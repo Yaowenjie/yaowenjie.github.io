@@ -17,8 +17,13 @@ public class HomePageTest {
         driver.findElement(By.xpath("/html/body/div[1]/div/input")).sendKeys("Powershell");
         driver.findElement(By.xpath("/html/body/div[1]/div/ul/li[1]/article/a")).click();
         String articleTitle = driver.findElement(By.xpath("//*[@id=\"main\"]/div/div/article/header/h1")).getText();
-        assertThat(articleTitle.toLowerCase(), containsString("Powershell".toLowerCase()));
+        assertContainsIngoreCase(articleTitle, "Powershell");
         driver.close();
+    }
+
+
+    public void assertContainsIngoreCase(String set, String subset) {
+        assertThat(set.toLowerCase(), containsString(subset.toLowerCase()));
     }
 
 }
