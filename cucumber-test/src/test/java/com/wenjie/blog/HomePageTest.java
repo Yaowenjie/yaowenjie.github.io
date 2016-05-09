@@ -5,8 +5,7 @@ import com.wenjie.blog.pages.PostPage;
 import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static com.wenjie.blog.util.CommonUtil.assertContainsIngoreCase;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class HomePageTest{
@@ -22,10 +21,6 @@ public class HomePageTest{
 
         assertContainsIngoreCase(postPage.getArticleTitle(), "Powershell");
         driver.close();
-    }
-
-    public void assertContainsIngoreCase(String set, String subset) {
-        assertThat(set.toLowerCase(), containsString(subset.toLowerCase()));
     }
 
 }

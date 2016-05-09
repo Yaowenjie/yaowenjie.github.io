@@ -13,7 +13,7 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div[1]/div/ul/li[1]/article/a")
     private WebElement searchResultFirst;
 
-    public void searchKeywordAndEnterPost(String wantedStr) throws InterruptedException {
+    public void searchKeywordAndEnterPost(String wantedStr){
         searchButton.click();
         searchInput.sendKeys(wantedStr);
         searchResultFirst.click();
