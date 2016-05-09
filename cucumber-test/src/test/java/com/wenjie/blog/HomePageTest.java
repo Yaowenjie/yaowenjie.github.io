@@ -1,4 +1,4 @@
-package com.wenjie;
+package com.wenjie.blog;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
