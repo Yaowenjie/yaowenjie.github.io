@@ -25,9 +25,12 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.seleniumhq.selenium:selenium-java:2.53.0')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+task testPage(type: Test, dependsOn: testClasses) {
+	include '**/HomePageTest*'
 }
