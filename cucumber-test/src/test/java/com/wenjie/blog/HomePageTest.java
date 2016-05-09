@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static com.wenjie.blog.util.CommonUtil.assertContainsIngoreCase;
+import static org.junit.Assert.assertEquals;
 import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class HomePageTest{
@@ -14,7 +15,7 @@ public class HomePageTest{
     PostPage postPage = initElements(driver, PostPage.class);
 
     @Test
-    public void shouldClickSearchButtonAndGoToAnArticle() throws InterruptedException {
+    public void shouldClickSearchButtonAndGoToAnArticle() {
         driver.get("http://localhost:4000");
 
         homePage.searchKeywordAndEnterPost("Powershell");
@@ -23,4 +24,14 @@ public class HomePageTest{
         driver.close();
     }
 
+    @Test
+    public void shouldHeaderAndFooterHasSameBackgroundImage() {
+        driver.get("http://localhost:4000");
+
+        String headerImageName = homePage.getBackgroundImageFor(homePage.getHeader());
+        String footerImageName = homePage.getBackgroundImageFor(homePage.getFooter());
+
+        assertEquals(headerImageName, footerImageName);
+        driver.close();
+    }
 }
