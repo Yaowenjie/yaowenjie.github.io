@@ -1,4 +1,4 @@
-package com.wenjie.blog;
+package com.wenjie.blog.selenium_tests;
 
 import com.wenjie.blog.pages.HomePage;
 import com.wenjie.blog.pages.PostPage;
