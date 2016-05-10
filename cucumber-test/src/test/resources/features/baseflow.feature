@@ -1,5 +1,11 @@
 @base_flow
-Feature: Use Search Button
+Feature: Test home page
+  I can go to my blog home page
+  When I refresh page
+  I can see background image changes
+  When I search one article using one key word
+  Then I can click the search result and enter one article page
+
 
   Scenario:
     Given I enter my blog address "http://localhost:4000" and go to Home page

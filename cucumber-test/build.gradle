@@ -33,13 +33,17 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-task testPage(type: Test, dependsOn: testClasses) {
-	include '**/HomePageTest*'
-}
-
 test{
     exclude '**/HomePageTest*'
     exclude '**/BaseFlowTest*'
 }
 
+task testPage(type: Test, dependsOn: testClasses) {
+    include '**/BaseFlowTest*'
+}
+
+task serve(type: Exec) {
+    commandLine 'jekyll'
+    args 'serve', '--detach'
+}
 
