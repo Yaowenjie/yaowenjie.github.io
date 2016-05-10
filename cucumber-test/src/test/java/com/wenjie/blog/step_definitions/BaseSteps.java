@@ -16,11 +16,11 @@ public class BaseSteps implements En {
 
     public BaseSteps() {
 
-        Given("^I go to My Blog Home page$", () -> {
-            driver.get("http://localhost:4000");
+        Given("^I enter my blog address \"([^\"]*)\" and go to Home page$", (String url) -> {
+            driver.get(url);
         });
 
-        When("^I click search button and enter \"([^\"]*)\" in the input blank and click the first article$", (String keyword) -> {
+        When("^I click search button and enter \"([^\"]*)\" in the input field and click the first result$", (String keyword) -> {
             homePage = initElements(driver, HomePage.class);
             homePage.searchKeywordAndEnterPost(keyword);
         });
@@ -30,11 +30,11 @@ public class BaseSteps implements En {
             assertContainsIngoreCase(postPage.getArticleTitle(), keyword);
         });
 
-        Then("^I refresh the current page$", () -> {
+        Then("^I refresh current page$", () -> {
             driver.navigate().refresh();
         });
 
-        Then("^I close the current window$", () -> {
+        Then("^I close current window$", () -> {
             driver.close();
         });
 
