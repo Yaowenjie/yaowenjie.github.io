@@ -43,7 +43,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div[6]/div/nav/a")
     private WebElement OlderPostButton;
 
-    
+
     public void searchKeywordAndEnterPost(String wantedStr){
         searchButton.click();
         searchInput.sendKeys(wantedStr);
