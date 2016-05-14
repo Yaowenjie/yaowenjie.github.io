@@ -105,5 +105,5 @@ include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
 
 gems: ['jekyll-paginate', 'jekyll-multiple-languages']
-languages:          ['en', 'cn']
-language_default:   'en'
+languages: ['en', 'cn']
+language_default: 'cn'
