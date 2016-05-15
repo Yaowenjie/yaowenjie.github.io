@@ -71,7 +71,7 @@ links:
 
 features:
     afs_tracker:    true
-    opentracker:    true
+    opentracker:    false
     antimated_bg:   false
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
