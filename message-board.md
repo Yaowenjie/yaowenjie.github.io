@@ -7,6 +7,12 @@ tags: [Message]
 imagefeature: wj/27.jpg
 comments: true
 ---
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/walk.css" />
+<div id="walk-container">
+  <div id="walk"></div>
+</div>
+
+
 > 那什么，没事，没事说两句：
 
 <div class="ds-thread" data-thread-key="{{ page.title }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
