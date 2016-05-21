@@ -2,7 +2,7 @@
 layout: "post"
 title: "Ansible Workshop 详细指南"
 date: "2016-05-19 10:55"
-published: true
+published: false
 ---
 
 公司内部准备的一个Workshop内容，请看详细文档：[Ansible Workshop 详细指南](https://yaowenjie.gitbooks.io/ansible-workshop/content/index.html) 。
