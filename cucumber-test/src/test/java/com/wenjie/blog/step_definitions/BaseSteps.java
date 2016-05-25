@@ -51,28 +51,36 @@ public class BaseSteps implements En {
             String currBg = homePage.getBackgroundImageFor(homePage.getHeader());
             assertNotEquals(prevBg, currBg);
         });
+
         Then("^I can see some tags$", () -> {
             assertNotNull(postPage.getFirstTag());
         });
+
         And("^I can see share block with title containing \"([^\"]*)\" and \"([^\"]*)\"$", (String arg0, String arg1) -> {
             assertContainsIngoreCase(postPage.getShareTitle(), arg0);
             assertContainsIngoreCase(postPage.getShareTitle(), arg1);
         });
+
         Then("^I click the wechat button$", () -> {
             postPage.getShareToWechatButton().click();
         });
+
         Then("^I see the QR code image$", () -> {
             assertNotNull(postPage.getWechatQRCode());
         });
+
         Then("^I can see the avatar image below share block$", () -> {
             assertNotNull(postPage.getAvatarImg());
         });
+
         And("^I can see the textArea$", () -> {
             assertNotNull(postPage.getMessageTextarea());
         });
+
         Then("^I enter \"([^\"]*)\" in this textArea$", (String arg0) -> {
             postPage.getMessageTextarea().sendKeys(arg0);
         });
+
         And("^I click sticker button to add a smile sticker$", () -> {
             postPage.getMessageStickerButton().click();
             postPage.getSmileSticker().click();

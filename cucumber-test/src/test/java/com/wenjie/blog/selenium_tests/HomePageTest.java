@@ -13,10 +13,12 @@ public class HomePageTest{
     FirefoxDriver driver = new FirefoxDriver();
     HomePage homePage = initElements(driver, HomePage.class);
     PostPage postPage = initElements(driver, PostPage.class);
+    String blogUrl = "http://localhost:4000";
+
 
     @Test
     public void shouldClickSearchButtonAndGoToAnArticle() {
-        driver.get("http://localhost:4000");
+        driver.get(blogUrl);
 
         homePage.searchKeywordAndEnterPost("Powershell");
 
@@ -26,7 +28,7 @@ public class HomePageTest{
 
     @Test
     public void shouldHeaderAndFooterHasSameBackgroundImage() {
-        driver.get("http://localhost:4000");
+        driver.get(blogUrl);
 
         String headerImageName = homePage.getBackgroundImageFor(homePage.getHeader());
         String footerImageName = homePage.getBackgroundImageFor(homePage.getFooter());
