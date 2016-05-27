@@ -11,9 +11,9 @@ imagefeature: wj/99.jpg
 
 > Developer ・ 开发猿
 >
-> Consultant ・ 咨询师
+> Consultant ・ 咨询狮
 >
-> Engineer ・ 工程师
+> Engineer ・ 工程狮
 >
 > ThoughtWorker ・ 骚窝客
 
