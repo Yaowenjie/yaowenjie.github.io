@@ -2,10 +2,21 @@
 layout: "post"
 title: "Ansible Workshop 详细指南"
 date: "2016-05-19 10:55"
-published: false
+published: true
+category: DevOps
+tags: [Ansible, workshop, 指南, gitbook]
+imagefeature: wj/20.jpg
 ---
 
-公司内部准备的一个Workshop内容，请看详细文档：[Ansible Workshop 详细指南](https://yaowenjie.gitbooks.io/ansible-workshop/content/index.html) 。
+近期在公司内部准备了一个关于Ansible的Workshop，其中包含如下内容：
+
+  - 自动化配置管理的背景及现有工具
+  - Ansible简介
+  - 编写一个简单的Ansible demo（使用apache搭建一个静态页面）
+  - 实例及总结
+
+### 详情请戳gitbook文档：[Ansible Workshop 详细指南](https://yaowenjie.gitbooks.io/ansible-workshop/content/index.html)。
+
 
 <!-- 备用： http://www.jianshu.com/p/df42e636f95e
       https://github.com/ksky521/nodePPT
