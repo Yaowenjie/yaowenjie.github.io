@@ -66,6 +66,8 @@ links:
     url: /tags
   - title: <i class="icon-user"></i> 关于作者
     url: /about-author
+  - title: <i class="icon-heart"></i> 个人收藏
+    url: /favourite
   - title: <i class="icon-comment"></i> 留言板
     url: /message-board
 
