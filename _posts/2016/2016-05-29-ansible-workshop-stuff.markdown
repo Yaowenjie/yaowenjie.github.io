@@ -3,6 +3,7 @@ layout: "post"
 title: "Ansible Workshop 详细指南"
 date: "2016-05-29 10:55"
 published: true
+comments: true
 category: DevOps
 tags: [Ansible, Workshop, 指南, gitbook]
 imagefeature: wj/2.jpg
