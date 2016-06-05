@@ -51,7 +51,7 @@ imagefeature: wj/16.jpg
 - - -
 &emsp;&emsp;在实际解决过程中，在[PowerShell.org](PowerShell.org)发现了一本不错的书---The DSC Book，里面对DSC的操作及原理做出了很多解释，也指出了很多问题的解决方案，甚喜。于是我借助空余时间把它翻译成了中文，并于原作者**Don Jones**联系，放在[Penflip](www.penflip.com)上分享，里面较为全面的介绍了DSC，感兴趣者可以参考本书，遇到问题的童鞋也可能在书内寻找到答案，甚至可以加入这本的维护团队中去（本书及原著都可能还会有些有误或者不准确之处，我们把他当做开源项目来做）。
 
-> &emsp;&emsp;- [The DSC Book （中文版）](https://www.penflip.com/powershellorg/the-dsc-book-chinese)
+> &emsp;&emsp;- [The DSC Book （中文版）](https://yaowenjie.gitbooks.io/the-dsc-book/content/) 原Penflip链接已失效。
 >
 > &emsp;&emsp;- [The DSC Book](https://www.penflip.com/powershellorg/the-dsc-book)
 
