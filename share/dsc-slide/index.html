@@ -1,0 +1,584 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Automatic Configuration</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Windows下<br/>自动化配置管理实践</h2> <br/>
+					<h4>姚文杰</h4>
+					<h4>wjyao@thoughtworks.com</h4>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<p data-markdown>
+						- ___What___ - 什么是“自动化配置管理”
+						- ___Why___  - 为什么要使用“自动化配置管理”
+						- ___How___  - Windows下某种实践
+						- ___When___ - 实践应用场景
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>什么是<br/>“配置管理”</h2>
+					</section>
+					<section>
+						<p>
+							<img width="161" height="175" data-src="img/3.png" alt="some image"> <br>
+							在软件开发、测试、产品等环境中，<br/>
+ 							针对诸如应用程序、文件、服务、进程、环境变量等等环境构成因素的<span class="fragment highlight-blue">搭建或配置</span>过程的<span class="fragment highlight-red">管理</span>。
+						</p>
+					</section>
+					<section>
+						<h3>举个栗子</h3>
+						<ul>
+							<li>安装IDE、数据库</li>
+							<li>管理文件</li>
+							<li>管理服务</li>
+							<li>部署网站</li>
+						</ul>
+					</section>
+					<section>
+						<h2>什么是<br/>“自动化配置管理”</h2>
+					</section>
+					<section>
+						<h3>
+							将上述那些过程<b>自动化</b>
+						</h3>
+						<p class="fragment">
+							<img width="141" height="200" data-src="img/4.png" alt="some image"> <br/>
+							一般借助特定的工具/技术，利用描述性/解释性的脚本来编写配置信息，并执行脚本实现管理/部署，<br/>
+							也就是“基础设施即代码”的一种实现。
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>为什么要使用<br/>“自动化配置管理”</h2>
+					</section>
+					<section>
+						<h3>传统的配置管理方式</h3> <br/>
+						<table class="fragment">
+							<tr>
+								<td>
+									<img width="150" height="150" data-src="img/5.png" alt="some image">
+								</td>
+								<td>
+									<img width="150" height="150" data-src="img/6.png" alt="some image">
+								</td>
+								<td>
+									<img width="150" height="150" data-src="img/7.png" alt="some image">
+								</td>
+							</tr>
+							<tr>
+								<td>人为指导</td>
+								<td>参考文档</td>
+								<td>脚本代码</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<img width="150" height="150" data-src="img/8.png" alt="some image">
+						<h3>管理几十/百台机器集群？</h3>
+						<h4>它们的问题就暴露了：</h4>
+						<p class="fragment" data-markdown>
+							- 难以复用和维护
+							- 极易出错，差异性难以避免
+							- 对人的依赖性大
+							- 逐步复杂，可读性有限
+							- 不可跨平台
+							- 对管理、运行人员要求高
+						</p>
+					</section>
+					<section>
+						<h3>自动化配置管理工具/技术的好处</h3>
+						<p data-markdown>
+							- 集群操作
+								- 易于管理
+								- 提高了效率
+								- 保证集群环境的一致性
+							- 解释性脚本
+								- 更高的可读性
+								- 可重用性高
+								- 可审查性高
+							- 第三方工具
+								- 支持跨平台
+						</p>
+					</section>
+					<section data-markdown>
+						### 常用的自动化配置管理工具
+						|工具名称|DSL|特点|
+						| -- | -- | -- |
+						|[Chef](https://www.chef.io/)| Ruby-based DSL|Ruby，成熟度高，学习曲线较陡。 |
+						|[Puppet](https://puppet.com/)|Ruby-based DSL| Ruby，成熟度高，学习曲线较陡。|
+						|[Ansible](https://www.ansible.com/)|YAML|Python，可维护性较高（架构简单），Windows平台支持比较弱。|
+						|[SaltStack](https://saltstack.com/)| SLS格式文件（支持YAML）| Python，简单快速灵活，对Windows平台支持有限，大规模多功能支持欠缺。|
+						||||
+					</section>
+				</section>
+
+				<section>
+					<h2>Windows下<br/>自动化配置管理实践</h2>
+				</section>
+
+				<section data-background="img/1.jpg">
+					<h1 style="color:black;">Windows VS Linux/Unix</h2>
+				</section>
+
+				<section>
+					<h2>项目实际需求</h2>
+					<ul>
+						<li>基于.NET开发</li>
+						<li>开发、测试、部署都是基于Windows Server机器</li>
+						<li>现存大量的Bat/Powershell脚本</li>
+						<li>几十台开发、测试机器</li>
+						<li>十几个云上产品环境</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h3>需要自动化部署能够实现管理：</h3>
+						<ul>
+							<li>应用（App）</li>
+							<li>功能（Feature）</li>
+							<li>服务（Service）及进程（Process）</li>
+							<li>文件（File）</li>
+							<li>用户（User）及用户组（Group）</li>
+							<li>注册表（Registry）</li>
+							<li>环境变量（Environment Variable）</li>
+							<li>更多(Others)？</li>
+						</ul>
+					</section>
+					<section>
+						<h3>具体一下，就是：</h3>
+						<ul>
+							<li>安装一些应用</li>
+							<li>管理一些文件</li>
+							<li>管理一些文件</li>
+							<li>启动一些服务</li>
+							<li>配置一些工具</li>
+							<li>部署一些Website</li>
+							<li>其他？</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>安装应用</h2>
+						<h4>包管理工具</h4>
+						<ul>
+							<li>yum</li>
+							<li>apt-get</li>
+						</ul>
+						<hr/>
+						<div class="fragment">
+								<h3>Windows下包管理工具</h3>
+								<img  height="100" data-src="img/11.png" alt="some image"><br/>
+								<img  height="100" data-src="img/10.png" alt="some image">
+						</div>
+					</section>
+					<section data-markdown>
+						## 两者区别
+						- [Nuget](nuget.org) - 关注开发平台工具
+						- [Chocolatey](chocolatey.org) - 对Nuget的一层封装，关注用户可用软件
+					</section>
+					<section>
+						<h2>具体使用</h2>
+							<pre><code class="hljs" data-trim contenteditable>
+chocolatey Install chrome－version *.*.*
+
+choco Install chrome
+
+cinst chrome
+
+cinst chrome -source http://192.168.56.11/nuget
+							</code></pre>
+					</section>
+					<section>
+						<h2>Chocolatey</h2>
+						<h4>优点:</h4>
+						<ul>
+							<li>实现了Windows下绝大多数软件包的安装和管理</li>
+							<li>可以自己创建包源，搭建自己的软件包Repo</li>
+							<li>命令行较为友好</li>
+							<li>扩展性高，可以自己制作分享软件包</li>
+						</ul>
+						<blockquote class="fragment">
+							<h4>缺点:</h4>
+							<ul>
+								<li>官方安装库未加验证</li>
+								<li>国内访问缓慢</li>
+								<li>软件包制作标准并不统一</li>
+							</ul>
+						</blockquote>
+					</section>
+				</section>
+
+				<section>
+					<h3>回到刚刚的需求清单：</h3>
+					<p data-markdown>
+						- ~~安装一些应用~~
+						- 管理一些文件
+						- 启动一些服务
+						- 配置一些工具
+						- 部署一些Website
+						- 其他？
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>自动化配置管理工具</h2>
+						<div class="fragment">
+							<img  height="220" data-src="img/9.jpg" alt="some image">
+							<h3>Desired State Configuration</h3>
+							<h3>期望状态配置</h3>
+						</div>
+					</section>
+					<section>
+						<h3>几点原因 - DSC的特点</h3>
+						<ul>
+							<li>微软原生 - 依托PowerShell</li>
+							<li>不依赖额外的工具</li>
+							<li>声明式的配置脚本</li>
+							<li>可扩展性高</li>
+							<li>支持云平台及虚拟化技术</li>
+							<li>支持多机器集群配置,部署</li>
+						</ul>
+					</section>
+					<section>
+						<h3>几点限制</h3>
+						<p data-markdown>
+							- 依赖PowerShell4.0(WMF4.0)
+								- 预装在Windows8.1及Windows Server 2012 R2的机器上
+								- Windows 7, Windows Server 2008 R2, Windows Server 2012升级Powershell到4.0后也可以使用
+							- 对权限要求相对较高
+								- 用户操作权限
+								- 网络访问权限等
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>DSC的实现方式</h2>
+					<img  height="500" data-src="img/12.png" alt="some image">
+				</section>
+
+				<section>
+					<h2>编写配置脚本</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+Configuration MyConfig
+{
+    Node "HostName_Or_IpAdress"
+    {
+        WindowsFeature IIS
+        {
+            Ensure = "Present"
+            Name = "Web-Server"
+        }
+
+        File MyFileExample
+        {
+           Ensure = "Present"
+           Type = "Directory“             # Default is “File”
+           Recurse = $true
+           SourcePath = $WebsiteFilePath
+           DestinationPath = "C:\inetpub\wwwroot"
+           DependsOn = "[WindowsFeature]MyRoleExample"
+        }
+    }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>执行配置脚本</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+	PS C: > MyConfig
+	#生成一个目录，目录下MyConfig.mof
+
+PS C: > Start-DscConfiguration -Wait -Verbose -Path .\MyConfig
+	#执行一个DSC配置
+					</code></pre>
+				</section>
+
+				<section>
+					<h3>回到刚刚的需求清单：</h3>
+					<p  class="fragment" data-markdown>
+						- ~~安装一些应用~~
+						- ~~管理一些文件~~
+						- ~~启动一些服务~~
+						- 配置一些工具
+						- 部署一些Website
+						- 其他？
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>什么才是DSC实现配置管理的核心？</h2>
+						<h1 class="fragment">Resource</h1>
+					</section>
+					<section>
+						<h4>Windows自带的Resource</h4>
+						<p data-markdown>
+							|Resource|描     述|
+							|--|--|
+							|Archive|	在目标机器上解压zip文件|
+							|Environment|	管理目标机器的环境变量|
+							|File|管理目标机器的文件和目录|
+							|Group|	管理目标机器上的本地用户组|
+							|Log|日志配置信息|
+							|Package| 在目标机器上安装和管理应用程序包 |
+						</p>
+					</section>
+					<section>
+						<h4>Windows自带的Resource</h4>
+						<p data-markdown>
+							|Resource|描     述|
+							|--|--|
+							|WindowsProcess|管理目标机器上进程|
+							|Registry|管理目标机器上注册表key value|
+							|WindowsFeature|在目标机器上添加功能或者角色|
+							|Script|在目标机器上运行PowerShell脚本|
+							|Service|管理目标机器上的服务|
+							|User|管理目标机器上本地用户账号|
+						</p>
+					</section>
+					<section>
+						<h4>扩展 - 微软实验性的Resource</h4>
+						<img  height="600" data-src="img/13.png" alt="some image">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>利用DSC自动化配置工具 <br/>
+							以<span style="color:pink">SQL Server</span>为例</h2>
+							<img  height="300" data-src="img/14.png" alt="some image">
+					</section>
+					<section>
+						<h2>首先，手动安装SQL Server需要多少步？</h2>
+						<img  height="500" data-src="img/15.jpg" alt="some image" class="fragment">
+					</section>
+					<section>
+						<h2>单纯PowerShell脚本的实现</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+if(!(Test-Path 'C:\SQLServer2008.zip')) {
+  (New-Object Net.WebClient).DownloadFile(‘http://10.18.8.100/ sql_server.zip','C:\SQLServer2008.zip');
+}
+if(!(Test-Path 'C:\sql_server'))
+{
+  & 'C:\Program Files\7-Zip\7z.exe' x C:\SQLServer2008.zip -oC:\
+  C:\sql_server\setup.exe /ConfigurationFile=C:\ConfigurationFile.ini
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>DSC脚本的实现</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+xSQLServerSetup MySQLServer
+{
+   SourcePath = ****
+   SourceFolder = ****
+   SetupCredential = ****
+   Features = ****
+   InstanceName = ****
+   InstanceID = ****
+   PID = ****
+   UpdateEnabled = ****
+   UpdateSource = ****
+   … …
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h3>再回到刚刚的需求清单：</h3>
+					<p  class="fragment" data-markdown>
+						- ~~安装一些应用~~
+						- ~~管理一些文件~~
+						- ~~启动一些服务~~
+						- ~~配置一些工具~~
+						- 部署一些Website
+						- 其他？
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>利用DSC自动化部署网站 <br/>
+							以<span style="color:pink">IIS</span>为例</h2>
+							<img  height="250" data-src="img/17.jpg" alt="some image">
+					</section>
+					<section>
+						<h3>同样，手动利用IIS部署需要多少步？</h3>
+						<img  height="500" data-src="img/16.jpg" alt="some image" class="fragment">
+					</section>
+					<section>
+						<h2>DSC脚本的实现</h2>
+						<pre><code class="hljs" data-trim contenteditable>
+xWebSite MyWebsite {
+      Name = "MyWeb"
+      ApplicationPool = "MyAppPool"
+      Ensure = "Present"
+      PhysicalPath = "C:\TestWebSite"
+      DirectoryBrowsing = "Enable"
+      BindingInfo = @(
+                  @(MSFT_xWebBindingInformation
+                      {
+                          Protocol              = "HTTPS"
+                          Port                  = 2001
+                      }
+                  )
+                  )
+      State = "Started"
+      DependsOn = @("[WindowsFeature]IIS", "[cAppPool]MyAppPool")
+  }
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h2>Demo演示</h2>
+					<ul>
+						<li>安装/启动 IIS及相关组件</li>
+						<li>创建静态页面文件</li>
+						<li>部署应用池</li>
+						<li>部署该静态页面，发布网站</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h3>再回到刚刚的需求清单：</h3>
+						<p  class="fragment" data-markdown>
+							- ~~安装一些应用~~
+							- ~~管理一些文件~~
+							- ~~启动一些服务~~
+							- ~~配置一些工具~~
+							- ~~部署一些Website~~
+							- 其他？
+						</p>
+					</section>
+					<section>
+						<h1>集群部署!</h1>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>DSC执行架构</h2>
+						<img  height="600" data-src="img/18.png" alt="some image">
+					</section>
+					<section>
+						<h2>DSC的两种模式</h2>
+						<p data-markdown>
+							- Push模式
+								- 无实际服务器
+								- 部署前，Resource需要目标机器上
+								- 适合少量机器管理及本地调试
+							- Pull模式
+								- 需要Pull服务器
+								- Resource保存在服务器上，目标机器按需拉取
+								- 适合大量机器集群管理
+						</p>
+					</section>
+				</section>
+
+				<!-- <section>
+					<ul>
+						<li>简介易懂的解释型脚本</li>
+						<li>微软亲生的</li>
+						<li>执行简单</li>
+					</ul>
+				</section> -->
+				<section>
+					<h2 class="fragment current-visible">应用场景</h2>
+					<div class="fragment">
+						<h3>适合的场景</h3>
+						<p data-markdown>
+							- Windows服务器系统环境
+							- 环境配置复杂、易变
+						</p> <hr/>
+					</div>
+					<div class="fragment">
+						<h3>不适合的场景</h3>
+						<p data-markdown>
+							- 非Windows平台，或过老的Windows系统
+							- 太多的网络或者权限限制
+							- 环境配置简单，单纯
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Reference</h2>
+					<p data-markdown>
+						- 本次Session的PPT
+							- https://yaowenjie.github.io
+						- Demo样例
+							- https://github.com/Yaowenjie/PowerShell-DSC-Stuff.git
+						- 《The DSC Book》中文版
+							- https://yaowenjie.gitbooks.io/the-dsc-book/content/
+					</p>
+				</section>
+
+				<section>
+					<h1>Thank You</h1>
+					<h2>Q&A</h2>
+					<ul>
+						<li>姚文杰</li>
+						<li>yaowenjie.github.io</li>
+					</ul>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				transition: 'convex',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

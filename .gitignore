@@ -1,6 +1,7 @@
 _site
 .DS_Store
 */.DS_Store
+**/.DS_Store
 cucumber-test/build
 cucumber-test/.gradle
 cucumber-test/out
@@ -9,3 +10,9 @@ cucumber-test/.idea
 */*.iml
 */*.ipr
 */*.iws
+
+*/*/node_modules
+*/*/images-spec
+*/*/test
+*/*/CONTRIBUTING.md
+*/*/demo.html
