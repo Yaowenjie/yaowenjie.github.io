@@ -1,6 +1,5 @@
 _site
 .DS_Store
-*/.DS_Store
 **/.DS_Store
 cucumber-test/build
 cucumber-test/.gradle
