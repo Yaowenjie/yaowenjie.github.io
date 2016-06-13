@@ -44,7 +44,7 @@ Feature: This is a simple test using Cucumber.
 ## 编写具体实现和测试
 &emsp;&emsp;但是写好了feature文件，它却并不能执行，所以我们还得依赖java代码来具体执行上述feature文件中的那些步骤。所以需要编写一个名为BaseSteps的类，用于表示上述行为的实现：
 
-```
+{% highlight java %}
 package com.wenjie;
 
 import cucumber.api.java8.En;
@@ -62,9 +62,9 @@ public class BaseSteps implements En {
     public BaseSteps() {
         blogPage = initElements(driver, BlogPage.class);
 
-        Given("^I enter my blog address \"([^\"]*)\" and go to Home page$", (String url) -> {
-            driver.get(url);
-        });
+        Given("^I enter my blog address \"([^\"]*)\" and go to Home page$",
+            (String url) -> { driver.get(url);}
+        );
 
         When("^I click the search button$", () -> {
             blogPage.clickSearchButton();
@@ -78,7 +78,8 @@ public class BaseSteps implements En {
             blogPage.clickFirstResultOfSearch();
         });
 
-        Then("^I go to the article page with title containing \"([^\"]*)\"$", (String keyword) -> {
+        Then("^I go to the article page with title containing \"([^\"]*)\"$",
+          (String keyword) -> {
             assertContainsIngoreCase(blogPage.getArticleTitle(), keyword);
         });
     }
@@ -87,7 +88,7 @@ public class BaseSteps implements En {
         assertThat(set.toLowerCase(), containsString(subset.toLowerCase()));
     }
 }
-```
+{% endhighlight %}
 
 &emsp;&emsp;可以看出来，我们这里采用了Java8中Lambda表达式的写法，并通过正则注入参数。
 
@@ -97,7 +98,7 @@ public class BaseSteps implements En {
 
 &emsp;&emsp;至此，我们这个简单的Cucumber Test的实现部分就完成了，但是要执行它们，通常我们需要写一个对应的测试类，比如说BaseFlowTest这个类：
 
-```
+{% highlight java %}
 package com.wenjie;
 
 import cucumber.api.CucumberOptions;
@@ -111,7 +112,10 @@ import org.junit.runner.RunWith;
 )
 public class BaseFlowTest {
 }
-```
+{% endhighlight %}
+
 
 &emsp;&emsp;它指定了feature文件路径和对应的feature文件的tag，也就是说执行这个测试，就会执行对应路径下tag为base_flow的feature文件内容，而这个feature文件则依赖BaseSteps这个类来具体实现它指定的步骤。<br/>
 &emsp;&emsp;你可以通过IDE或者使用gradle的task来执行这个测试(BaseFlowTest),你会看到和[上一篇博客]({{site.url}}/编程相关/cucumber-test)一样的结果。不同的是，你维护的一份更加可读的文件，这对于存在大量 __可复用__ 操作的测试来说十分便利、有益。
+
+<!-- https://www.ibm.com/developerworks/cn/java/j-lo-cucumber01/ -->
