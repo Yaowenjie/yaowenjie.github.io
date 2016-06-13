@@ -7,6 +7,7 @@ published: true
 comments: true
 category: 编程相关
 tags: [Cucumber, Test, SpringBoot, Selenium]
+imagefeature: wj/15.jpg
 ---
 ### 承接上文
 &emsp;&emsp;[前一篇博客]({{site.url}}/编程相关/cucumber-test)介绍了如何写一个简单的Selenium Test，接下来你将会了解如何将其转化更符合BDD（行为驱动开发）思想的Cucumber专有语言。

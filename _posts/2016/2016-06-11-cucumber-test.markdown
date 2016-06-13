@@ -7,6 +7,7 @@ published: true
 comments: true
 category: 编程相关
 tags: [Cucumber, Test, SpringBoot, Selenium]
+imagefeature: wj/20.jpg
 ---
 ### 背景(废话不读系列)
 &emsp;&emsp;前段时间闲来无事，试着给自己的[博客]({{site.url}})从头写了一些简单的Cucumber Test。现隔了数周，还是决定把整个过程整理成一份博客文章，一是分享给大家、参考指正，二是便于自己后期回阅。
