@@ -118,4 +118,8 @@ public class BaseFlowTest {
 &emsp;&emsp;它指定了feature文件路径和对应的feature文件的tag，也就是说执行这个测试，就会执行对应路径下tag为base_flow的feature文件内容，而这个feature文件则依赖BaseSteps这个类来具体实现它指定的步骤。<br/>
 &emsp;&emsp;你可以通过IDE或者使用gradle的task来执行这个测试(BaseFlowTest),你会看到和[上一篇博客]({{site.url}}/编程相关/cucumber-test)一样的结果。不同的是，你维护的一份更加可读的文件，这对于存在大量 __可复用__ 操作的测试来说十分便利、有益。
 
-<!-- https://www.ibm.com/developerworks/cn/java/j-lo-cucumber01/ -->
+## 总结
+&emsp;&emsp;本文只是入门级别的Cucumber编写指导，很多用法并没有过多涉及。具体代码可以参考：
+
+- 本文代码：https://github.com/Yaowenjie/Cucumber-Demo
+- 博客实际测试： https://github.com/Yaowenjie/yaowenjie.github.io/tree/master/cucumber-test
