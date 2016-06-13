@@ -135,4 +135,4 @@ public class CucumberApplicationTests {
 ```
 
 &emsp;&emsp;你将看到这个测试会调用firefox浏览器（要换成Chrome或者其他浏览器怎么办？），并自动地执行了刚刚的那些操作，是不是很炫酷？至此，这个简单的Selenium Test就完成了，你也可以模仿这样的写法，去自动化的操作其他的网页。<br/>
-&emsp;&emsp;接下来，将会讲述如何基于此写一个简单的Cucumber Test。
+&emsp;&emsp;接下来，将会讲述如何基于此写一个简单的Cucumber Test，请戳[本文下半部分]({{site.url}}/编程相关/cucumber-test-part-2)。
