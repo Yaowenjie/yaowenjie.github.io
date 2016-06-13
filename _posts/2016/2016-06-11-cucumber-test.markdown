@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "从头写一个Cucumber测试(一) Selenium Test"
-description: “Writing Cucumber Test”
+description: “Writing Selenium Test”
 date: "2016-06-11 22:36"
 published: true
 comments: true
