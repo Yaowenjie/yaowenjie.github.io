@@ -207,22 +207,22 @@ cinst git -source http://192.168.56.11/nuget
 					<pre><code class="hljs" data-trim contenteditable>
 Configuration MyConfig
 {
-    Node "HostName_Or_IpAdress"
+    Node "HostName_Or_IpAddress"
     {
+        File MyFileExample
+        {
+            Ensure = "Present"
+            Type = "Directory“             # Default is “File”
+            Recurse = $true
+            SourcePath = $WebsiteFilePath
+            DestinationPath = "C:\inetpub\wwwroot"
+            DependsOn = "[WindowsFeature]MyRoleExample"
+        }
+
         WindowsFeature IIS
         {
             Ensure = "Present"
             Name = "Web-Server"
-        }
-
-        File MyFileExample
-        {
-           Ensure = "Present"
-           Type = "Directory“             # Default is “File”
-           Recurse = $true
-           SourcePath = $WebsiteFilePath
-           DestinationPath = "C:\inetpub\wwwroot"
-           DependsOn = "[WindowsFeature]MyRoleExample"
         }
     }
 }
@@ -273,12 +273,19 @@ PS C: > Start-DscConfiguration -Wait -Verbose -Path .\MyConfig
 					</section>
 					<section>
 						<h4>扩展 - 微软实验性的Resource</h4>
-						<img  height="600" data-src="img/13.png" alt="some image">
+						<div data-markdown>
+							|部分xResource|
+							|--|--|--|
+							|xFileShare|xIPAddress|xSqlServer|
+							|xAzure|xActiveDirectory|xDatabase|
+							|xPhp|xSmbshare|xNetworking|
+							|xDisk|xDnsServer|xWordPress|
+						</div>
 					</section>
 				</section>
 
 				<section>
-					<h3>再我们要实现的目标：</h3>
+					<h3>我们要实现的目标：</h3>
 					<ul>
 						<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
 						<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
@@ -287,7 +294,7 @@ PS C: > Start-DscConfiguration -Wait -Verbose -Path .\MyConfig
 						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
 					</ul>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>利用DSC自动化配置工具 <br/>
@@ -394,16 +401,65 @@ xWebSite MyWebsite {
 							<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
 							<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
 							<li><s>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></s></li>
-							<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
+							<li><s>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></s></li>
 						</ul>
 						<div class="fragment">
 							<hr/>
 							<h3>基本结束了？</h3>
+							<h4 class="fragment">能不能把安装应用这一步也用DSC管理？</h4>
 						</div>
 					</section>
 					<section>
-						<h1>集群部署!</h1>
+						<h3>当然可以</h3>
+						<ol>
+							<li>使用Package这个Resource</li>
+							<li style="color:#39CCCC;" class="fragment">编写一个Resouce，名为Choco</li>
+						</ol>
 					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>自定义Resource</h2>
+					</section>
+					<section>
+						<h3>Resource实际上是一个PowerShell模块</h3>
+						<ul>
+							<li><span style="color:#7FDBFF;">choco.psd1</span> - 基本数据（作者/版本等等）</li>
+							<li><span style="color:#7FDBFF;">choco.schema.mof</span> - 基本概要（属性及属性类型）</li>
+							<li><span style="color:#7FDBFF;"><b>choco.psm1</b></span> - 具体的执行脚本模块文件</li>
+						</ul>
+					</section>
+					<section>
+						<h3>choco.psm1的三个函数</h3>
+						<ul>
+							<li><span style="color:#7FDBFF;">Get-TargetResource</span> - 返回当前状态</li>
+							<li><span style="color:#7FDBFF;"><b>Set-TargetResource</b></span> - 设置系统状态</li>
+							<li><span style="color:#7FDBFF;">Test-TargetResource</span> - 比较当前状态与理想状态</li>
+						</ul>
+					</section>
+					<section>
+						<h3>安装git - DSC脚本的写法</h3>
+						<pre><code class="hljs" data-trim contenteditable>
+Configuration MyConfig
+{
+    Node "HostName_Or_IpAddress"
+    {
+      	Choco Git
+        {
+            Name = "git"
+            Ensure = "Present"
+            Version = ***
+            Source = ***
+        }
+    }
+}
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h1>集群部署的方案</h1>
 				</section>
 
 				<section>
@@ -438,6 +494,9 @@ xWebSite MyWebsite {
 						<li>支持多机器集群配置,部署 - <span style="color:#7FDBFF;">Pull模式适合大型集群管理</span></li>
 						<li>支持云平台及虚拟化技术 - <span style="color:#7FDBFF;">支持Azure等</span></li>
 					</ul>
+					<p data-markdown class="fragment">
+						> WMF 5.0， DSC功能增强，添加Resource库，愈发完善
+					</p>
 				</section>
 
 				<section>
@@ -462,12 +521,12 @@ xWebSite MyWebsite {
 				<section>
 					<h2>Reference</h2>
 					<p data-markdown>
-						- 本次Session的PPT
-							- https://yaowenjie.github.io
-						- Demo样例
-							- https://github.com/Yaowenjie/PowerShell-DSC-Stuff.git
 						- 我对《The DSC Book》的中文翻译
 							- https://yaowenjie.gitbooks.io/the-dsc-book/content/
+						- 本次Session的PPT
+							- https://yaowenjie.github.io/share/dsc-slide/
+						- Demo样例
+							- https://github.com/Yaowenjie/PowerShell-DSC-Stuff.git
 					</p>
 				</section>
 
