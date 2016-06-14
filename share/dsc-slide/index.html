@@ -31,117 +31,16 @@
 				</section>
 
 				<section>
-					<h2>Agenda</h2>
-					<p data-markdown>
-						- ___What___ - 什么是“自动化配置管理”
-						- ___Why___  - 为什么要使用“自动化配置管理”
-						- ___How___  - Windows下某种实践
-						- ___When___ - 实践应用场景
-					</p>
-				</section>
-
-				<section>
-					<section>
-						<h2>什么是<br/>“配置管理”</h2>
-					</section>
-					<section>
-						<p>
-							<img width="161" height="175" data-src="img/3.png" alt="some image"> <br>
-							在软件开发、测试、产品等环境中，<br/>
- 							针对诸如应用程序、文件、服务、进程、环境变量等等环境构成因素的<span class="fragment highlight-blue">搭建或配置</span>过程的<span class="fragment highlight-red">管理</span>。
-						</p>
-					</section>
-					<section>
-						<h3>举个栗子</h3>
-						<ul>
-							<li>安装IDE、数据库</li>
-							<li>管理文件</li>
-							<li>管理服务</li>
-							<li>部署网站</li>
-						</ul>
-					</section>
-					<section>
-						<h2>什么是<br/>“自动化配置管理”</h2>
-					</section>
-					<section>
-						<h3>
-							将上述那些过程<b>自动化</b>
-						</h3>
-						<p class="fragment">
-							<img width="141" height="200" data-src="img/4.png" alt="some image"> <br/>
-							一般借助特定的工具/技术，利用描述性/解释性的脚本来编写配置信息，并执行脚本实现管理/部署，<br/>
-							也就是“基础设施即代码”的一种实现。
-						</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>为什么要使用<br/>“自动化配置管理”</h2>
-					</section>
-					<section>
-						<h3>传统的配置管理方式</h3> <br/>
-						<table class="fragment">
-							<tr>
-								<td>
-									<img width="150" height="150" data-src="img/5.png" alt="some image">
-								</td>
-								<td>
-									<img width="150" height="150" data-src="img/6.png" alt="some image">
-								</td>
-								<td>
-									<img width="150" height="150" data-src="img/7.png" alt="some image">
-								</td>
-							</tr>
-							<tr>
-								<td>人为指导</td>
-								<td>参考文档</td>
-								<td>脚本代码</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<img width="150" height="150" data-src="img/8.png" alt="some image">
-						<h3>管理几十/百台机器集群？</h3>
-						<h4>它们的问题就暴露了：</h4>
-						<p class="fragment" data-markdown>
-							- 难以复用和维护
-							- 极易出错，差异性难以避免
-							- 对人的依赖性大
-							- 逐步复杂，可读性有限
-							- 不可跨平台
-							- 对管理、运行人员要求高
-						</p>
-					</section>
-					<section>
-						<h3>自动化配置管理工具/技术的好处</h3>
-						<p data-markdown>
-							- 集群操作
-								- 易于管理
-								- 提高了效率
-								- 保证集群环境的一致性
-							- 解释性脚本
-								- 更高的可读性
-								- 可重用性高
-								- 可审查性高
-							- 第三方工具
-								- 支持跨平台
-						</p>
-					</section>
-					<section data-markdown>
-						### 常用的自动化配置管理工具
-						|工具名称|DSL|特点|
-						| -- | -- | -- |
-						|[Chef](https://www.chef.io/)| Ruby-based DSL|Ruby，成熟度高，学习曲线较陡。 |
-						|[Puppet](https://puppet.com/)|Ruby-based DSL| Ruby，成熟度高，学习曲线较陡。|
-						|[Ansible](https://www.ansible.com/)|YAML|Python，可维护性较高（架构简单），Windows平台支持比较弱。|
-						|[SaltStack](https://saltstack.com/)| SLS格式文件（支持YAML）| Python，简单快速灵活，对Windows平台支持有限，大规模多功能支持欠缺。|
-						||||
-					</section>
-				</section>
-
-				<section>
-					<h2>Windows下<br/>自动化配置管理实践</h2>
+					<h3>日常环境的配置管理包括哪些</h3>
+					<h4>---- 举些栗子</h4>
+					<ul>
+						<li>安装IDE、数据库</li>
+						<li>管理文件</li>
+						<li>管理服务</li>
+						<li>部署网站等等</li>
+					</ul>
+					<hr/>
+					<h3 class="fragment">自动化 ≈ 脚本化</h3>
 				</section>
 
 				<section data-background="img/1.jpg">
@@ -176,13 +75,11 @@
 					<section>
 						<h3>具体一下，就是：</h3>
 						<ul>
-							<li>安装一些应用</li>
-							<li>管理一些文件</li>
-							<li>管理一些文件</li>
-							<li>启动一些服务</li>
-							<li>配置一些工具</li>
-							<li>部署一些Website</li>
-							<li>其他？</li>
+							<li>安装一些应用 - <span style="color:#7FDBFF;">Git</span></li>
+							<li>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></li>
+							<li>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></li>
+							<li>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></li>
+							<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
 						</ul>
 					</section>
 				</section>
@@ -210,13 +107,13 @@
 					<section>
 						<h2>具体使用</h2>
 							<pre><code class="hljs" data-trim contenteditable>
-chocolatey Install chrome－version *.*.*
+chocolatey install git －version *.*.*
 
-choco Install chrome
+choco install git
 
-cinst chrome
+cinst git
 
-cinst chrome -source http://192.168.56.11/nuget
+cinst git -source http://192.168.56.11/nuget
 							</code></pre>
 					</section>
 					<section>
@@ -240,35 +137,51 @@ cinst chrome -source http://192.168.56.11/nuget
 				</section>
 
 				<section>
-					<h3>回到刚刚的需求清单：</h3>
-					<p data-markdown>
-						- ~~安装一些应用~~
-						- 管理一些文件
-						- 启动一些服务
-						- 配置一些工具
-						- 部署一些Website
-						- 其他？
-					</p>
+					<h3>我们要实现的目标：</h3>
+					<ul>
+						<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
+						<li>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></li>
+						<li>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></li>
+						<li>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></li>
+						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
+					</ul>
 				</section>
 
 				<section>
 					<section>
-						<h2>自动化配置管理工具</h2>
+						<h1>自动化配置管理工具</h1>
+					</section>
+					<section data-markdown>
+						### 常用的自动化配置管理工具
+						|工具名称|DSL|支持Windows|
+						| -- | -- | -- |
+						|[Chef](https://www.chef.io/)| Ruby-based DSL| 是 |
+						|[Puppet](https://puppet.com/)|Ruby-based DSL| 是 |
+						|[Ansible](https://www.ansible.com/)|YAML| 是 |
+						|[SaltStack](https://saltstack.com/)| SLS格式文件（支持YAML）| 是|
+						||||
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>微软原生 - 基于WMF4.0的</h2>
 						<div class="fragment">
 							<img  height="220" data-src="img/9.jpg" alt="some image">
-							<h3>Desired State Configuration</h3>
+							<h3>Desired State Configuration(DSC)</h3>
 							<h3>期望状态配置</h3>
 						</div>
 					</section>
 					<section>
 						<h3>几点原因 - DSC的特点</h3>
 						<ul>
-							<li>微软原生 - 依托PowerShell</li>
+							<li>微软原生</li>
 							<li>不依赖额外的工具</li>
+							<li>远程通信的方式多样、可靠</li>
 							<li>声明式的配置脚本</li>
 							<li>可扩展性高</li>
-							<li>支持云平台及虚拟化技术</li>
 							<li>支持多机器集群配置,部署</li>
+							<li>支持云平台及虚拟化技术</li>
 						</ul>
 					</section>
 					<section>
@@ -328,18 +241,6 @@ PS C: > Start-DscConfiguration -Wait -Verbose -Path .\MyConfig
 				</section>
 
 				<section>
-					<h3>回到刚刚的需求清单：</h3>
-					<p  class="fragment" data-markdown>
-						- ~~安装一些应用~~
-						- ~~管理一些文件~~
-						- ~~启动一些服务~~
-						- 配置一些工具
-						- 部署一些Website
-						- 其他？
-					</p>
-				</section>
-
-				<section>
 					<section>
 						<h2>什么才是DSC实现配置管理的核心？</h2>
 						<h1 class="fragment">Resource</h1>
@@ -376,6 +277,17 @@ PS C: > Start-DscConfiguration -Wait -Verbose -Path .\MyConfig
 					</section>
 				</section>
 
+				<section>
+					<h3>再我们要实现的目标：</h3>
+					<ul>
+						<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
+						<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
+						<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
+						<li>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></li>
+						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
+					</ul>
+				</section>
+				
 				<section>
 					<section>
 						<h2>利用DSC自动化配置工具 <br/>
@@ -420,15 +332,14 @@ xSQLServerSetup MySQLServer
 				</section>
 
 				<section>
-					<h3>再回到刚刚的需求清单：</h3>
-					<p  class="fragment" data-markdown>
-						- ~~安装一些应用~~
-						- ~~管理一些文件~~
-						- ~~启动一些服务~~
-						- ~~配置一些工具~~
-						- 部署一些Website
-						- 其他？
-					</p>
+					<h3>再我们要实现的目标：</h3>
+					<ul>
+						<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
+						<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
+						<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
+						<li><s>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></s></li>
+						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
+					</ul>
 				</section>
 
 				<section>
@@ -477,15 +388,18 @@ xWebSite MyWebsite {
 
 				<section>
 					<section>
-						<h3>再回到刚刚的需求清单：</h3>
-						<p  class="fragment" data-markdown>
-							- ~~安装一些应用~~
-							- ~~管理一些文件~~
-							- ~~启动一些服务~~
-							- ~~配置一些工具~~
-							- ~~部署一些Website~~
-							- 其他？
-						</p>
+						<h3>再我们要实现的目标：</h3>
+						<ul>
+							<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
+							<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
+							<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
+							<li><s>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></s></li>
+							<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
+						</ul>
+						<div class="fragment">
+							<hr/>
+							<h3>基本结束了？</h3>
+						</div>
 					</section>
 					<section>
 						<h1>集群部署!</h1>
@@ -497,6 +411,7 @@ xWebSite MyWebsite {
 						<h2>DSC执行架构</h2>
 						<img  height="600" data-src="img/18.png" alt="some image">
 					</section>
+
 					<section>
 						<h2>DSC的两种模式</h2>
 						<p data-markdown>
@@ -512,13 +427,19 @@ xWebSite MyWebsite {
 					</section>
 				</section>
 
-				<!-- <section>
+				<section>
+					<h2>总结</h2>
 					<ul>
-						<li>简介易懂的解释型脚本</li>
-						<li>微软亲生的</li>
-						<li>执行简单</li>
+						<li>微软原生 - <span style="color:#7FDBFF;">依赖PowerShell</span></li>
+						<li>不依赖额外的工具 - <span style="color:#7FDBFF;">纯PowerShell语言</span></li>
+						<li>远程通信的方式多样、可靠 - <span style="color:#7FDBFF;">支持PS远程/HTTP(S)/SMB</span></li>
+						<li>声明式的配置脚本 - <span style="color:#7FDBFF;">Configuration Node Resource</span></li>
+						<li>可扩展性高 - <span style="color:#7FDBFF;">Resource可编写</span></li>
+						<li>支持多机器集群配置,部署 - <span style="color:#7FDBFF;">Pull模式适合大型集群管理</span></li>
+						<li>支持云平台及虚拟化技术 - <span style="color:#7FDBFF;">支持Azure等</span></li>
 					</ul>
-				</section> -->
+				</section>
+
 				<section>
 					<h2 class="fragment current-visible">应用场景</h2>
 					<div class="fragment">
@@ -545,7 +466,7 @@ xWebSite MyWebsite {
 							- https://yaowenjie.github.io
 						- Demo样例
 							- https://github.com/Yaowenjie/PowerShell-DSC-Stuff.git
-						- 《The DSC Book》中文版
+						- 我对《The DSC Book》的中文翻译
 							- https://yaowenjie.gitbooks.io/the-dsc-book/content/
 					</p>
 				</section>
