@@ -474,17 +474,31 @@ Configuration MyConfig
 							- Push模式
 								- 无实际服务器
 								- 部署前，Resource需要目标机器上
+								- 在执行时生效
 								- 适合少量机器管理及本地调试
 							- Pull模式
 								- 需要Pull服务器
 								- Resource保存在服务器上，目标机器按需拉取
+								- 定期监控状态，使目标机器处于期望状态
 								- 适合大量机器集群管理
 						</p>
 					</section>
 				</section>
 
 				<section>
-					<h2>总结</h2>
+					<h2>日志及故障排除</h2>
+					<ul>
+						<li>在运行至加Verbose: <pre><code class="hljs" data-trim contenteditable>
+							Start-DSCConfiguration －Verbose
+						</code></pre></li>
+						<li>使用Log、xDSCDiagnostic这样的内外部Resource</li>
+						<li>使用Windows自带的Event Viewer</li>
+					</ul>
+					<img  height="350" data-src="img/eventview.png" alt="some image">
+				</section>
+
+				<section>
+					<h2>总结 - 特点</h2>
 					<ul>
 						<li>微软原生 - <span style="color:#7FDBFF;">依赖PowerShell</span></li>
 						<li>不依赖额外的工具 - <span style="color:#7FDBFF;">纯PowerShell语言</span></li>
