@@ -13,7 +13,7 @@ comments: true
 </div>
 
 
-> 那什么，没事，没事说两句：
+> 走过，路过，言语两句：
 
 <div class="ds-thread" data-thread-key="{{ page.title }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
 
