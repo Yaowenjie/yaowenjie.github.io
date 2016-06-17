@@ -1,0 +1,21 @@
+var currentURL = window.location.href;
+if (currentURL.indexOf("yaowenjie.github.io") > -1) {
+  var AFS_Account="00830483";
+  var AFS_Tracker="auto";
+  var AFS_Server="www8";
+  var AFS_Page="DetectName";
+  var AFS_Url="DetectUrl";
+  var AFS_Protocol="http:";
+  var speed = document.createElement('script');
+  if (document.location.protocol == "https:") AFS_Protocol="https:";
+  speed.type = 'text/javascript';
+  speed.async = true;
+  speed.src =AFS_Protocol+'//'+AFS_Server+'.afsanalytics.com/cgi-bin/afstracka.cgi?usr='+AFS_Account;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(speed, s);
+}
+
+// <noscript>
+//   <a href="http://new.afsanalytics.com/?usr=00830483" rel='nofollow' >
+//   <img src="https://www8.afsanalytics.com/cgi-bin/connect.cgi?usr=00830483Pauto" border='0' alt="Web Analytics"></a>
+// </noscript>
