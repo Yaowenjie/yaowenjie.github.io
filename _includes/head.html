@@ -89,17 +89,6 @@
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.url }}/images/apple-touch-icon-144x144-precomposed.png">
 
-
-{% if site.url contains 'yaowenjie.github' %}
-  {% if site.features.opentracker %}
-    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
-  {% endif %}
-
-  {% if site.features.afs_tracker %}
-    <script type="text/javascript" src="{{ site.url }}/assets/js/afs-tracker.js"></script>
-  {% endif %}
-{% endif %}
-
 <script type="text/javascript">
   function getUserInfo(inputEvent) {
     var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_=' + Math.random();
