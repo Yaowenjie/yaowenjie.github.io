@@ -28,7 +28,7 @@ imagefeature: wj/20.jpg
 &emsp;&emsp;在开始之前，首先确保你的机器上安装了[Java8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。<br/>
 &emsp;&emsp;Spring Boot作为Spring新一代的框架，提升了Spring开发者的开发体验，这里原则上并不一定需要使用Spring Boot。[Gradle]((http://gradle.org/))作为一个自动化构建工具，也极大的改善的开发者构建工程时的体验。<br/>
 &emsp;&emsp;可以使用Spring的初始化工具自动生成基本的项目文件，首先进入[start.spring.io](https://start.spring.io/)，把Maven Project改为Gradle Project，Group和Artifact名字可以更改成你自定义的名字，如下图：
-<center><img class="center" src="{{ site.url }}/images/2016/cucumber01.png" alt="smudge.png"></center>
+<center><img class="center" src="{{ site.url }}/images/2016/cucumber01.png" alt="cucumber.png"></center>
 &emsp;&emsp;由于这个初始化工具并没有提供什么Cucumber相关的依赖，所以我们并不需要在Dependencies中添加任何东西。然后点击“Generate Project”，它就会自动生成基于SpringBoot和Gradle的初始项目，并打包成zip自动通过浏览器下载到本地。<br/>
 &emsp;&emsp;然后解压该zip包，在命令行(工作路径为解压后的工程根目录)中输入:
 
