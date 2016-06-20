@@ -58,36 +58,17 @@
 					</ul>
 				</section>
 
-				<section>
-					<section>
-						<h3>需要能够实现自动化管理：</h3>
-						<ul>
-							<li>应用（App）</li>
-							<li>功能（Feature）</li>
-							<li>服务（Service）及进程（Process）</li>
-							<li>文件（File）</li>
-							<li>用户（User）及用户组（Group）</li>
-							<li>注册表（Registry）</li>
-							<li>环境变量（Environment Variable）</li>
-							<li>更多(Others)？</li>
-						</ul>
-					</section>
-					<section>
-						<h3>具体一下，就是自动化以下过程：</h3>
-						<ul>
-							<li>安装一些应用 - <span style="color:#7FDBFF;">Git</span></li>
-							<li>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></li>
-							<li>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></li>
-							<li>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></li>
-							<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
-						</ul>
-					</section>
-				</section>
 
 				<section>
 					<section>
-						<h2>安装应用</h2>
-						<h4>包管理工具</h4>
+						<h2>从<span style="color:#7FDBFF;">安装应用自动化</span>开始说起</h2>
+					</section>
+					<section>
+						<h3>最开始的方案</h3>
+						<h2>手动 + Bat/PS脚本（MSI）</h2>
+					</section>
+					<section>
+						<h3>Linux包管理工具</h3>
 						<ul>
 							<li>yum</li>
 							<li>apt-get</li>
@@ -117,37 +98,24 @@ cinst git -source http://192.168.56.11/nuget
 							</code></pre>
 					</section>
 					<section>
-						<h2>Chocolatey</h2>
-						<h4>优点:</h4>
+						<h2>Nuget + Chocolatey搭配使用</h2>
+						<p>
+							内网里搭建起Nuget Server，用于项目专用软件包源。
+						</p>
+					</section>
+					<section>
+						<h3>安装应用 - 使用Windows下的包管理</h3>
+						<h4 style="color:#7FDBFF;">优点:</h4>
 						<ul>
-							<li>实现了Windows下绝大多数软件包的安装和管理</li>
+							<li>实现了Windows下绝大多数软件包的安装和管理自动化</li>
 							<li>可以自己创建包源，搭建自己的软件包Repo</li>
 							<li>命令行较为友好</li>
 							<li>扩展性高，可以自己制作分享软件包</li>
 						</ul>
-						<blockquote class="fragment">
-							<h4>缺点:</h4>
-							<ul>
-								<li>官方安装库未加验证</li>
-								<li>国内访问缓慢</li>
-								<li>软件包制作标准并不统一</li>
-							</ul>
-						</blockquote>
 					</section>
 				</section>
 
-				<section>
-					<h3>我们要实现的目标：</h3>
-					<ul>
-						<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
-						<li>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></li>
-						<li>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></li>
-						<li>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></li>
-						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
-					</ul>
-				</section>
-
-				<section>
+				<!-- <section>
 					<section>
 						<h1>自动化配置管理工具</h1>
 					</section>
@@ -160,6 +128,56 @@ cinst git -source http://192.168.56.11/nuget
 						|[Ansible](https://www.ansible.com/)|YAML| 是 |
 						|[SaltStack](https://saltstack.com/)| SLS格式文件（支持YAML）| 是|
 						||||
+					</section>
+				</section> -->
+
+				<section>
+					<h3>Windows下其他配置管理/部署项</h3>
+					<ul>
+						<li>管理一些文件</li>
+						<li>启动一些服务</li>
+						<li>配置一些工具</li>
+						<li>部署一些Website</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h3>之前的做法</h3>
+						<p data-markdown>
+							- 开发/产品环境
+								- 采用手动和脚本并行的策略(半自动)
+							- 持续交付流水线中的测试环境（运行build、tests的机器）
+								- 做好对应的镜像，每天凌晨定时从镜像中心拷贝并重建对应的环境
+						</p>
+					</section>
+					<section>
+						<h3>几个缺点</h3>
+						<ul>
+							<li>新人对环境如何配置，具体配置成什么样无从了解</li>
+							<li>环境相对固定，更改会相对麻烦</li>
+							<li>维护的Windows镜像过于庞大</li>
+							<li>半自动化的管理和部署策略风险较大</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>使用配置管理工具？</h2>
+					</section>
+					<section data-markdown>
+						### 常用的自动化配置管理工具
+						|工具名称|DSL|支持Windows|
+						| -- | -- | -- |
+						|[Chef](https://www.chef.io/)| Ruby-based DSL| 是 |
+						|[Puppet](https://puppet.com/)|Ruby-based DSL| 是 |
+						|[Ansible](https://www.ansible.com/)|YAML| 是 |
+						|[SaltStack](https://saltstack.com/)| SLS格式文件（支持YAML）| 是|
+						||||
+					</section>
+					<section>
+						<h2>Windows自己<span style="color:#7FDBFF;">原生</span>的自动化配置管理方案</h2>
 					</section>
 				</section>
 
@@ -209,6 +227,12 @@ Configuration MyConfig
 {
     Node "HostName_Or_IpAddress"
     {
+				WindowsFeature IIS
+				{
+						Ensure = "Present"
+						Name = "Web-Server"
+				}
+
         File MyFileExample
         {
             Ensure = "Present"
@@ -217,12 +241,6 @@ Configuration MyConfig
             SourcePath = $WebsiteFilePath
             DestinationPath = "C:\inetpub\wwwroot"
             DependsOn = "[WindowsFeature]MyRoleExample"
-        }
-
-        WindowsFeature IIS
-        {
-            Ensure = "Present"
-            Name = "Web-Server"
         }
     }
 }
@@ -242,7 +260,7 @@ PS C: > Start-DscConfiguration -Wait -Verbose -Path .\MyConfig
 
 				<section>
 					<section>
-						<h2>什么才是DSC实现配置管理的核心？</h2>
+						<h2>DSC实现配置管理的核心？</h2>
 						<h1 class="fragment">Resource</h1>
 					</section>
 					<section>
@@ -282,17 +300,6 @@ PS C: > Start-DscConfiguration -Wait -Verbose -Path .\MyConfig
 							|xDisk|xDnsServer|xWordPress|
 						</div>
 					</section>
-				</section>
-
-				<section>
-					<h3>我们要实现的目标：</h3>
-					<ul>
-						<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
-						<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
-						<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
-						<li>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></li>
-						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
-					</ul>
 				</section>
 
 				<section>
@@ -341,10 +348,10 @@ xSQLServerSetup MySQLServer
 				<section>
 					<h3>再我们要实现的目标：</h3>
 					<ul>
-						<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
+						<!-- <li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
 						<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
 						<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
-						<li><s>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></s></li>
+						<li><s>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></s></li> -->
 						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
 					</ul>
 				</section>
@@ -395,22 +402,7 @@ xWebSite MyWebsite {
 
 				<section>
 					<section>
-						<h3>再我们要实现的目标：</h3>
-						<ul>
-							<li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
-							<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
-							<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
-							<li><s>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></s></li>
-							<li><s>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></s></li>
-						</ul>
-						<div class="fragment">
-							<hr/>
-							<h3>基本结束了？</h3>
-							<h4 class="fragment">能不能把安装应用这一步也用DSC管理？</h4>
-						</div>
-					</section>
-					<section>
-						<h3>当然可以</h3>
+						<h3>把安装应用程序的过程也加入到DSC脚本中来</h3>
 						<ol>
 							<li>使用Package这个Resource</li>
 							<li style="color:#39CCCC;" class="fragment">编写一个Resouce，名为Choco</li>
@@ -519,7 +511,7 @@ Configuration MyConfig
 				</section>
 
 				<section>
-					<h2 class="fragment current-visible">应用场景</h2>
+					<h2 class="fragment current-visible">该种实践的应用场景</h2>
 					<div class="fragment">
 						<h3>适合的场景</h3>
 						<p data-markdown>
