@@ -217,7 +217,7 @@ cinst git -source http://192.168.56.11/nuget
 
 				<section>
 					<h2>DSC的实现方式</h2>
-					<img  height="500" data-src="img/12.png" alt="some image">
+					<img  height="350" data-src="img/12.png" alt="some image">
 				</section>
 
 				<section>
@@ -227,11 +227,11 @@ Configuration MyConfig
 {
     Node "HostName_Or_IpAddress"
     {
-				WindowsFeature IIS
-				{
-						Ensure = "Present"
-						Name = "Web-Server"
-				}
+        WindowsFeature IIS
+        {
+            Ensure = "Present"
+            Name = "Web-Server"
+        }
 
         File MyFileExample
         {
@@ -343,17 +343,6 @@ xSQLServerSetup MySQLServer
 }
 						</code></pre>
 					</section>
-				</section>
-
-				<section>
-					<h3>再我们要实现的目标：</h3>
-					<ul>
-						<!-- <li><s>安装一些应用 - <span style="color:#7FDBFF;">Git</span></s></li>
-						<li><s>管理一些文件 - <span style="color:#7FDBFF;">网站物理路径</span></s></li>
-						<li><s>启动一些服务 - <span style="color:#7FDBFF;">IIS</span></s></li>
-						<li><s>配置一些工具 - <span style="color:#7FDBFF;">SQL Server</span></s></li> -->
-						<li>部署一些Website - <span style="color:#7FDBFF;">利用IIS搭简单网站</span></li>
-					</ul>
 				</section>
 
 				<section>
