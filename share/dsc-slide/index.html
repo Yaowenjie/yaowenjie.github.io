@@ -32,7 +32,7 @@
 
 				<section>
 					<h3>日常环境的配置管理包括哪些</h3>
-					<h4>---- 举些栗子</h4>
+					<h4 style="color:#7FDBFF;">---- 举些栗子</h4>
 					<ul>
 						<li>安装IDE、数据库</li>
 						<li>管理文件</li>
@@ -40,7 +40,7 @@
 						<li>部署网站等等</li>
 					</ul>
 					<hr/>
-					<h3 class="fragment" style="color:#7FDBFF;">自动化 ≈ 脚本化</h3>
+					<h3 class="fragment" style="color:#7FDBFF;">自动化 ≈ 代码/脚本化</h3>
 				</section>
 
 				<section data-background="img/1.jpg">
@@ -100,7 +100,7 @@ cinst git -source http://192.168.56.11/nuget
 					<section>
 						<h2>Nuget + Chocolatey搭配使用</h2>
 						<p>
-							内网里搭建起Nuget Server，用于项目专用软件包源。
+							内网里搭建起<span style="color:#7FDBFF;">Nuget Server</span>，用于项目专用软件包源。
 						</p>
 					</section>
 					<section>
@@ -108,7 +108,7 @@ cinst git -source http://192.168.56.11/nuget
 						<h4 style="color:#7FDBFF;">优点:</h4>
 						<ul>
 							<li>实现了Windows下绝大多数软件包的安装和管理自动化</li>
-							<li>可以自己创建包源，搭建自己的软件包Repo</li>
+							<li>可以自己创建包源，搭建自己的软件包残酷，更加安全</li>
 							<li>命令行较为友好</li>
 							<li>扩展性高，可以自己制作分享软件包</li>
 						</ul>
@@ -146,18 +146,18 @@ cinst git -source http://192.168.56.11/nuget
 						<h3>之前的做法</h3>
 						<p data-markdown>
 							- 开发/产品环境
-								- 采用手动和脚本并行的策略(半自动)
+								- 采用___手动___和___脚本___并行的策略(半自动)
 							- 持续交付流水线中的测试环境（运行build、tests的机器）
-								- 做好对应的镜像，每天凌晨定时从镜像中心拷贝并重建对应的环境
+								- 做好对应的镜像，每天凌晨___定时___从镜像中心拷贝并___重建___对应的环境
 						</p>
 					</section>
 					<section>
 						<h3>几个缺点</h3>
 						<ul>
-							<li>新人对环境如何配置，具体配置成什么样无从了解</li>
-							<li>环境相对固定，更改会相对麻烦</li>
-							<li>维护的Windows镜像过于庞大</li>
-							<li>半自动化的管理和部署策略风险较大</li>
+							<li>新人对环境如何配置，<span style="color:#7FDBFF;">具体配置</span>成什么样<span style="color:#7FDBFF;">无从了解</span></li>
+							<li>环境相对固定，<span style="color:#7FDBFF;">更改</span>会相对麻烦</li>
+							<li>维护的Windows镜像过于<span style="color:#7FDBFF;">庞大</span></li>
+							<li>半自动化的管理和部署策略<span style="color:#7FDBFF;">风险较大</span></li>
 						</ul>
 					</section>
 				</section>
