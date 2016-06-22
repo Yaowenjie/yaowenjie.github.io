@@ -14,8 +14,3 @@ if (currentURL.indexOf("yaowenjie.github.io") > -1) {
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(speed, s);
 }
-
-// <noscript>
-//   <a href="http://new.afsanalytics.com/?usr=00830483" rel='nofollow' >
-//   <img src="https://www8.afsanalytics.com/cgi-bin/connect.cgi?usr=00830483Pauto" border='0' alt="Web Analytics"></a>
-// </noscript>
