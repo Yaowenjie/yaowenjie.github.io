@@ -60,10 +60,10 @@ links:
     icon: home
   # - title: <i class="icon-book"></i> Documentation
   #   url: /documentation
-  - title: <i class="icon-list"></i> 分类
+  - title: <i class="icon-list"></i> 归档
     url: /categories
-  - title: <i class="icon-tags"></i> 标签
-    url: /tags
+  # - title: <i class="icon-tags"></i> 标签
+  #   url: /tags
   - title: <i class="icon-user"></i> 关于作者
     url: /about-author
   - title: <i class="icon-heart"></i> 个人收藏
