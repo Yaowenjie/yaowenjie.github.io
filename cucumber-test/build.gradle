@@ -35,7 +35,6 @@ dependencies {
 
 test{
     exclude '**/HomePageTest*'
-    exclude '**/BaseFlowTest*'
 }
 
 task testPage(type: Test, dependsOn: testClasses) {
@@ -46,4 +45,3 @@ task serve(type: Exec) {
     commandLine 'jekyll'
     args 'serve', '--detach'
 }
-
