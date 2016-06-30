@@ -1,6 +1,7 @@
 language: java
 jdk:
   - oraclejdk8
+before_script:
+  - cd ./cucumber-test/
 script:
-  - cd cucumber-test
   - ./gradlew test
