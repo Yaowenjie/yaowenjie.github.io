@@ -8,7 +8,7 @@ Feature: Test home page
 
 
   Scenario:
-    Given I enter my blog address "http://yaowenjie.github.io:4000" and go to Home page
+    Given I enter my blog address "http://yaowenjie.github.io" and go to Home page
     # Random Background Image:
     And I can see the page header and footer have same background image
     Then I refresh current page to see the background image changes
