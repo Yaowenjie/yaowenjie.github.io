@@ -4,4 +4,7 @@ jdk:
 before_script:
   - cd ./cucumber-test/
 script:
-  - ./gradlew test
+  - pwd
+  - ls
+  - gradle check
+  - gradle test
