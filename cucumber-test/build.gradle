@@ -18,8 +18,8 @@ jar {
 	baseName = 'demo'
 	version = '0.0.1-SNAPSHOT'
 }
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 repositories {
 	mavenCentral()
@@ -28,7 +28,7 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.seleniumhq.selenium:selenium-java:2.53.0')
-	compile('info.cukes:cucumber-java8:1.2.4')
+	compile('info.cukes:cucumber-java:1.2.4')
 	compile('info.cukes:cucumber-junit:1.2.4')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

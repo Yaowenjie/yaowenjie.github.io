@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - oraclejdk8
+  - oraclejdk7
 addons:
   firefox: "39.0"
 before_script:
