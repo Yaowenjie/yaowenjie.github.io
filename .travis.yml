@@ -8,4 +8,6 @@ before_script:
 script:
   - pwd
   - ls
+  - curl http://www.baidu.com
+  - curl http://yaowenjie.github.io
   - gradle test
