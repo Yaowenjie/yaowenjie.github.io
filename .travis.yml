@@ -7,7 +7,7 @@ before_script:
   - cd ./cucumber-test/
 script:
   - pwd
-  - ls
-  - curl http://www.baidu.com
   - curl http://yaowenjie.github.io
+  - gradle clean build
   - gradle test
+  - cat ./build/reports/tests/index.html
