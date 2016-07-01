@@ -27,7 +27,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
-	compile('org.seleniumhq.selenium:selenium-java:2.53.0')
+	compile('org.seleniumhq.selenium:selenium-java:2.45.0')
 	compile('info.cukes:cucumber-java:1.2.4')
 	compile('info.cukes:cucumber-junit:1.2.4')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

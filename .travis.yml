@@ -8,6 +8,4 @@ before_script:
 script:
   - pwd
   - curl http://yaowenjie.github.io
-  - gradle clean build
   - gradle test
-  - cat ./build/reports/tests/index.html
