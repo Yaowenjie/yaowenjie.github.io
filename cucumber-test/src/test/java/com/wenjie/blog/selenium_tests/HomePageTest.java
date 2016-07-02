@@ -15,7 +15,6 @@ public class HomePageTest{
     PostPage postPage = initElements(driver, PostPage.class);
     String blogUrl = "http://localhost:4000";
 
-
     @Test
     public void shouldClickSearchButtonAndGoToAnArticle() {
         driver.get(blogUrl);

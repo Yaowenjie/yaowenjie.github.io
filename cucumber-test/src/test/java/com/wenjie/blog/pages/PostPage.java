@@ -73,6 +73,4 @@ public class PostPage {
         return smileSticker;
     }
 
-
-
 }
