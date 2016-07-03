@@ -13,10 +13,4 @@ if (currentURL.indexOf("yaowenjie.github.io") > -1) {
   speed.src =AFS_Protocol+'//'+AFS_Server+'.afsanalytics.com/cgi-bin/afstracka.cgi?usr='+AFS_Account;
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(speed, s);
-  // Try to remove the blank div in some pages
-  $("a").each(function(index, value) {
-      if(this.href.indexOf("new.afsanalytics.com/?usr=00830483") != -1) {
-         this.style.display = "none"
-      }
-  })
 }
