@@ -10,5 +10,4 @@ before_script:
   - cd ./cucumber-test/
 script:
   - pwd
-  - curl http://yaowenjie.github.io
   - gradle test
