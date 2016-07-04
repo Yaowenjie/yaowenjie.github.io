@@ -89,23 +89,3 @@ $("a#click-pages").click(function(){
 {% endif %}
 
 {% if page.comments %}{% include disqus_comments.html %}{% endif %}
-
-{% if site.url contains 'yaowenjie.github' %}
-  {% if site.features.opentracker %}
-    <script type="text/javascript" defer="defer" src="//script.opentracker.net/?site=yaowenjie.github.io"></script>
-  {% endif %}
-
-  {% if site.features.afs_tracker %}
-    <script type="text/javascript" src="{{ site.url }}/assets/js/afs-tracker.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("a").each(function() {
-            if(this.href.indexOf("new.afsanalytics.com/?usr=00830483") != -1) {
-               this.style.display = "none";
-            }
-        })
-      })
-    </script>
-
-  {% endif %}
-{% endif %}
