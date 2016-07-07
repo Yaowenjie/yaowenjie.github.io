@@ -2368,6 +2368,10 @@ a .icon-flip-vertical:before {
 .icon-wechat:before {
   content: "\f1d7";
 }
+.icon-bars:before {
+  content: "\f0c9";
+}
+
 
 /*--search--*/
 input[type="search"] {
@@ -3874,12 +3878,13 @@ a#slide:hover{
     }
 
 a#slide:after{
-    content:"❖"
+    /*content:"⌘"*/
     }
 
 a#slide.slide:after{
+    clear: both;
     position:absolute;
-    content:"✘";
+    /*content:"✘";*/
     top:11px;
     left:50%;
     width:40px;
