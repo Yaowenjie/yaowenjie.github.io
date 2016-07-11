@@ -4,6 +4,7 @@ title: "【Chrome插件】Github Travis Stat"
 description: "[Chrome Extension] Github Travis Stat"
 date: "2016-07-06 17:47"
 published: true
+category: 编程相关
 comments: true
 ---
 ### 太长不读版
