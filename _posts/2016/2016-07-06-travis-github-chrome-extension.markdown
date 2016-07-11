@@ -1,13 +1,13 @@
 ---
 layout: "post"
-title: "【Chrome插件】github+travis v2"
-description: "[Chrome Extension] github+travis v2"
+title: "【Chrome插件】Github Travis Stat"
+description: "[Chrome Extension] Github Travis Stat"
 date: "2016-07-06 17:47"
 published: true
 comments: true
 ---
 ### 太长不读版
-&emsp;&emsp;最近自己写了一个Chrome浏览器扩展/插件([github repo](https://github.com/Yaowenjie/travis-github-chrome-extension))，并将其发布到了谷歌官方商店([chrome web store](https://chrome.google.com/webstore/detail/github%2Btravis-v2/ekkfhiophiaakmeppcnkblpbbjlnlnmh))，该插件为github上的仓库提供travis-ci运行状态和运行时间的 __图表__，你可以直观地了解到哪些仓库（自己或者别人的）开通了travis-ci的build，还可以看到特定repo近十次build的 __时间和状态变化__，并且点击tooltip还可以进入特定的travis build页面。<br/>
+&emsp;&emsp;最近自己写了一个Chrome浏览器扩展/插件([github repo](https://github.com/Yaowenjie/travis-github-chrome-extension))，并将其发布到了谷歌官方商店([chrome web store](https://chrome.google.com/webstore/detail/github%2Btravis-v2/ekkfhiophiaakmeppcnkblpbbjlnlnmh))，该插件为github上的仓库提供travis-ci运行状态和运行时间的 __图表__，你可以直观地了解到哪些仓库（自己或者别人的）开通了travis-ci的build，还可以看到特定repo近十次build的 __时间和状态变化__，鼠标置于具体build上，还可查看具体build时间和message，点击还可以进入特定的travis-ci build页面。<br/>
 
 <!--more-->
 <hr/>
@@ -27,17 +27,17 @@ comments: true
   - 在每个repo内显示最近10次的build的时间变化。
   - 当我想查看具体build的具体信息时，能够点击进入对应的travis-ci页面。
 
-&emsp;&emsp;经过两三天零碎时间的摸索，借鉴别人的插件思路，便整出来了这个：[github+travis v2](https://chrome.google.com/webstore/detail/github%2Btravis-v2/ekkfhiophiaakmeppcnkblpbbjlnlnmh)，并将其发布在chrome的官方商店，欢迎大家免费使用哈。
+&emsp;&emsp;经过两三天零碎时间的摸索，借鉴别人的插件思路，便整出来了这个：[Github Travis Stat](https://chrome.google.com/webstore/detail/github-travis-stat/ekkfhiophiaakmeppcnkblpbbjlnlnmh)，并将其发布在chrome的官方商店，欢迎大家免费使用哈。
 
 ## 基本简介
-&emsp;&emsp;该插件为github上的仓库提供travis-ci运行状态和运行时间的 __图表__，你可以看到特定repo近十次build的 __时间和状态变化__，并且点击tooltip还可以进入特定的travis build页面。如下图所示：
+&emsp;&emsp;该插件为github上的仓库提供travis-ci运行状态和运行时间的 __图表__，你可以看到特定repo近十次build的 __时间和状态变化__，鼠标置于具体build上，还可查看具体build时间和message，点击还可以进入特定的travis-ci build页面。如下图所示：
 <center><img class="center" src="{{ site.url }}/images/2016/travis0.jpg" alt="travis.png"></center>
 
 &emsp;&emsp;还可以直观地了解到哪些仓库（自己或者别人的）开通了travis-ci的build，以及它们的最新状态，点击build按钮还可以进入对应的travis页面：
 <center><img class="center" src="{{ site.url }}/images/2016/travis1.png" alt="travis.png"></center>
 
 ## 安装
-&emsp;&emsp;安装该插件，你可以直接点击[该链接](https://chrome.google.com/webstore/detail/github%2Btravis-v2/ekkfhiophiaakmeppcnkblpbbjlnlnmh)，或者访问chrome web store，并搜索“__github travis v2__”关键字，然后添加你的chrome浏览器即可。<br/>
+&emsp;&emsp;安装该插件，你可以直接点击[该链接](https://chrome.google.com/webstore/detail/github-travis-stat/ekkfhiophiaakmeppcnkblpbbjlnlnmh)，或者访问chrome web store，并搜索“__github travis stat__”关键字，然后添加你的chrome浏览器即可。<br/>
 &emsp;&emsp;如果你无法访问chrome web store，请下载[github repo最新的release版本](https://github.com/Yaowenjie/travis-github-chrome-extension/releases)，解压后，在Chrome浏览器开发者模式下手动添加该插件（如下图所示）。
 <center><img class="center" src="{{ site.url }}/images/2016/travis2.png" alt="travis.png"></center>
 
