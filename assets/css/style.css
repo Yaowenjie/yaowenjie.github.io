@@ -3803,7 +3803,7 @@ button.menu-button {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 40px;
+  width: 55px;
   height: 40px;
   z-index: 1000;
   font-size: 16px;
@@ -3861,7 +3861,7 @@ body {
 a#slide{
     position:fixed;
     display:block;
-    width:40px;
+    width:55px;
     height:40px;
     top:10px;
     left:10px;
