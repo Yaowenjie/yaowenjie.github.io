@@ -54,21 +54,21 @@ bing_verify:
 # Links to include in footer navigation
 # For external links add external: true
 links:
-  - title: <i class="icon-home"></i> 主页
+  - title: <i class="icon-home"></i> - 主页
     url: /
     external: false
     icon: home
   # - title: <i class="icon-book"></i> Documentation
   #   url: /documentation
-  - title: <i class="icon-list"></i> 归档
+  - title: <i class="icon-list"></i> - 归档
     url: /categories
   # - title: <i class="icon-tags"></i> 标签
   #   url: /tags
-  - title: <i class="icon-user"></i> 关于作者
+  - title: <i class="icon-user"></i> - 关于作者
     url: /about-author
-  - title: <i class="icon-heart"></i> 个人收藏
+  - title: <i class="icon-heart"></i> - 个人收藏
     url: /favourite
-  - title: <i class="icon-comment"></i> 留言板
+  - title: <i class="icon-comment"></i> - 留言板
     url: /message-board
 
 features:

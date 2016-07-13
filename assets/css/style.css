@@ -3909,8 +3909,8 @@ a#slide.slide:after{
     }
 
 #sidebar h2{
-    margin:0 0 16px !important;
-    font:900 16px/1em "Lato",sans-serif;
+    margin:0 0 6px !important;
+    font:900 27px/1.68em "Lato",sans-serif;
     color:#fff;
     }
 
@@ -3924,17 +3924,18 @@ a#slide.slide:after{
 
 
 #sidebar #navigation hr{
-    margin:31px 0 38px
+    margin:11px 0 18px
     }
 
 #sidebar #navigation li{
-    margin:0;
-    list-style-type:none
+    margin: 8px 0;
+    list-style-type:none;
+    border-bottom: 1px outset #DDDDDD;
     }
 
 #sidebar #navigation li a{
     padding:0 0 18px;
-    font:700 16px/1em "Cambria";
+    font:700 18px/1.125em "Cambria";
     text-transform: uppercase;;
     color:#b3b3b1
     }
