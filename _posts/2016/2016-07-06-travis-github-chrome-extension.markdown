@@ -32,7 +32,7 @@ comments: true
 
 ## 基本简介
 &emsp;&emsp;该插件为github上的仓库提供travis-ci运行状态和运行时间的 __图表__，你可以看到特定repo近十次build的 __时间和状态变化__，鼠标置于具体build上，还可查看具体build时间和message，点击还可以进入特定的travis-ci build页面。如下图所示：
-<center><img class="center" src="{{ site.url }}/images/2016/travis0.jpg" alt="travis.png"></center>
+<center><img class="center" src="{{ site.url }}/images/2016/travis0.png" alt="travis.png"></center>
 
 &emsp;&emsp;还可以直观地了解到哪些仓库（自己或者别人的）开通了travis-ci的build，以及它们的最新状态，点击build按钮还可以进入对应的travis页面：
 <center><img class="center" src="{{ site.url }}/images/2016/travis1.png" alt="travis.png"></center>
@@ -43,5 +43,5 @@ comments: true
 <center><img class="center" src="{{ site.url }}/images/2016/travis2.png" alt="travis.png"></center>
 
 ## 最后
-- 欢迎大家star/fork该[github repo](https://github.com/Yaowenjie/travis-github-chrome-extension)，接受有益的Pull Request。
+- 欢迎大家star/fork该[github repo](https://github.com/Yaowenjie/travis-github-chrome-extension)，也接受有益的Pull Request。
 - 欢迎在[github issue](https://github.com/Yaowenjie/travis-github-chrome-extension/issues)提出你的问题和建议。
