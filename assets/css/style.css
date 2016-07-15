@@ -4068,3 +4068,62 @@ body.slide{
 
 
 /*      End-Responsive      */
+
+
+#main button {
+  -webkit-appearance: none;
+  background: transparent;
+  outline:0;
+  background: none;
+  border: none;
+}
+
+#main svg {
+  padding: 5px;
+}
+
+#main .arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  margin-left: -35px;
+  width: 70px;
+  height: 90px;
+}
+
+#main .left {
+  left: 42%;
+}
+
+#main .right {
+  left: 58%;
+}
+
+#main .left:hover polyline,
+#main .left:focus polyline {
+  stroke: #51A8DD;
+  stroke-width: 3;
+}
+
+#main .left:active polyline {
+  stroke: #500000;
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+#main .right:hover polyline,
+#main .right:focus polyline {
+  stroke: #51A8DD;
+  stroke-width: 3;
+}
+
+#main .right:active polyline {
+  stroke: #500000;
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+#main polyline {
+  transition: all 250ms ease-in-out;
+}

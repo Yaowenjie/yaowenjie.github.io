@@ -47,14 +47,14 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
                         {% endif %}
                         {{ content }}
                         <br>
-                    {% assign tagsize = page.tags.size %}
-                    {% if tagsize != 0 %}
-                    <div class="entry-tags text-center">
+                        {% assign tagsize = page.tags.size %}
+                        {% if tagsize != 0 %}
+                        <div class="entry-tags text-center">
 
-                        <i class="icon-tags"></i>&nbsp;Tagged with {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}
+                            <i class="icon-tags"></i>&nbsp;Tagged with {% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}
 
-                    </div>
-                    {% endif %}
+                        </div>
+                        {% endif %}
                     </div>
         </div>
                     <footer class="post-footer entry-meta">
@@ -66,6 +66,18 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
                         {% endif %}
                     </footer>
             </article>
+            <button class="arrow left">
+              <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+              45.63,75.8 0.375,38.087 45.63,0.375 "/>
+              </svg>
+            </button>
+            <button class="arrow right">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+              0.375,0.375 45.63,38.087 0.375,75.8 "/>
+              </svg>
+            </button>
     </div>
 </div>
 
