@@ -17,8 +17,7 @@ imagefeature: wj/99.jpg
 >
 > ThoughtWorker ・ 骚窝客
 
-> 📷 所有背景图片皆出自@Wenjie
-
+---
 
 现在，<br/>
 我那什么，<br/>
@@ -31,8 +30,9 @@ imagefeature: wj/99.jpg
 但是，<br/>
 听大家说，<br/>
 换行，<br/>
-就可以成诗(装X)
+就可以成诗
 
+---
 
 > 非常抱歉，
 >
