@@ -4070,7 +4070,7 @@ body.slide{
 /*      End-Responsive      */
 
 
-#main button {
+/*#main button {
   -webkit-appearance: none;
   background: transparent;
   outline:0;
@@ -4126,4 +4126,4 @@ body.slide{
 
 #main polyline {
   transition: all 250ms ease-in-out;
-}
+}*/
