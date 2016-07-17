@@ -12,14 +12,16 @@
 - **样式**：主要是bootstrap和fontawesome，部分样式用sass（jekyll默认支持sass）编写
 - **评论系统**：使用国内评论系统duoshuo，后期期望增加disqus（分区域显示）
 - **动态效果**：部分服务和效果（比如主页的背景图刷新变化）由javascript实现，主要为ES5语法。
-- **功能测试**：根目录下的cucumber-test目录为博客的功能测试脚本（初期纯为练手，后期可能会扩展），并借助[travis-ci](https://travis-ci.org/Yaowenjie/yaowenjie.github.io/builds/)(详情请看.travis-ci.yml文件)在每次提交代码时能够自动执行对应的测试。
+- **功能测试**：根目录下的cucumber-test目录为博客的功能测试脚本（初期纯为练手，后期可能会扩展），并借助[travis-ci](https://travis-ci.org/Yaowenjie/yaowenjie.github.io/builds/)(详情请看.travis-ci.yml文件)在每次提交代码时能够自动执行对应的测试
+- **API**：现博客已更新API接口，可通过“/api/index.json”或“api/posts.json”这样的相对地址获取相应API的json文件
+
 
 ### 关于本博客 - 内容篇
 - **背景图片**：博客内的绝大多数背景图片为作者多年来（说的好像多老一样）随拍的照片压缩（虽然很多时候刷出来很是不快）之后的样子
 - **文章类型**：以软件技术**总结/分享**类文章为主，偶尔写点**感想、生活**类文章。
 - **其他**：如果你还有好奇心，还为你备有留言板、个人收藏、关于作者等页面
 
-### 闲言碎语
+### 疑问或建议
 > 欢迎**fork或star**本repo，如果你有任何疑问或者意见，可以在**issue**中提出，或者直接发送邮件(见github左侧profile下邮箱地址)给我哟。
 
 ### 文章列表
