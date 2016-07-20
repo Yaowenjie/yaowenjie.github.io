@@ -9,11 +9,11 @@ imagefeature: wj/99.jpg
   <figcaption>Yao Wenjie</figcaption>
 </figure>
 
-> Developer ・ 开发猿
+> Developer ・ 开花猿
 >
-> Consultant ・ 咨询狮
+> Consultant ・ 自熏师
 >
-> Engineer ・ 工程狮
+> Engineer ・ 攻城狮
 >
 > ThoughtWorker ・ 骚窝客
 
@@ -45,3 +45,7 @@ imagefeature: wj/99.jpg
 > 因为这个家伙
 >
 > ### *比较懒* ###
+>
+###### 但是你仍然可以star/fork[该博客的github repo](https://github.com/Yaowenjie/yaowenjie.github.io)，列issue给我，发邮件吐槽我，或者直接在博客留言板留言
+>
+###### 我不会告诉你，你可能忽略了博客下面那栏社交账号，以及每篇文章下的分享按钮，哈哈哈哈啊哈哈哈
