@@ -143,5 +143,7 @@ exclude '**/BaseFlowTest*'
 <center><img class="center" src="{{ site.url }}/images/2016/sonar1.png" alt="sonar.png"></center>
 技术债细节：
 <center><img class="center" src="{{ site.url }}/images/2016/sonar2.png" alt="sonar.png"></center>
-项目结构：
+项目结构信息：
 <center><img class="center" src="{{ site.url }}/images/2016/sonar3.png" alt="sonar.png"></center>
+
+&emsp;&emsp;当然，Sonar可以展示和管理的内容远远不止这些，这里只是一个简单但暂且还算全面的Demo，更多内容请访问[SonarQube官网](http://www.sonarqube.org/)。
