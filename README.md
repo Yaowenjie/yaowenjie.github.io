@@ -26,6 +26,8 @@
 
 ### 文章列表
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/devops/code-analyzing-practice-with-sonar"><time datetime="2016-07-19T16:56:00+08:00" itemprop="datePublished">July 19, 2016</time> - 利用SonarQube实现代码静态扫描及问题总结 </a></li>
+
     <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/travis-github-chrome-extension"><time datetime="2016-07-06T17:47:00+08:00" itemprop="datePublished">July 06, 2016</time> - 【Chrome插件】Github Travis Stat </a></li>
 
     <li><a href="http://yaowenjie.github.io/devops/automatic-confirguration-in-windows"><time datetime="2016-06-24T23:22:00+08:00" itemprop="datePublished">June 24, 2016</time> - Windows下自动化配置管理实践讲义 </a></li>
