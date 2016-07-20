@@ -3,7 +3,7 @@ layout: "post"
 title: "利用SonarQube实现代码静态扫描及问题总结"
 description: "Code analyzing practice with SonarQube"
 date: "2016-07-19 16:56"
-published: false
+published: true
 category: DevOps
 comments: true
 imagefeature: wj/29.jpg
@@ -28,7 +28,7 @@ sudo apt-get install mysql-server
 sudo mysql_secure_installation
 ```
 
-&emsp;&emsp;接着创建一个用于创建对应sonar用户和sonar的数据表的SQL文件，名为**create_database.sql**:
+&emsp;&emsp;接着创建一个用于创建对应sonar用户和sonar的数据表的SQL文件，名为 **create_database.sql**:
 
 ```sql
 CREATE DATABASE sonar CHARACTER SET utf8 COLLATE utf8_general_ci;
@@ -51,7 +51,7 @@ mysql -u sonar -p
 ```
 
 #### 2.1 创建数据库时出现错误（第二步成功请无视这一步）
-&emsp;&emsp;笔者在创建sonar数据库的时候由于“手残”等诸多原因，导致数据库创建失败/中断，这时候需要我们手动的Drop掉（注意一定是Drop掉，不能只是删除）对应的数据库和用户:
+&emsp;&emsp;笔者在创建sonar数据库的时候由于“手残”等诸多原因，导致数据库创建失败/中断，这时候需要我们手动的Drop掉（注意一定是Drop掉，不能只是删除）对应的数据库和用户，并重新执行第二步创建数据库的操作:
 
 ```sql
 mysql> DROP DATABASE sonar;
@@ -78,7 +78,7 @@ sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncodi
 {Your_Sonar_Path}/bin/linux-x86-64/sonar.sh start
 ```
 &emsp;&emsp;如果系统为32位的，你需要将上方路径改为“bin/linux-x86-32/sonar.sh”，否决启动将会失败。当然，把该路径加入环境变量也不失为一种方便的举措。<br/>
-&emsp;&emsp;启动成功后，在浏览器中访问：**localhost:9000**，你将看到类似这样的SonarQube的Home页面（首次Project应该是空的）：
+&emsp;&emsp;启动成功后，在浏览器中访问：**http://localhost:9000**，你将看到类似这样的SonarQube的Home页面（首次Project应该是空的）：
 <center><img class="center" src="{{ site.url }}/images/2016/sonar-home.png" alt="sonar.png"></center>
 
 #### 3.1 Sonar启动后异常停止
@@ -116,4 +116,32 @@ java.lang.IllegalStateException: Webapp did not start
 ```
 &emsp;&emsp;如果出现这样的log信息，那是因为SonarQube运行需要的内存不够的原因，缺啥补啥，笔者便将使用的虚拟机运存从512MB增加到1024MB，问题便消失了。
 
-### 4. 使用Sonar-Scanner扫描具体的代码
+### 4. 使用SonarQube-Scanner扫描分析具体代码
+&emsp;&emsp;Sonar正常运行后，就需要添加/扫描/分析具体的代码了，SonarQube提供了支持多种工具的扫描器(SonarQube Scanner)，其中包括针对MSBuild、Ant、Maven、Gradle这样构建工具以及Jenkins这样CI工具的插件支持之外，还有一个可以直接运行的独立Scanner。这里就以一个[简单的基于Gradle构建的Java项目](https://github.com/Yaowenjie/Cucumber-Demo)为例，通过添加对应的gradle插件，实现对该项目代码的代码分析。
+
+&emsp;&emsp;首先，从github上clone/下载这个工程：[https://github.com/Yaowenjie/Cucumber-Demo](https://github.com/Yaowenjie/Cucumber-Demo)，然后在**build.gradle**中添加sonarqube插件（这种方式要求gradle的版本为2.1+）：
+
+```
+plugins {
+  id "org.sonarqube" version "2.0.1"
+}
+```
+
+&emsp;&emsp;接着，运行如下：
+
+```sh
+./gradlew sonar
+```
+
+&emsp;&emsp;如果你运行test的时候报错了的话，请在build.gradle内的test里排除掉BaseFlowTest：
+
+```
+exclude '**/BaseFlowTest*'
+```
+
+&emsp;&emsp;成功执行后，在浏览器中访问**http://localhost:9000**，会发现新增了一个名为Cucumber-Demo的Project，点击进入可以看到详细的代码分析数据和图表。
+<center><img class="center" src="{{ site.url }}/images/2016/sonar1.png" alt="sonar.png"></center>
+技术债细节：
+<center><img class="center" src="{{ site.url }}/images/2016/sonar2.png" alt="sonar.png"></center>
+项目结构：
+<center><img class="center" src="{{ site.url }}/images/2016/sonar3.png" alt="sonar.png"></center>
