@@ -87,7 +87,7 @@ sonar.jdbc.url=jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncodi
 ##### **Sonar与MySQL版本不匹配**
 &emsp;&emsp;这种情况下，可以在log里面看到类似如下这样的内容:
 
-```log
+```
 2016.05.18 15:17:37 INFO  web[o.a.c.h.Http11NioProtocol] Starting ProtocolHandler ["http-nio-0.0.0.0-9000"]
 2016.05.18 15:17:37 INFO  web[o.s.s.a.TomcatAccessLog] Web server is started
 2016.05.18 15:17:37 INFO  web[o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
@@ -102,6 +102,7 @@ java.lang.IllegalStateException: Webapp did not start
 &emsp;&emsp;这里没有明显的错误，但是[Google之](http://stackoverflow.com/questions/37296804/java-lang-illegalstateexception-webapp-did-not-start-at-sonarqube)才发现与版本有关，笔者一开始使用的SonarQube 5.6并不支持MySQL 5.5。所以需要将SonarQube降到5.4，当然也可以升级MySQL，笔者选择了前者。
 
 ##### **虚拟机内存不够**
+
 ```
 2016.07.18 22:58:26 ERROR web[o.a.c.c.StandardContext] One or more listeners failed to start. Full details will be found in the appropriate container log file
 2016.07.18 22:58:26 ERROR web[o.a.c.c.StandardContext] Context [] startup failed due to previous errors
@@ -114,6 +115,7 @@ java.lang.IllegalStateException: Webapp did not start
  java.util.TimerThread.mainLoop(Timer.java:552)
  java.util.TimerThread.run(Timer.java:505)
 ```
+
 &emsp;&emsp;如果出现这样的log信息，那是因为SonarQube运行需要的内存不够的原因，缺啥补啥，笔者便将使用的虚拟机运存从512MB增加到1024MB，问题便消失了。
 
 ### 4. 使用SonarQube-Scanner扫描分析具体代码
@@ -146,4 +148,4 @@ exclude '**/BaseFlowTest*'
 项目结构信息：
 <center><img class="center" src="{{ site.url }}/images/2016/sonar3.png" alt="sonar.png"></center>
 
-&emsp;&emsp;当然，Sonar可以展示和管理的内容远远不止这些，这里只是一个简单但暂且还算全面的Demo，更多内容请访问[SonarQube官网](http://www.sonarqube.org/)。
+&emsp;&emsp;至此，整个过程便完成了。当然，Sonar可以展示和管理的内容远远不止这些，这里只是一个简单但暂且还算全面的Demo，更多内容请访问[SonarQube官网](http://www.sonarqube.org/)。
