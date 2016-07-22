@@ -61,7 +61,7 @@ compile('org.seleniumhq.selenium:selenium-java:2.53.0')
 
 &emsp;&emsp;接下来需要重新执行一遍之前的build指令(./gradlew clean build)，然后你需要在YourProject/src/main/java/com/wenjie下创建一个新的类（名为BlogPage），用于表示页面下的对应元素以及对其的操作，代码如下：
 
-{% highlight java %}
+```java
 package com.wenjie;
 
 import org.openqa.selenium.WebElement;
@@ -89,11 +89,11 @@ public class BlogPage {
         searchResultFirst.click();
     }
 }
-{% endhighlight %}
+```
 
 &emsp;&emsp;可以看到在BlogPage中定义了三个 ___WebElement___，它们分别是搜索按钮，搜索输入框，以及搜索结果中的第一个（它们都是通过xpath或者id的形式定义），并且通过三个方法将对这三个元素的点击和输入操作暴露出去。接下来就可以新建一个新的测试类（也可以基于原有的测试类），并编写一个对应的测试，如下：
 
-{% highlight java %}
+```java
 package com.wenjie;
 
 import org.junit.Test;
@@ -121,7 +121,8 @@ public class CucumberApplicationTests {
 	}
 
 }
-{% endhighlight %}
+```
+
 从上面的代码很容易看出来这个测试干了什么:
 
 - 打开{{site.url}} - driver.get(blogUrl);
