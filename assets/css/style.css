@@ -31,6 +31,7 @@ h1 {
   font-size: 38px;
   line-height: 48px;
   margin-bottom: 24px;
+  font-weight: bold;
 }
 h1 small {
   font-size: 26px;
@@ -40,6 +41,7 @@ h2 {
   line-height: 24px;
   margin-top: 24px;
   margin-bottom: 24px;
+  font-weight: bold;
 }
 h2 small {
   font-size: 18px;
@@ -50,6 +52,7 @@ h3 {
   margin-top: 24px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 h3 small {
   font-size: 13px;
@@ -92,7 +95,7 @@ a:hover {
 }
 /* - Lead text - */
 .lead {
-  font-size: 21px;
+  /*font-size: 21px;*/
   line-height: 2em;
 }
 /* - Blockquote - */
@@ -3306,7 +3309,7 @@ pre {
     padding: 1em;
     margin: 0;
 }
-.highlight  { background: #F9F5F9; color: #000000}
+.highlight  { background: #e6e6e6; color: #000000}
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #3F6B5B; font-weight: bold} /* Comment */
 .highlight .err { color: #000000} /* Error */
