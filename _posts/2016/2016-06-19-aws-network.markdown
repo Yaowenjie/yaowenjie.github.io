@@ -9,7 +9,6 @@ category: Cloud
 tags: [AWS, VPC, Network]
 imagefeature: wj/13.jpg
 ---
-#### 综述
 &emsp;&emsp;本文将围绕AWS网络基础的相关概念，介绍使用VPC（虚拟私人云）的益处以及AWS常见的安全网络架构，并主要通过几种不同情况下如何做连接和访问控制的需求出来，来介绍各个网络组件（如ACL、安全组、Peering等）的作用。
 
 <!--more-->
