@@ -1,7 +1,24 @@
-@import url(http://fonts.useso.com/css?family=Source+Sans+Pro:200,300,400,700);
+/*@import url(http://fonts.useso.com/css?family=Source+Sans+Pro:200,300,400,700);
 @import url(http://fonts.useso.com/css?family=Merriweather:400,300,400italic,700);
 @import url(http://fonts.useso.com/css?family=Raleway:400,300,100,700);
-@import url(http://fonts.useso.com/css?family=Sacramento);
+@import url(http://fonts.useso.com/css?family=Sacramento);*/
+
+@font-face {
+    font-family: 'source-code-pro';
+    src: url('../font/SourceSansPro-Regular.ttf');
+}
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../font/Merriweather-Regular.ttf');
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../font/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: 'Sacramento';
+    src: url('../font/Sacramento-Regular.ttf');
+}
 
 /*!
  * Wenjie Modified Version
@@ -3278,7 +3295,7 @@ img.mfp-img {
 }
 
 tt,code,kbd,samp,pre {
-    font-family: 'source-code-pro',monospace;
+    font-family: 'source-code-pro1',monospace;
 }
 
 p code,li code {
