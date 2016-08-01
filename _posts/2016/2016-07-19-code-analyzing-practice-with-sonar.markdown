@@ -10,7 +10,7 @@ imagefeature: wj/29.jpg
 ---
 &emsp;&emsp;[SonarQube(Sonar)](http://www.sonarqube.org/)是一个用于管理代码质量的开源平台。SonarQube目前已支持超过20种主流编程语言，它管理的代码质量主要涉及7个维度:架构与设计、重复、单元测试、复杂度、潜在的bug、代码标准、注释。
 <center><img class="center" src="{{ site.url }}/images/2016/7axes.png" alt="7axes.png"></center>
-&emsp;&emsp;本文，笔者将围绕搭建SonarQube这样的代码质量管理平台这个主题展开，一步步讲述具体的过程，其中涉及Sonar的下载安装、创建对应Mysql数据库以及运行和管理，并对实践过程中出现的一些问题进行了分析和解决。
+&emsp;&emsp;本文，笔者将围绕搭建SonarQube这样的代码质量管理平台这个主题展开，结合java代码实例一步步讲述具体的过程，其中涉及Sonar的下载安装、创建对应Mysql数据库以及运行和管理，并对实践过程中出现的一些问题进行了分析和解决。
 
 <!--more-->
 
