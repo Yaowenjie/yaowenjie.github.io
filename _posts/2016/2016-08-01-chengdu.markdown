@@ -5,7 +5,7 @@ description: “Chengdu”
 date: "2016-08-01 16:33"
 published: true
 comments: true
-category: Life
+category: Life|生活
 imagefeature: wj/37.jpg
 ---
 &emsp;&emsp;成都，在[赵雷的歌](http://music.163.com/#/song?id=30260031)里，是浓浓的忧伤、不舍、思恋... 片语转旋间，是深秋的垂柳，阴雨的小城，成都的街头，玉林路的尽头，小酒馆的门口...
@@ -30,4 +30,10 @@ imagefeature: wj/37.jpg
 	<a href="{{ site.url }}/images/wj/29.jpg"><img src="{{ site.url }}/images/wj/29.jpg"></a>
 	<a href="{{ site.url }}/images/wj/31.jpg"><img src="{{ site.url }}/images/wj/31.jpg"></a>
 	<a href="{{ site.url }}/images/wj/33.jpg"><img src="{{ site.url }}/images/wj/33.jpg"></a>
+</figure>
+&emsp;&emsp;这点记忆和印象都被容纳在了那方圆几千步的范围内。它不足以代表成都，但于我，它足够真切，也足够细微。抛去这些，还有宽敞马路上憋坏了等待绿灯的新人，街边小巷随处可见油光满面的面，公园亭苑间清茶飘香中的机麻声...
+
+&emsp;&emsp;这里生活可以巴适，人儿可以很乖。不妨结识一拨好友，好吃，好喝，好耍。
+<figure>
+	<a href="{{ site.url }}/images/wj/35.jpg"><img src="{{ site.url }}/images/wj/35.jpg"></a>
 </figure>
