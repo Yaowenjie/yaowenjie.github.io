@@ -3,5 +3,31 @@ layout: "post"
 title: "成都"
 description: “Chengdu”
 date: "2016-08-01 16:33"
-published: false
+published: true
+comments: true
+category: Life
+imagefeature: wj/37.jpg
 ---
+&emsp;&emsp;成都，在[赵雷的歌](http://music.163.com/#/song?id=30260031)里，是浓浓的忧伤、不舍、思恋... 片语转旋间，是深秋的垂柳，阴雨的小城，成都的街头，玉林路的尽头，小酒馆的门口...
+
+<!--more-->
+
+&emsp;&emsp;在我的记忆里，那本是一座被雾圈住的城，安静，不喧嚣，偶尔阴雨小作。
+<figure class="third">
+	<a href="{{ site.url }}/images/wj/42.jpg"><img src="{{ site.url }}/images/wj/42.jpg"></a>
+	<a href="{{ site.url }}/images/wj/39.jpg"><img src="{{ site.url }}/images/wj/39.jpg"></a>
+	<a href="{{ site.url }}/images/wj/40.jpg"><img src="{{ site.url }}/images/wj/40.jpg"></a>
+</figure>
+
+&emsp;&emsp;它也不时明艳，一洗往日的灰暗。
+<figure class="half">
+	<a href="{{ site.url }}/images/wj/36.jpg"><img src="{{ site.url }}/images/wj/36.jpg"></a>
+	<a href="{{ site.url }}/images/wj/34.jpg"><img src="{{ site.url }}/images/wj/34.jpg"></a>
+</figure>
+
+&emsp;&emsp;可最爱还是，余晖依存，路灯点亮的那一刻。
+<figure class="third">
+	<a href="{{ site.url }}/images/wj/29.jpg"><img src="{{ site.url }}/images/wj/29.jpg"></a>
+	<a href="{{ site.url }}/images/wj/31.jpg"><img src="{{ site.url }}/images/wj/31.jpg"></a>
+	<a href="{{ site.url }}/images/wj/33.jpg"><img src="{{ site.url }}/images/wj/33.jpg"></a>
+</figure>
