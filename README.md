@@ -26,6 +26,8 @@
 
 ### 文章列表
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/chengdu"><time datetime="2016-08-01T16:33:00+08:00" itemprop="datePublished">August 01, 2016</time> - 成都 </a></li>
+
     <li><a href="http://yaowenjie.github.io/devops/code-analyzing-practice-with-sonar"><time datetime="2016-07-19T16:56:00+08:00" itemprop="datePublished">July 19, 2016</time> - 利用SonarQube实现代码静态扫描及问题总结 </a></li>
 
     <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/travis-github-chrome-extension"><time datetime="2016-07-06T17:47:00+08:00" itemprop="datePublished">July 06, 2016</time> - 【Chrome插件】Github Travis Stat </a></li>
