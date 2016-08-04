@@ -48,7 +48,7 @@
 
     <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/no-8"><time datetime="2016-04-13T19:50:00+08:00" itemprop="datePublished">April 13, 2016</time> - No.8 </a></li>
 
-    <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/%E5%A6%82%E4%BD%95%E8%AE%A9git%E5%BF%BD%E7%95%A5-ignore-%E6%8E%89%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E5%8D%95-%E5%A4%9A%E8%A1%8C%E5%86%85%E5%AE%B9"><time datetime="2016-03-30T20:59:00+08:00" itemprop="datePublished">March 30, 2016</time> - 如何让Git忽略掉文件中的单/多行内容 </a></li>
+    <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/gitignore-specific-line"><time datetime="2016-03-30T20:59:00+08:00" itemprop="datePublished">March 30, 2016</time> - 如何让Git忽略掉文件中的单/多行内容 </a></li>
 
     <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><time datetime="2016-03-27T11:00:00+08:00" itemprop="datePublished">March 27, 2016</time> - 过去的一些照片 </a></li>
 
