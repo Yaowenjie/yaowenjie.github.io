@@ -49,3 +49,7 @@ imagefeature: wj/99.jpg
 ###### 但是你仍然可以star/fork[该博客的github repo](https://github.com/Yaowenjie/yaowenjie.github.io)，[列issue](https://github.com/Yaowenjie/yaowenjie.github.io/issues)给我，[发邮件](mailto:wsywj61@gmail.com)吐槽我，或者直接在[博客留言板]({{ site.url }}/message-board)留言
 >
 ###### 我不会告诉你，你可能忽略了博客下面那栏社交账号，以及每篇文章下的分享按钮，哈哈哈哈啊哈哈哈
+
+
+### 你也可以通过支付宝打赏的方式，支持我继续创作：
+<center><img class="center" src="{{ site.url }}/images/alipay-QR.png" alt="alipay-QR.png"></center>
