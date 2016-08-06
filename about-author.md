@@ -52,4 +52,4 @@ imagefeature: wj/99.jpg
 
 
 ### 你也可以通过支付宝打赏的方式，支持我继续创作：
-<center><img class="center" src="{{ site.url }}/images/alipay-QR.png" alt="alipay-QR.png"></center>
+<center><img class="center" src="{{ site.url }}/images/alipay-QR.jpg" alt="alipay-QR.jpg"></center>
