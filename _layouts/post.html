@@ -13,6 +13,8 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 -->
 <head>
   {% include head.html %}
+  <script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="{{ site.url }}/assets/js/vendor/bootstrap.min.js"></script>
 </head>
 <body class="post-template" itemscope itemtype="http://schema.org/WebPage">
 {% include header.html %}
@@ -58,6 +60,11 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
                     </div>
         </div>
                     <footer class="post-footer entry-meta">
+
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-backdrop="static">
+                          <i class="icon-dollar"></i> 打赏我
+                        </button>
+
                         {% if site.share %}{% include share.html %}{% endif %}
                         {% include signoff.html %}
                         {% if site.disqus_shortname and page.comments == true %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
@@ -85,6 +92,8 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
+$('#myModal').appendTo("body").modal('show');
+
 var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
   (function() {
     var ds = document.createElement('script');
@@ -97,6 +106,24 @@ var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
 </script>
 
 {% include scripts.html %}
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！</h4>
+      </div>
+      <div class="modal-body">
+        {% include payment.html %}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">取消/关闭该窗口</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

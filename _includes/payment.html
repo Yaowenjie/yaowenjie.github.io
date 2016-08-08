@@ -1,0 +1,20 @@
+<div id="payment-group">
+<fieldset class="switch">
+  <span id='legend-text'>扫码打赏我: </span>
+
+	<input id="alipay" name="view" type="radio" checked onClick="switchPayment()">
+	<label for="alipay">支付宝</label>
+
+	<input id="wechatpay" name="view" type="radio" onClick="switchPayment()">
+	<label for="wechatpay">微信</label>
+
+	<span class="switch-button"></span>
+</fieldset>
+</div>
+
+<center><img id="alipay-QR" src="{{ site.url }}/images/alipay-QR.jpg" alt="alipay-QR.jpg"></center>
+<center><img id="wechat-QR" src="{{ site.url }}/images/wechat-QR.jpg" alt="wechat-QR.jpg" style="display: none"></center>
+
+
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/payment.css" />
+<script type="text/javascript" src="{{ site.url }}/assets/js/payment.js"></script>
