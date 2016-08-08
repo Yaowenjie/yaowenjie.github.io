@@ -51,5 +51,22 @@ imagefeature: wj/99.jpg
 ###### 我不会告诉你，你可能忽略了博客下面那栏社交账号，以及每篇文章下的分享按钮，哈哈哈哈啊哈哈哈
 
 
-### 你也可以通过支付宝打赏的方式，支持我继续创作：
-<center><img class="center" src="{{ site.url }}/images/alipay-QR.jpg" alt="alipay-QR.jpg"></center>
+#### 你也可以通过支付宝/微信的形式**打**赏我，支持我继续创作：
+<center><button onClick="switchPayment()" id="switch-payment">目前是支付宝二维码，点击切换微信二维码</button></center>
+<br/>
+<center><img id="alipay-QR" src="{{ site.url }}/images/alipay-QR.jpg" alt="alipay-QR.jpg"></center>
+<center><img id="wechat-QR" src="{{ site.url }}/images/wechat-QR.jpg" alt="wechat-QR.jpg" style="display: none"></center>
+
+<script type="text/javascript">
+  function switchPayment() {
+    var alipayQR = document.getElementById("alipay-QR");
+    var wechatQR = document.getElementById("wechat-QR");
+    var switchButton = document.getElementById("switch-payment");
+    var textForAlipay = '目前是支付宝二维码，点击切换微信二维码';
+    var textForWechat = '目前是微信二维码，点击切换支付宝二维码';
+
+    alipayQR.style.display = (alipayQR.style.display === 'none') ? 'block' : 'none';
+    wechatQR.style.display = (wechatQR.style.display === 'none') ? 'block' : 'none';
+    switchButton.firstChild.data = (alipayQR.style.display === 'none') ? textForWechat : textForAlipay;
+  }
+</script>
