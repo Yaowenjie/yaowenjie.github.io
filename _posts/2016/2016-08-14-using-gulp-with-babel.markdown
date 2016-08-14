@@ -4,7 +4,7 @@ title: "基于Babel使用gulp"
 date: "2016-08-14 11:00"
 published: true
 comments: true
-tags: [gulp, babel]
+tags: [gulp, babel, ES6, broswerify]
 category: Front-end
 imagefeature: wj/10.jpg
 ---
@@ -67,12 +67,12 @@ gulp.task('default', function () {
 
 &emsp;&emsp;这种方式下差不多唯一没有使能的特性就是ES6的模块。为此，我推荐使用browserify。
 
-### 使用gulp通过Broswerify
+### 在基于Broswerify的gulp里调用Babel
 (查询所有这些库的名字的大小写花了我一会儿工夫)
 
-&emsp;&emsp;如果你想学习ES6的模块(modules，它让你能够**import**工程中的其他文件)，你可以结合使用[Broswerify](http://browserify.org/)以及babel来实现。
+&emsp;&emsp;如果你想学习ES6的模块(modules，它让你能够**import**工程中的其他文件)，你可以结合使用[Broswerify](http://browserify.org/)和babel。
 
-&emsp;&emsp;如果你还没有听说过Broswerify，允许你使用Node.js风格的require来编写代码：
+&emsp;&emsp;或许你还没有听说过Broswerify，其实它让你可以使用Node.js风格的require来编写代码：
 
 ```js
 var $ = require('jquery');
@@ -80,9 +80,9 @@ var $ = require('jquery');
 $('body').css('background-color', 'orange');
 ```
 
-&emsp;&emsp;Browserify支持"转换(Transforms)"，它们主要是一些高效的插件 - 就像gulp里面有很多插件可以处理很多文件相关的事情一样，也有很多Browserify的转换，它们可以让你在脚本编译的机器上完成很多支持环境变量的事情，或者编译[React](https://facebook.github.io/react/)的JSX文件。
+&emsp;&emsp;Browserify支持“转换(Transforms)”，它们主要是一些高效的辅助插件 - 就像gulp里面有很多插件可以处理很多文件相关的事情一样，也有很多Browserify的转换，它们可以让你在脚本编译的机器上完成很多支持环境变量的事情，或者编译[React](https://facebook.github.io/react/)的JSX文件。
 
-&emsp;&emsp;其中一个转换插件叫做[babelify](https://github.com/babel/babelify)，它为Browserify添加了babel的支持。除了让你使用ES6和**require()**之外，它还可以把**import**声明转换为**requiire()**，你可以使用在你的代码里使用ES6的模块:
+&emsp;&emsp;其中一个转换插件叫做[babelify](https://github.com/babel/babelify)，它为Browserify添加了babel的支持。除了让你使用ES6和**require()**之外，它还可以把**import**声明转换为**require()**，此时你就可以在你的代码里使用ES6的模块:
 
 ```js
 import $ from 'jquery';
@@ -160,6 +160,6 @@ gulp.task('default', function () {
 
 ---
 
-&emsp;&emsp;你现在应该知道如果在你的gulp文件中使用ES6了 - 通过安装**babel**和重命名这个文件为**gulpfile.babel.js** - 以及如何使用gulp把ES6的代码转换成ES5的了，即使用[gulp-babel](https://www.npmjs.com/package/gulp-babel)或者结合使用[babelify](https://www.npmjs.com/package/gulp-babel)和Browserify。
+&emsp;&emsp;你现在应该知道如何在你的gulp文件中使用ES6了 - 通过安装**babel**和重命名这个文件为**gulpfile.babel.js**； 以及如何使用gulp把ES6的代码转换成ES5的了 - 使用[gulp-babel](https://www.npmjs.com/package/gulp-babel)或者结合使用[babelify](https://www.npmjs.com/package/gulp-babel)和Browserify。
 
-&emsp;&emsp;如果你在升级到Babel 6之后遇到了什么奇怪的error，先确认你使用[es2015 present](https://babeljs.io/docs/plugins/preset-es2015/)！
+&emsp;&emsp;如果你在升级到Babel 6之后遇到了什么奇怪的error，先确认你是否使用了[es2015 present](https://babeljs.io/docs/plugins/preset-es2015/)！
