@@ -2,7 +2,7 @@
 layout: "post"
 title: "基于Babel使用gulp"
 date: "2016-08-14 11:00"
-published: false
+published: true
 comments: true
 tags: [gulp, babel]
 category: Front-end
@@ -48,7 +48,118 @@ require('./gulpfile.babel.js');
 &emsp;&emsp;然后再使用上面提到的gulpfile.babel.js。
 
 ## 使用Gulp构建ES6语法的文件
+&emsp;&emsp;只是使用babel把ES6转换为ES5是相当简单的。使用如下的[gulp-babel](https://www.npmjs.com/package/gulp-babel)插件：
 
+```js
+var gulp = require('gulp');
+var babel = require('gulp-babel');
 
+gulp.task('default', function () {
+    return gulp.src('src/app.js')
+        .pipe(babel())
+        .pipe(gulp.dest('dist'));
+});
+```
 
-## 使用gulp通过Broswerify
+&emsp;&emsp;这里的输出将会是经过babel处理的代码，它们可以用于那些暂时还不是完全支持ES6特性的浏览器中。一旦调用了gulp-babel插件，你就可以调用像uglify这样的常用插件。
+
+&emsp;&emsp;gulp-babel插件也支持[gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)，它可以用于简单的浏览器调试。
+
+&emsp;&emsp;这种方式下差不多唯一没有使能的特性就是ES6的模块。为此，我推荐使用browserify。
+
+### 使用gulp通过Broswerify
+(查询所有这些库的名字的大小写花了我一会儿工夫)
+
+&emsp;&emsp;如果你想学习ES6的模块(modules，它让你能够**import**工程中的其他文件)，你可以结合使用[Broswerify](http://browserify.org/)以及babel来实现。
+
+&emsp;&emsp;如果你还没有听说过Broswerify，允许你使用Node.js风格的require来编写代码：
+
+```js
+var $ = require('jquery');
+
+$('body').css('background-color', 'orange');
+```
+
+&emsp;&emsp;Browserify支持"转换(Transforms)"，它们主要是一些高效的插件 - 就像gulp里面有很多插件可以处理很多文件相关的事情一样，也有很多Browserify的转换，它们可以让你在脚本编译的机器上完成很多支持环境变量的事情，或者编译[React](https://facebook.github.io/react/)的JSX文件。
+
+&emsp;&emsp;其中一个转换插件叫做[babelify](https://github.com/babel/babelify)，它为Browserify添加了babel的支持。除了让你使用ES6和**require()**之外，它还可以把**import**声明转换为**requiire()**，你可以使用在你的代码里使用ES6的模块:
+
+```js
+import $ from 'jquery';
+
+$('body').css('background-color', 'red');
+```
+
+&emsp;&emsp;你可以在下面的代码里一起使用Browserify和babelify：
+
+```js
+var fs = require('fs');
+var babelify = require('babelify');
+var browserify = require('browserify');
+
+var bundler = browserify('src/app.js');
+bundler.transform(babelify);
+
+bundler.bundle()
+    .on('error', function (err) { console.error(err); })
+    .pipe(fs.createWriteStream('bundle.js'));
+```
+
+&emsp;&emsp;bundler.bundle()方法返回了一段包含处理过的代码的可读流。我们可以使用vinyl-source-stream和vinyl-buffer，来把这个转化为可以被送入其他gulp插件和**gulp.dest()** 的内容：尽管之前的代码完全可以很好工作了，但最佳实践还是要避免在gulpfile里面使用fs模块。
+
+&emsp;&emsp;在gulpfile里面，之前的代码可以写成这样:
+
+```js
+var babelify = require('babelify');
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
+var uglify = require('gulp-uglify');
+
+gulp.task('default', function () {
+    var bundler = browserify('src/app.js');
+    bundler.transform(babelify);
+
+    bundler.bundle()
+        .on('error', function (err) { console.error(err); })
+        .pipe(source('app.js'))
+        .pipe(buffer())
+        .pipe(uglify()) // Use any gulp plugins you want now
+        .pipe(gulp.dest('dist'));
+});
+```
+&emsp;&emsp;最后，加分题！给下面的代码添加对source maps的支持。
+
+```js
+var babelify = require('babelify');
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
+var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
+
+gulp.task('default', function () {
+    var bundler = browserify({
+        entries: 'src/app.js',
+        debug: true
+    });
+    bundler.transform(babelify);
+
+    bundler.bundle()
+        .on('error', function (err) { console.error(err); })
+        .pipe(source('app.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(uglify()) // Use any gulp plugins you want now
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('dist'));
+});
+```
+
+&emsp;&emsp;棒!（它是不是有点长了，获取有必要把它拆成一个独立的文件？）
+
+---
+
+&emsp;&emsp;你现在应该知道如果在你的gulp文件中使用ES6了 - 通过安装**babel**和重命名这个文件为**gulpfile.babel.js** - 以及如何使用gulp把ES6的代码转换成ES5的了，即使用[gulp-babel](https://www.npmjs.com/package/gulp-babel)或者结合使用[babelify](https://www.npmjs.com/package/gulp-babel)和Browserify。
+
+&emsp;&emsp;如果你在升级到Babel 6之后遇到了什么奇怪的error，先确认你使用[es2015 present](https://babeljs.io/docs/plugins/preset-es2015/)！
