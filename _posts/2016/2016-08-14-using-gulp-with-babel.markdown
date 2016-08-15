@@ -160,6 +160,6 @@ gulp.task('default', function () {
 
 ---
 
-&emsp;&emsp;你现在应该知道如何在你的gulp文件中使用ES6了 - 通过安装**babel**和重命名这个文件为**gulpfile.babel.js**； 以及如何使用gulp把ES6的代码转换成ES5的了 - 使用[gulp-babel](https://www.npmjs.com/package/gulp-babel)或者结合使用[babelify](https://www.npmjs.com/package/gulp-babel)和Browserify。
+&emsp;&emsp;你现在应该知道如何在你的gulpfile中使用ES6了 - 通过安装**babel**和重命名gulpfile为**gulpfile.babel.js**； 以及如何使用gulp把ES6的代码转换成ES5 - 使用[gulp-babel](https://www.npmjs.com/package/gulp-babel)或者结合使用[babelify](https://www.npmjs.com/package/gulp-babel)和Browserify。
 
 &emsp;&emsp;如果你在升级到Babel 6之后遇到了什么奇怪的error，先确认你是否使用了[es2015 present](https://babeljs.io/docs/plugins/preset-es2015/)！
