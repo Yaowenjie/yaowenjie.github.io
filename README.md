@@ -26,7 +26,7 @@
 
 ### 文章列表
 <ul class="post-list">
-    <li><a href="http://yaowenjie.github.io/front-end/using-gulp-with-babel"><time datetime="2016-08-14T11:00:00+08:00" itemprop="datePublished">August 14, 2016</time> - 基于Babel使用gulp </a></li>
+    <li><a href="http://yaowenjie.github.io/front-end/using-gulp-with-babel"><time datetime="2016-08-14T11:00:00+08:00" itemprop="datePublished">August 14, 2016</time> - 使用基于Babel的gulp </a></li>
 
 
     <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/chengdu"><time datetime="2016-08-01T16:33:00+08:00" itemprop="datePublished">August 01, 2016</time> - 成都 </a></li>
