@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '配置AWS VPC的五个误区'
+title: '[译]配置AWS VPC的五个误区'
 date: 2016-03-25 17:53
 description: VPC让AWS变得更好！
 comments: true

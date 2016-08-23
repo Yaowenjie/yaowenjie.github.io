@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "在ECS上使用Consul实现服务发现"
+title: "[译]在ECS上使用Consul实现服务发现"
 description: "Service discovery via consul with amazon ecs"
 date: "2016-04-20 20:41"
 comments: true

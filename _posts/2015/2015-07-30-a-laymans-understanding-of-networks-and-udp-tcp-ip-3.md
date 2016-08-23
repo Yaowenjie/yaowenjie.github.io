@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '一个门外汉对网络和UDP/TCP/IP的理解（3）'
+title: '[译]一个门外汉对网络和UDP/TCP/IP的理解（3）'
 date: 2015-07-30 17:50
 comments: true
 category: 网络基础

@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "使用基于Babel的gulp"
+title: "[译]使用基于Babel的gulp"
 date: "2016-08-14 11:00"
 published: true
 comments: true
