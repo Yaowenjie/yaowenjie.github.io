@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '[译]基础设施即代码'
+title: '基础设施即代码'
 description: Infrastructure As Code
 date: 2016-03-04 17:53
 comments: true
