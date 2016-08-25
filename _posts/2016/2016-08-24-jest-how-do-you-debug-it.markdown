@@ -82,7 +82,7 @@ kill - 结束脚本
 &emsp;&emsp;下面就是具体的步骤:
 
 1. 点击菜单“Run –  Edit Configurations…”
-2. 添加一个新的“Node.js”配置并且像下面这样填写：<center><img class="center" src="https://liusy182.files.wordpress.com/2015/03/run-config.png?w=1228&h=646" alt="未标题-2.jpg"></center>
-3. 保存并且关闭对话窗口。在编辑器内里面任意地方添加断点<center><img class="center" src="https://liusy182.files.wordpress.com/2015/03/bp.png?w=1232&h=550" alt="未标题-2.jpg"></center>
+2. 添加一个新的“Node.js”配置并且像下面这样填写：<center><img class="center" src="{{ site.url }}/images/2016/jest-1.png" alt="jest.png"></center>
+3. 保存并且关闭对话窗口。在编辑器内里面任意地方添加断点<center><img class="center" src="{{ site.url }}/images/2016/jest-2.png" alt="jest.png"></center>
 4. 点击菜单中“Run –  Debug…”并且选择我们刚刚保存的配置。这会启动一个调试的shell来运行这些测试。并且它最终会停到我们设置的断点处。
 5. 现在，我们可以使用WebStorm的调试器（会出现在IDE的底部）来调试Jest测试啦！
