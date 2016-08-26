@@ -26,7 +26,9 @@
 
 ### 文章列表
 <ul class="post-list">
-    <li><a href="http://yaowenjie.github.io/front-end/using-gulp-with-babel"><time datetime="2016-08-14T11:00:00+08:00" itemprop="datePublished">August 14, 2016</time> - 使用基于Babel的gulp </a></li>
+    <li><a href="http://yaowenjie.github.io/front-end/jest-how-do-you-debug-it"><time datetime="2016-08-24T11:26:00+08:00" itemprop="datePublished">August 24, 2016</time> - [译]如何调试JEST测试？ </a></li>
+
+    <li><a href="http://yaowenjie.github.io/front-end/using-gulp-with-babel"><time datetime="2016-08-14T11:00:00+08:00" itemprop="datePublished">August 14, 2016</time> - [译]使用基于Babel的gulp </a></li>
 
 
     <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/chengdu"><time datetime="2016-08-01T16:33:00+08:00" itemprop="datePublished">August 01, 2016</time> - 成都 </a></li>
@@ -47,7 +49,7 @@
 
     <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/using-browser-sync-to-test-in-many-plantforms-synchronously"><time datetime="2016-04-23T22:33:00+08:00" itemprop="datePublished">April 23, 2016</time> - 使用Browsersync实现多浏览器跨平台的UI测试 </a></li>
 
-    <li><a href="http://yaowenjie.github.io/cloud/service-discovery-via-consul-with-amazon-ecs"><time datetime="2016-04-20T20:41:00+08:00" itemprop="datePublished">April 20, 2016</time> - 在ECS上使用Consul实现服务发现 </a></li>
+    <li><a href="http://yaowenjie.github.io/cloud/service-discovery-via-consul-with-amazon-ecs"><time datetime="2016-04-20T20:41:00+08:00" itemprop="datePublished">April 20, 2016</time> - [译]在ECS上使用Consul实现服务发现 </a></li>
 
     <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/no-8"><time datetime="2016-04-13T19:50:00+08:00" itemprop="datePublished">April 13, 2016</time> - No.8 </a></li>
 
@@ -59,11 +61,11 @@
 
     <li><a href="http://yaowenjie.github.io/devops/infrastructure-as-code"><time datetime="2016-03-04T17:53:00+08:00" itemprop="datePublished">March 04, 2016</time> - 基础设施即代码 </a></li>
 
-    <li><a href="http://yaowenjie.github.io/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/a-laymans-understanding-of-networks-and-udp-tcp-ip-3"><time datetime="2015-07-30T17:50:00+08:00" itemprop="datePublished">July 30, 2015</time> - 一个门外汉对网络和UDP/TCP/IP的理解（3） </a></li>
+    <li><a href="http://yaowenjie.github.io/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/a-laymans-understanding-of-networks-and-udp-tcp-ip-3"><time datetime="2015-07-30T17:50:00+08:00" itemprop="datePublished">July 30, 2015</time> - [译]一个门外汉对网络和UDP/TCP/IP的理解（3） </a></li>
 
-    <li><a href="http://yaowenjie.github.io/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/a-laymans-understanding-of-networks-and-udp-tcp-ip-2"><time datetime="2015-07-30T16:14:00+08:00" itemprop="datePublished">July 30, 2015</time> - 一个门外汉对网络和UDP/TCP/IP的理解（2） </a></li>
+    <li><a href="http://yaowenjie.github.io/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/a-laymans-understanding-of-networks-and-udp-tcp-ip-2"><time datetime="2015-07-30T16:14:00+08:00" itemprop="datePublished">July 30, 2015</time> - [译]一个门外汉对网络和UDP/TCP/IP的理解（2） </a></li>
 
-    <li><a href="http://yaowenjie.github.io/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/laymans-understanding-of-networks-and-udp-tcp-ip"><time datetime="2015-07-30T14:01:00+08:00" itemprop="datePublished">July 30, 2015</time> - 一个门外汉对网络和UDP/TCP/IP的理解（1） </a></li>
+    <li><a href="http://yaowenjie.github.io/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/laymans-understanding-of-networks-and-udp-tcp-ip"><time datetime="2015-07-30T14:01:00+08:00" itemprop="datePublished">July 30, 2015</time> - [译]一个门外汉对网络和UDP/TCP/IP的理解（1） </a></li>
 
     <li><a href="http://yaowenjie.github.io/powershell/windows-powershell-dsc-practice-c"><time datetime="2015-07-30T11:49:00+08:00" itemprop="datePublished">July 30, 2015</time> - Windows PowerShell DSC实践 | Ultimate </a></li>
 
