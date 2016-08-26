@@ -28,7 +28,7 @@ public class HomePage {
     @FindBy(xpath = "//*[@id=\"navigation\"]/li[5]/a")
     private WebElement messageBoardLink;
 
-    @FindBy(xpath = "//*[@id=\"masthead\"]/button")
+    @FindBy(xpath = "//*[@id=\"masthead\"]/*[contains(@class, 'menu-button')]")
     private WebElement searchButton;
 
     @FindBy(xpath = "/html/body/div[1]/div/input")
