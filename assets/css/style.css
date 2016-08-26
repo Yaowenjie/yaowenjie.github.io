@@ -3835,6 +3835,23 @@ button.menu-button {
   background-color: #262626;
   color: #fff
 }
+button.starme-button {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  width: 200px;
+  height: 40px;
+  z-index: 1000;
+  font-size: 16px;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  text-align: center;
+  vertical-align: middle;
+  background-color: rgba(38, 38, 38, 0.5);
+  color: #fff;
+  border-radius: 5px;
+}
 .image-credit {
   position: absolute;
   top: 92%;
@@ -3852,6 +3869,11 @@ button.menu-button {
 }
 button.menu-button:hover {
   background-color: #39c492 ;
+  color: #fff
+  box-shadow: rgba(0,0,0,0.2) 0 0 0 3px;
+}
+button.starme-button:hover {
+  background-color: rgba(57, 196, 146, 0.5);
   color: #fff
   box-shadow: rgba(0,0,0,0.2) 0 0 0 3px;
 }
@@ -4057,7 +4079,7 @@ body.slide{
         width:700px
         }
 
-    }
+}
 
 @media screen and (max-width:700px){
 
@@ -4078,15 +4100,20 @@ body.slide{
     #permalink .permalink-box{
         width:90%
         }
-
+    .blog-description {
+      display: none;
+    }
+}
 
 @media screen and (max-width:500px){
 
     a#slide{
         position:absolute
         }
-
-
+    button.starme-button {
+      display: none;
+    }
+}
 /*      End-Responsive      */
 
 
