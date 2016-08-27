@@ -24,7 +24,7 @@ node debug --harmony .\node_modules\jest-cli\bin\jest.js --runInBand myView-test
 ```
 &emsp;&emsp;接下来让我来解释一下我们这里到底做了什么：
 
-- "node debug"将会启动node自带的调试器。“debug”会调用一个V8引擎调试器的wrapper。这个wrapper提供了一系列的指令，用于在代码中跳进跳出和跟踪，这些都不会出现在V8的"node -debug"中。（我承认它们看起来很相似）
+- "node debug"将会启动node自带的调试器。“debug”会调用一个V8引擎调试器的wrapper。这个wrapper提供了一系列的指令，用于在代码中跳进跳出和跟踪，而这些指令都不会出现在V8的“node -debug”中。（我承认它们看起来很相似，一个“-”符号之差）
 - "-harmony"标志是为了让Jest正确地运行。更多关于harmony的信息可以戳[这里](http://stackoverflow.com/questions/13351965/what-does-node-harmony-do)。
 - “.\node_modules\jest-cli\bin\jest.js”就是Jest的入口。这个文件会在我调用“\node_modules\.bin”里的“Jest”时被调用。
 - "-runInBand"告诉Jest在当前的进程中运行所有测试，而不是再启动一个进程。Jest默认就会启动多个进程并行的运行测试。如下为源码中关于这个选项的描述的片段（在.\node_modules\jest-cli\bin\jest.js中）:<br/>
@@ -32,9 +32,9 @@ node debug --harmony .\node_modules\jest-cli\bin\jest.js --runInBand myView-test
 ```
 'Run all tests serially in the current process (rather than creating a worker pool of child processes that run tests). This is sometimes useful for debugging, but such use cases are pretty rare.'
 ---
-'在当前的进程中顺利的运行所有测试（而不是创建一个包含诸多子进程的进程池来运行测试）。这便于调试，但是使用它的场景确实挺少的。'
+'在当前的进程中顺序地运行所有测试（而不是创建一个包含诸多子进程的进程池来运行测试）。这便于调试，但是使用它的场景确实挺少的。'
 ```
-- “myView-test.js”就是我们想要debug的测试文件。使用部分路径时没有问题的，因为Jest会把它转换为一段正则表达式。
+- “myView-test.js”就是我们想要debug的测试文件。像这样使用相对路径是没有问题的，因为Jest会把它转换为一段正则表达式。
 
 &emsp;&emsp;一旦启动了调试器，我们就可以看到调试器会在jest.cs的第一行就暂停了。可以使用Node调试器支持的API来跟踪代码。或者也可以在测试中添加断点:
 
