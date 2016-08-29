@@ -6,7 +6,7 @@ published: true
 comments: true
 tags: [webpack, dashboard, 命令行]
 category: Front-end
-imagefeature: wj/10.jpg
+imagefeature: 2016/wd3.png
 ---
 &emsp;&emsp;webpack-dashboard是用于改善开发人员使用[webpack](http://webpack.github.io/)时控制台用户体验的一款工具。它摒弃了webpack（尤其是使用dev server时）在命令行内诸多杂乱的信息结构，为webpack在命令行上构建提供了一目了然的仪表盘(dashboard)，其中包括**构建过程**和**状态**、**日志**以及涉及的**模块列表**。使用它，你就可以更加优雅的使用webpack构建你的代码。
 
@@ -61,7 +61,7 @@ new WebpackDevServer(
 ).listen(
 ```
 
-&emsp;&emsp;当然，你也可以在npm的script里面启动dev server时添加**quiet**选项。
+&emsp;&emsp;当然，你也可以在npm的script里面启动dev server时添加**quiet**选项（我在尝试的时候选择这种简单的方式）。
 
 ```js
 "scripts": {
@@ -71,9 +71,13 @@ new WebpackDevServer(
 
 &emsp;&emsp;这样，你就可以运行诸如**npm start**这样的命令启动你的server。然后，你就可以休息一下，泡杯咖啡，假装自己就是一位宇航员，静静地看着你的dashboard。
 
+&emsp;&emsp;如下图所示，为笔者尝试时的截图：
+<center><img class="center" src="{{ site.url }}/images/2016/wd4.png" alt="dashboard.png"></center>
+
+
 ## 最后
 &emsp;&emsp;本文之介绍了基于webpack-dev-server的这一种使用情况，其他启动server的方式（比如express）或者其他情况可以参考[webpack-dashboard github官方仓库](https://github.com/FormidableLabs/webpack-dashboard)。
 
 &emsp;&emsp;webpack-dashboard目前还处于初期阶段，所以必然还有一些值得注意或者值得改进的地方。如果你使用的是OS X自带的终端(Terminal)，需要确认"View → Allow Mouse Reporting"是使能(Enable)状态，如果你的终端没有这个功能的话，你或许可以尝试一下[iTerm2](https://www.iterm2.com/index.html)。另外，如果你忘记使用quiet模式或者你的某些log/名字过长，可能会导致显示的字符串“越界”，跑到另一个区域，看起来没有那么直接美观了。
 
-&emsp;&emsp;最后，如果你想简单的看一下webpack-dashboard启动起来的效果，你可以参考[本文示例代码](https://github.com/Yaowenjie/React-learning/tree/master/lesson1)。
+&emsp;&emsp;最后，如果你想简单的看一下webpack-dashboard启动起来的效果，你可以参考使用[本文示例代码](https://github.com/Yaowenjie/React-learning/tree/master/lesson1)。
