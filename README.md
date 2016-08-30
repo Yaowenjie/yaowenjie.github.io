@@ -26,6 +26,8 @@
 
 ### 文章列表
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/front-end/using-webpack-dashboard"><time datetime="2016-08-28T22:55:00+08:00" itemprop="datePublished">August 28, 2016</time> - 使用优雅的webpack命令行工具:webpack-dashboard </a></li>
+
     <li><a href="http://yaowenjie.github.io/front-end/jest-how-do-you-debug-it"><time datetime="2016-08-24T11:26:00+08:00" itemprop="datePublished">August 24, 2016</time> - [译]如何调试JEST测试？ </a></li>
 
     <li><a href="http://yaowenjie.github.io/front-end/using-gulp-with-babel"><time datetime="2016-08-14T11:00:00+08:00" itemprop="datePublished">August 14, 2016</time> - [译]使用基于Babel的gulp </a></li>
