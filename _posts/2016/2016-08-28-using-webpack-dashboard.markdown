@@ -14,7 +14,9 @@ imagefeature: 2016/wd3.png
 <center><img class="center" src="{{ site.url }}/images/2016/wd1.png" alt="star.png"></center>
 
 <!--more-->
+
 ## 它是什么
+
 &emsp;&emsp;简单地说，[webpack-dashboard](https://github.com/FormidableLabs/webpack-dashboard)就是把原先你使用webpack时（特别是使用webpack dev server时）命令行控制台打印的日志：
 <center><img class="center" src="{{ site.url }}/images/2016/wd2.png" alt="console.png"></center>
 
