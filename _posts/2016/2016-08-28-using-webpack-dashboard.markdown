@@ -8,9 +8,9 @@ tags: [webpack, dashboard, 命令行]
 category: Front-end
 imagefeature: 2016/wd3.png
 ---
-&emsp;&emsp;webpack-dashboard是用于改善开发人员使用[webpack](http://webpack.github.io/)时控制台用户体验的一款工具。它摒弃了webpack（尤其是使用dev server时）在命令行内诸多杂乱的信息结构，为webpack在命令行上构建提供了一目了然的仪表盘(dashboard)，其中包括**构建过程**和**状态**、**日志**以及涉及的**模块列表**。使用它，你就可以更加优雅的使用webpack构建你的代码。
+&emsp;&emsp;webpack-dashboard是用于改善开发人员使用[webpack](http://webpack.github.io/)时控制台用户体验的一款工具。它摒弃了webpack（尤其是使用dev server时）在命令行内诸多杂乱的信息结构，为webpack在命令行上构建了一个一目了然的仪表盘(dashboard)，其中包括**构建过程**和**状态**、**日志**以及涉及的**模块列表**。有了它，你就可以更加优雅的使用webpack来构建你的代码。
 
-&emsp;&emsp;另外，它自开源以来短短半个月，就已经在github上收获了6000多枚star。
+&emsp;&emsp;另外，它自开源以来短短半个月，就已经在github上收获了6000多枚star，足见人们对于提升开发工具的用户体验有着巨大的需求。
 <center><img class="center" src="{{ site.url }}/images/2016/wd1.png" alt="star.png"></center>
 
 <!--more-->
@@ -47,7 +47,7 @@ plugins: [
 ]
 ```
 
-&emsp;&emsp;最后，你需要让dev server处于静默的状态启动（主要是为了去掉多余的日志），要实现这一点，你可以像官方那样，在WebpackDevServer的构造函数里添加 **quiet: true**。
+&emsp;&emsp;最后，你需要让dev server在静默的状态中启动（主要是为了去掉多余的日志），要实现这一点，你可以像官方的做法那样，在WebpackDevServer的构造函数里添加 **quiet: true**。
 
 ```js
 new WebpackDevServer(
@@ -76,8 +76,8 @@ new WebpackDevServer(
 
 
 ## 最后
-&emsp;&emsp;本文之介绍了基于webpack-dev-server的这一种使用情况，其他启动server的方式（比如express）或者其他情况可以参考[webpack-dashboard github官方仓库](https://github.com/FormidableLabs/webpack-dashboard)。
+&emsp;&emsp;本文只介绍了基于webpack-dev-server的这一种使用情况，其他启动server的方式（比如express）或者其他情况可以参考[webpack-dashboard github官方仓库](https://github.com/FormidableLabs/webpack-dashboard)。
 
-&emsp;&emsp;webpack-dashboard目前还处于初期阶段，所以必然还有一些值得注意或者值得改进的地方。如果你使用的是OS X自带的终端(Terminal)，需要确认"View → Allow Mouse Reporting"是使能(Enable)状态，如果你的终端没有这个功能的话，你或许可以尝试一下[iTerm2](https://www.iterm2.com/index.html)。另外，如果你忘记使用quiet模式或者你的某些log/名字过长，可能会导致显示的字符串“越界”，跑到另一个区域，看起来没有那么直接美观了。
+&emsp;&emsp;webpack-dashboard目前还处于初期阶段，所以必然还有一些值得注意或者值得改进的地方。如果你使用的是OS X自带的终端(Terminal)，需要确认“View → Allow Mouse Reporting”是使能(Enable)状态，如果你的终端没有这个功能的话，你或许可以尝试一下[iTerm2](https://www.iterm2.com/index.html)。另外，如果你忘记使用quiet模式或者你的某句日志或者名字过长，可能会导致显示的字符串“越界”，跑到另一个区域，看起来没有那么直接美观了。
 
 &emsp;&emsp;最后，如果你想简单的看一下webpack-dashboard启动起来的效果，你可以参考使用[本文示例代码](https://github.com/Yaowenjie/React-learning/tree/master/lesson1)。
