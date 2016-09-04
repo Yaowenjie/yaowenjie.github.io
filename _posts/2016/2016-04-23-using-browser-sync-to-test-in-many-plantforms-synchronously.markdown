@@ -7,7 +7,7 @@ comments: true
 share: true
 imagefeature: wj/5.jpg
 category: 编程相关
-tags: [browser-sync, 同步, 多平台, UI测试]
+tags: [Browser-sync, 同步, 多平台, Test]
 published: true
 ---
 &emsp;&emsp;最近由于TW[技术雷达(Tech Radar)](https://www.thoughtworks.com/radar/tools)的机缘，同事向我们介绍了一个用于浏览器同步测试的工具 --- Browsersync，使用之后，发现它着实简单，而且十分炫酷。更重要的一点是，__Browsersync可以同时在PC、平板、手机等设备下进项UI调试__，换句话说，你在其中一个浏览器上的操作会同步到多个设备的多个浏览器上。

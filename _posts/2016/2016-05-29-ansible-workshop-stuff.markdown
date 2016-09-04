@@ -5,7 +5,7 @@ date: "2016-05-29 10:55"
 published: true
 comments: true
 category: DevOps
-tags: [Ansible, Workshop, 指南, gitbook]
+tags: [Ansible, Workshop, 指南, Gitbook]
 imagefeature: wj/2.jpg
 ---
 

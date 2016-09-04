@@ -4,7 +4,7 @@ title: 'Windows Powershell DSC实践（一）| 认识及工具准备'
 date: 2014-12-13 00:07
 comments: true
 category: PowerShell
-tags: [powershell, DSC, vagrant, Chocolatey, 自动化部署, virtualbox]
+tags: [PowerShell, DSC, Vagrant, Chocolatey, 自动化配置管理, Virtualbox]
 imagefeature: wj/16.jpg
 ---
 ## DSC? Who are you？| 什么叫DSC

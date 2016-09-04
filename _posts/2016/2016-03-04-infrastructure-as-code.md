@@ -5,7 +5,7 @@ description: Infrastructure As Code
 date: 2016-03-04 17:53
 comments: true
 category: DevOps
-tags: [InfrastructureAsCode, 基础设施即代码, 基础设施, 持续交付]
+tags: [InfrastructureAsCode, 基础设施, 持续交付]
 share: true
 imagefeature: wj/17.jpg
 ---

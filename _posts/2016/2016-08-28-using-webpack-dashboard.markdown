@@ -4,7 +4,7 @@ title: "使用优雅的webpack命令行工具:webpack-dashboard"
 date: "2016-08-28 22:55"
 published: true
 comments: true
-tags: [webpack, dashboard, 命令行]
+tags: [Webpack, Dashboard, 命令行]
 category: Front-end
 imagefeature: 2016/wd3.png
 ---

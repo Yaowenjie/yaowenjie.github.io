@@ -4,7 +4,7 @@ title: 'Windows PowerShell DSC实践 | Ultimate'
 date: 2015-07-30 11:49
 comments: true
 category: PowerShell
-tags: [powershell, DSC, TheDSCBook, penflip, 自动化配置管理]
+tags: [PowerShell, DSC, Penflip, 自动化配置管理]
 imagefeature: wj/16.jpg
 ---
 ## 续言

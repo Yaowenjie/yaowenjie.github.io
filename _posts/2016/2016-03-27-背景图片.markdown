@@ -6,7 +6,7 @@ date: "2016-03-27 11:00"
 description: "Pictures will be used in background."
 comments: true
 category: Life|生活
-tags: [photo, pictures, 照片]
+tags: [Photo]
 imagefeature: wj/8.jpg
 ---
 &emsp;&emsp;随意挑了点以前拍的照片，所有图片皆为压缩后的原片，木有其它的处理，这些都将被用作以后博客的背景图，哈哈哈哈

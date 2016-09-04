@@ -4,7 +4,7 @@ title: '[译]一个门外汉对网络和UDP/TCP/IP的理解（2）'
 date: 2015-07-30 16:14
 comments: true
 category: 网络基础
-tags: [IP地址, DNS, 域名解析, 域名服务器]
+tags: [IP, DNS, 域名解析]
 imagefeature: wj/20.jpg
 ---
 ###### 本文源自对文章[Layman’s understanding of Networking & UDP/TCP/IP（点击进入原文）](http://www.microshell.com/sysadmin/networking/laymans-understanding-of-networking-udptcpip/2//)的翻译。
