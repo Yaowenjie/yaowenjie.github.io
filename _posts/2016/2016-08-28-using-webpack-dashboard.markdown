@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "使用优雅的webpack命令行工具:webpack-dashboard"
+title: "使用webpack命令行工具:webpack-dashboard"
 date: "2016-08-28 22:55"
 published: true
 comments: true
