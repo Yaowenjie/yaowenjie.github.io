@@ -7,7 +7,7 @@ comments: true
 category: DevOps
 tags: [InfrastructureAsCode, 基础设施, 持续交付]
 share: true
-imagefeature: wj/17.jpg
+imagefeature: wj/28.jpg
 ---
 
 ###### 本文翻译自老马(Martin Fowler)的[博客](http://martinfowler.com/bliki/InfrastructureAsCode.html)，该译文现已被[博客原文](http://martinfowler.com/bliki/InfrastructureAsCode.html#footer)收录在其下方翻译处。
