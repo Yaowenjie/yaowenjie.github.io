@@ -88,7 +88,7 @@ $("a#click-pages").click(function(){
 </script>
 {% endif %}
 
-{% if page.comments %}{% include disqus_comments.html %}{% endif %}
+{% if page.comments and site.features.disqus_comment %}{% include disqus_comments.html %}{% endif %}
 
 {% if site.url contains 'yaowenjie.github' %}
   {% if site.features.opentracker %}

@@ -75,6 +75,7 @@ features:
     afs_tracker:    true
     opentracker:    false
     antimated_bg:   false
+    disqus_comment: false
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Shanghai
