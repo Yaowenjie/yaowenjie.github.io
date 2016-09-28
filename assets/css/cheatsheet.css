@@ -1,6 +1,20 @@
 /*** Table Styles **/
+#ps-title {
+  left: 27%;
+  top: 70%;
+  position: absolute;
+  font-size: 3.18em;
+  text-shadow: 2px 2px 4px #000000;
+}
 
-.table-fill {
+@media screen and (max-width:1140px){
+  #ps-title {
+    display: none;
+  }
+}
+
+
+table {
   float:left;
   background: white;
   border-radius:3px;
@@ -15,11 +29,12 @@
 }
 
 th {
-  color:#D5DDE5;;
+  max-width: 150px;
+  color:#D5DDE5;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;
-  font-size:18px;
+  font-size:16px;
   font-weight: 100;
   padding:8px;
   text-align:left;
@@ -77,6 +92,7 @@ tr:last-child td:last-child {
 }
 
 td {
+  max-width: 200px;
   background:#FFFFFF;
   padding:6px;
   text-align:left;
