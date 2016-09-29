@@ -1,10 +1,13 @@
 /*** Table Styles **/
 #ps-title {
-  left: 27%;
-  top: 70%;
+  right: -10%;
+  top: 55%;
   position: absolute;
-  font-size: 3.18em;
+  font-size: 2.68em;
   text-shadow: 2px 2px 4px #000000;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 @media screen and (max-width:1140px){
@@ -20,7 +23,7 @@ table {
   border-radius:3px;
   border-collapse: collapse;
   /*height: 320px;*/
-  margin: 5px;
+  margin: 10px;
   max-width: 600px;
   padding:5px;
   /*width: 100%;*/
@@ -33,8 +36,8 @@ th {
   color:#D5DDE5;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
-  border-right: 1px solid #343a45;
-  font-size:16px;
+  border-right: 1px solid #1b1e24;
+  font-size:12px;
   font-weight: 100;
   padding:8px;
   text-align:left;
@@ -55,7 +58,7 @@ tr {
   border-top: 1px solid #C1C3D1;
   border-bottom-: 1px solid #C1C3D1;
   color:#666B85;
-  font-size:16px;
+  font-size:12px;
   font-weight:normal;
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
@@ -98,7 +101,7 @@ td {
   text-align:left;
   vertical-align:middle;
   font-weight:100;
-  font-size:16px;
+  font-size:14px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
   border-right: 1px solid #C1C3D1;
 }

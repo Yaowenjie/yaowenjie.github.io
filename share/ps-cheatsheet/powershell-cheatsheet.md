@@ -35,7 +35,6 @@ description: "This is cheatsheet for PowerShell"
 |fl|	Format-List|
 |ft|	Format-Table|
 
-
 |Assignment, Logical, Comparison Operators|
 |---|---|
 |+=, −=, ×=, ÷=, %=, ++, −−, =|	Assigns one or more values to a variable|
@@ -49,15 +48,6 @@ description: "This is cheatsheet for PowerShell"
 |-contains,-notcontains|	Check if value in array|
 |-in, -notin|	Reverse of contains,notcontains|
 
-|Useful  Commands|
-|---|---|
-|Update-Help|	Downloads and installs newest help files|
-|Get-Help|	Displays information about commands and concepts|
-|Get-Command|	Gets all commands|
-|Get-Member|	Gets the properties and methods of objects|
-|Get-Module|	Gets the modules that have been imported or that can be imported into the current session|
-|Get-Service|	Gets the services on a local or remote computer|
-|Get-Process|	Gets the processes that are running on the local computer or a remote computer|
 
 |Part of Cmdlets	|
 |---|---|---|
@@ -71,32 +61,33 @@ description: "This is cheatsheet for PowerShell"
 |Get-ADUser|	Get-ADComputer|	New-ISESnippet|
 |Get-WMIObject|	Out-File|	Out-String|
 
-|Common Automatic Variables	|
+|Useful  Commands|
 |---|---|
-|$$|	Last token of the previous command line|
-|$?|	Boolean status of last command|
-|$^|	First token of the previous command line|
-|$_,| $PSItem	Current pipeline object|
-|$profile|	The standard profile (may not be present)|
-|$PsVersionTable|	Details about the version of PowerShell|
-
-|Comments, Escape Characters|
-|---|---|
-|#, <#…#>|	Comment, Multiline Comment|
-|"`"test`""|	Escape char `|
-|`t|	Tab|
-|`n|	New line|
-|`|	Line continue|
-|&|	The call operator, "invocation operator"|
+|Update-Help|	Downloads and installs newest help files|
+|Get-Help|	Displays information about commands and concepts|
+|Get-Command|	Gets all commands|
+|Get-Member|	Gets the properties and methods of objects|
+|Get-Module|	Gets the modules that have been imported or that can be imported into the current session|
+|Get-Service|	Gets the services on a local or remote computer|
+|Get-Process|	Gets the processes that are running on the local computer or a remote computer|
 
 
-|Flow Control	|
+|Importing, Exporting, Converting	|
 |---|
-|If(){ } Elseif(){ } Else{ }	|
-|while() { }	|
-|For($i=0; $i -lt 10; $i++) { }	|
-|Foreach($file in dir C:\) {$file.name}	|
-|1..10 foreach{$_}	|
+|Export-CliXML|
+|Import-CliXML|
+|ConvertTo-XML|
+|ConvertTo-HTML|
+|Export-CSV|
+|Import-CSV|
+|ConvertTo-CSV|
+|ConvertFrom-CSV|
+
+
+|Setting Security Policy|
+|---|
+|View and change execution policy with Get-ExecutionPolicy |
+|Set Execution policy: Set-Executionpolicy (with options: Restricted , AllSigned, RemoteSigned, Unrestricted)|
 
 
 |Case-Sensitive Comparison|
@@ -108,14 +99,28 @@ description: "This is cheatsheet for PowerShell"
 |-ieq, -ine, -ilike, -inotlike, -inotmatch, -icontains, -inotcontains|
 
 
-|Importing, Exporting, Converting	|
-|---|---|
-|Export-CliXML|	Import-CliXML|
-|ConvertTo-XML|	ConvertTo-HTML|
-|Export-CSV|	Import-CSV|
-|ConvertTo-CSV|	ConvertFrom-CSV|
-
-|Setting Security Policy|
+|Flow Control	|
 |---|
-|View and change execution policy with Get-Execution |
-|Set-Execution policy: Get-Executionpolicy (with options: Restricted , AllSigned, RemoteSigned, Unrestricted)|
+|If(){ } Elseif(){ } Else{ }	|
+|while() { }	|
+|For($i=0; $i -lt 10; $i++) { }	|
+|Foreach($file in dir C:\) {$file.name}	|
+|1..10 foreach{$_}	|
+
+|Common Automatic Variables	|
+|---|---|
+|$$|	Last token of the previous command line|
+|$?|	Boolean status of last command|
+|$^|	First token of the previous command line|
+|$_,| $PSItem	Current pipeline object|
+|$profile|	The standard profile (may not be present)|
+|$PsVersionTable|	Details about the version of PowerShell|
+
+
+|Comments, Escape Characters|
+|---|---|
+| ` |	Escape char `, and Line continue|
+|#, <#…#>|	Comment, Multiline Comment|
+|`t|	Tab|
+|`n|	New line|
+|&|	The call operator, "invocation operator"|
