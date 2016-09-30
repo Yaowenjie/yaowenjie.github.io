@@ -124,3 +124,14 @@ description: "This is cheatsheet for PowerShell"
 |`t|	Tab|
 |`n|	New line|
 |&|	The call operator, "invocation operator"|
+
+
+<script type="text/javascript">
+  document.querySelectorAll("table th:first-child").forEach(function(th) {
+    th.colSpan = 2;
+  })
+
+  document.querySelectorAll("table th:last-child").forEach(function(th) {
+    if(th.innerHTML === "&nbsp;") th.style.display = 'none';
+  })
+</script>
