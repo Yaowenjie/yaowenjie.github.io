@@ -1,13 +1,13 @@
 ---
-title: PowerShell CheatSheet
-permalink: /share/ps-cheatsheet
+title: PowerShell CheatSheet 中文版
+permalink: /share/ps-cheatsheet-chn
 description: "This is cheatsheet for PowerShell"
 ---
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/cheatsheet.css" />
 
-<div id='ps-title'>PowerShell CheatSheet</div>
+<div id='ps-title'>PowerShell CheatSheet 中文版</div>
 
-|Aliases|
+|昵称|
 |---|---|
 |dir, ls, gci|	Get-ChildItem|
 |h,history,ghy| 	Get-History|
@@ -35,7 +35,7 @@ description: "This is cheatsheet for PowerShell"
 |fl|	Format-List|
 |ft|	Format-Table|
 
-|Assignment, Logical, Comparison Operators|
+|计算、逻辑、比较运算符|
 |---|---|
 |+=, −=, ×=, ÷=, %=, ++, −−, =|	Assigns one or more values to a variable|
 |-and,-or,-not,-xor,!|	Connect expressions / statements |
@@ -49,7 +49,7 @@ description: "This is cheatsheet for PowerShell"
 |-in, -notin|	Reverse of contains,notcontains|
 
 
-|Part of Cmdlets	|
+|部分Cmdlets	|
 |---|---|---|
 |Get-EventLog|Get-WinEvent|	Get-Date|
 |New-Item|Set-Item|	Move-Item|
@@ -61,7 +61,7 @@ description: "This is cheatsheet for PowerShell"
 |Get-ADUser|	Get-ADComputer|	New-ISESnippet|
 |Get-WMIObject|	Out-File|	Out-String|
 
-|Useful  Commands|
+|常见有用指令|
 |---|---|
 |Update-Help|	Downloads and installs newest help files|
 |Get-Help|	Displays information about commands and concepts|
@@ -72,7 +72,7 @@ description: "This is cheatsheet for PowerShell"
 |Get-Process|	Gets the processes that are running on the local computer or a remote computer|
 
 
-|Importing, Exporting, Converting	|
+|输入、输出、转换	|
 |---|
 |Export-CliXML|
 |Import-CliXML|
@@ -84,22 +84,22 @@ description: "This is cheatsheet for PowerShell"
 |ConvertFrom-CSV|
 
 
-|Setting Security Policy|
+|安全策略相关|
 |---|
 |View and change execution policy with Get-ExecutionPolicy |
 |Set Execution policy: Set-Executionpolicy (with options: Restricted , AllSigned, RemoteSigned, Unrestricted)|
 
 
-|Case-Sensitive Comparison|
+|大小写敏感的比较|
 |---|
 |-ceq, -cne, -clike, -cnotlike, -cnotmatch, -ccontains, -cnotcontains|
 
-|Case-Insensitive Comparison|
+|大小写不敏感的比较|
 |---|
 |-ieq, -ine, -ilike, -inotlike, -inotmatch, -icontains, -inotcontains|
 
 
-|Flow Control	|
+|流控制	|
 |---|
 |If(){ } Elseif(){ } Else{ }	|
 |while() { }	|
@@ -107,7 +107,7 @@ description: "This is cheatsheet for PowerShell"
 |Foreach($file in dir C:\) {$file.name}	|
 |1..10 foreach{$_}	|
 
-|Common Automatic Variables	|
+|常见自动变量	|
 |---|---|
 |$$|	Last token of the previous command line|
 |$?|	Boolean status of last command|
@@ -117,7 +117,7 @@ description: "This is cheatsheet for PowerShell"
 |$PsVersionTable|	Details about the version of PowerShell|
 
 
-|Comments, Escape Characters|
+|注释及忽视符号|
 |---|---|
 | ` |	Escape char `, and Line continue|
 |#, <#…#>|	Comment, Multiline Comment|
