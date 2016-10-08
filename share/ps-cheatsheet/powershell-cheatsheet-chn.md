@@ -5,35 +5,8 @@ description: "This is cheatsheet for PowerShell"
 ---
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/cheatsheet.css" />
 
-<div id='ps-title'>PowerShell CheatSheet 中文版</div>
+<!-- <div id='ps-title'>PowerShell CheatSheet 中文版</div> -->
 
-|昵称|
-|---|---|
-|dir, ls, gci|	Get-ChildItem|
-|h,history,ghy| 	Get-History|
-|cd,chdir,sl|	Set-Location|
-|copy,cp,cpi|	Copy-Item|
-|move,mv,mi|	Move-Item|
-|del,rm|	Remove-Item|
-|rni,ren|	Rename-Item|
-|cls,clear|	Clear-Host|
-|cat,gc,type|	Get-Content|
-|sc|	Set-Content|
-|pwd,gl|	Get-Location|
-|foreach,%| 	Foreach-Object|
-|where,?|	Where-Object|
-|gcm|	Get-Command|
-|gcim|	Get-CimInstance|
-|sort|	Sort-Object|
-|diff,compare|	Compare-Object|
-|r,ihy|	Invoke-History|
-|gi|	Get-Item|
-|gp|	Get-ItemProperty|
-|sp|	Set-ItemProperty|
-|gm|	Get-Member|
-|sls|	Select-String|
-|fl|	Format-List|
-|ft|	Format-Table|
 
 |计算、逻辑、比较运算符|
 |---|---|
@@ -61,16 +34,6 @@ description: "This is cheatsheet for PowerShell"
 |Get-ADUser|	Get-ADComputer|	New-ISESnippet|
 |Get-WMIObject|	Out-File|	Out-String|
 
-|常见有用指令|
-|---|---|
-|Update-Help|	下载安装最新的帮助文件|
-|Get-Help| 显示命令和概念的基本信息|
-|Get-Command|	获取所有命令|
-|Get-Member|	获取对象的属性和方法|
-|Get-Module|	获取已经导入或者可以被导入到当前session的模块|
-|Get-Service|	获取本地或者远程机器上的服务|
-|Get-Process|	获取本地或者远程机器上的进程|
-
 
 |输入、输出、转换	|
 |---|
@@ -83,6 +46,73 @@ description: "This is cheatsheet for PowerShell"
 |ConvertTo-CSV|
 |ConvertFrom-CSV|
 
+|命令昵称1|
+|---|---|
+|dir, ls, gci|	Get-ChildItem|
+|h,history,ghy| 	Get-History|
+|cd,chdir,sl|	Set-Location|
+|copy,cp,cpi|	Copy-Item|
+|move,mv,mi|	Move-Item|
+|del,rm|	Remove-Item|
+|rni,ren|	Rename-Item|
+|cls,clear|	Clear-Host|
+|cat,gc,type|	Get-Content|
+|sc|	Set-Content|
+|pwd,gl|	Get-Location|
+|foreach,%| 	Foreach-Object|
+|where,?|	Where-Object|
+
+|命令昵称2|
+|---|---|
+|gcm|	Get-Command|
+|gcim|	Get-CimInstance|
+|sort|	Sort-Object|
+|diff,compare|	Compare-Object|
+|r,ihy|	Invoke-History|
+|gi|	Get-Item|
+|gp|	Get-ItemProperty|
+|sp|	Set-ItemProperty|
+|gm|	Get-Member|
+|sls|	Select-String|
+|fl|	Format-List|
+|ft|	Format-Table|
+
+|常见有用指令|
+|---|---|
+|Update-Help|	下载安装最新的帮助文件|
+|Get-Help| 显示命令和概念的基本信息|
+|Get-Command|	获取所有命令|
+|Get-Member|	获取对象的属性和方法|
+|Get-Module|	获取已经导入或者可以被导入到当前session的模块|
+|Get-Service|	获取本地或者远程机器上的服务|
+|Get-Process|	获取本地或者远程机器上的进程|
+
+|常见自动化变量	|
+|---|---|
+|$$|	会话最后一行中的最后一个令牌|
+|$?|	最后一个操作的执行状态（TRUE/FALSE）|
+|$^|	会话最后一行中的第一个令牌|
+|$_,| $PSItem	当前管道内的对象|
+|$profile|	标准profile (可能不是当前profile)|
+|$PsVersionTable|	PowerShell版本相关信息|
+
+
+|流控制	|
+|---|
+|If(){ } Elseif(){ } Else{ }	|
+|while() { }	|
+|For($i=0; $i -lt 10; $i++) { }	|
+|Foreach($file in dir C:\) {$file.name}	|
+|1..10 foreach{$_}	|
+
+
+|注释及忽视符号|
+|---|---|
+| ` |	转义符, 单独使用时作为续行符|
+|#, <#…#>|	注释, 多行注释|
+|`t|	Tab|
+|`n|	另起一行|
+|&|	调用操作符|
 
 |安全策略相关|
 |---|
@@ -98,32 +128,6 @@ description: "This is cheatsheet for PowerShell"
 |---|
 |-ieq, -ine, -ilike, -inotlike, -inotmatch, -icontains, -inotcontains|
 
-
-|流控制	|
-|---|
-|If(){ } Elseif(){ } Else{ }	|
-|while() { }	|
-|For($i=0; $i -lt 10; $i++) { }	|
-|Foreach($file in dir C:\) {$file.name}	|
-|1..10 foreach{$_}	|
-
-|常见自动化变量	|
-|---|---|
-|$$|	会话最后一行中的最后一个令牌|
-|$?|	最后一个操作的执行状态（TRUE/FALSE）|
-|$^|	会话最后一行中的第一个令牌|
-|$_,| $PSItem	当前管道内的对象|
-|$profile|	标准profile (可能不是当前profile)|
-|$PsVersionTable|	PowerShell版本相关信息|
-
-
-|注释及忽视符号|
-|---|---|
-| ` |	转义符, 单独使用时作为续行符|
-|#, <#…#>|	注释, 多行注释|
-|`t|	Tab|
-|`n|	另起一行|
-|&|	调用操作符|
 
 
 <script type="text/javascript">

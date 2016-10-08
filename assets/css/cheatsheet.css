@@ -18,14 +18,14 @@
 
 
 table {
-  float:left;
+  /*float:left;*/
+  display: inline-block;
   background: white;
   border-radius:3px;
   border-collapse: collapse;
   /*height: 320px;*/
   margin: 10px;
   max-width: 600px;
-  padding:5px;
   /*width: 100%;*/
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
