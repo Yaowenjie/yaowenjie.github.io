@@ -37,19 +37,19 @@ description: "This is cheatsheet for PowerShell"
 
 |计算、逻辑、比较运算符|
 |---|---|
-|+=, −=, ×=, ÷=, %=, ++, −−, =|	Assigns one or more values to a variable|
-|-and,-or,-not,-xor,!|	Connect expressions / statements |
-|-eq, -ne|	Equal, not equal|
-|-gt, -ge|	Greater than, greater than or equal|
-|-lt, -le|	Less than, less than or equal|
-|-replace|	“Hi” -replace “H”, “P”|
-|-match,-notmatch|	Regular expression match|
-|-like,-notlike|	Wildcard matching|
-|-contains,-notcontains|	Check if value in array|
-|-in, -notin|	Reverse of contains,notcontains|
+|+=, −=, ×=, ÷=, %=, ++, −−, =|	将一个或者多个值赋给一个变量|
+|-and,-or,-not,-xor,!|	连接表达式/声明 |
+|-eq, -ne|	相等, 不等|
+|-gt, -ge|	大于, 大于或等于|
+|-lt, -le|	小于, 小于或等于|
+|-replace|	替换字符|
+|-match,-notmatch|	正则表达式匹配|
+|-like,-notlike|	通配符匹配|
+|-contains,-notcontains|	检查数组内是否包含该值|
+|-in, -notin|	contains,notcontains的反向调用|
 
 
-|部分Cmdlets	|
+|部分常见Cmdlets	|
 |---|---|---|
 |Get-EventLog|Get-WinEvent|	Get-Date|
 |New-Item|Set-Item|	Move-Item|
@@ -63,13 +63,13 @@ description: "This is cheatsheet for PowerShell"
 
 |常见有用指令|
 |---|---|
-|Update-Help|	Downloads and installs newest help files|
-|Get-Help|	Displays information about commands and concepts|
-|Get-Command|	Gets all commands|
-|Get-Member|	Gets the properties and methods of objects|
-|Get-Module|	Gets the modules that have been imported or that can be imported into the current session|
-|Get-Service|	Gets the services on a local or remote computer|
-|Get-Process|	Gets the processes that are running on the local computer or a remote computer|
+|Update-Help|	下载安装最新的帮助文件|
+|Get-Help| 显示命令和概念的基本信息|
+|Get-Command|	获取所有命令|
+|Get-Member|	获取对象的属性和方法|
+|Get-Module|	获取已经导入或者可以被导入到当前session的模块|
+|Get-Service|	获取本地或者远程机器上的服务|
+|Get-Process|	获取本地或者远程机器上的进程|
 
 
 |输入、输出、转换	|
@@ -86,8 +86,8 @@ description: "This is cheatsheet for PowerShell"
 
 |安全策略相关|
 |---|
-|View and change execution policy with Get-ExecutionPolicy |
-|Set Execution policy: Set-Executionpolicy (with options: Restricted , AllSigned, RemoteSigned, Unrestricted)|
+|查看当前执行策略: Get-ExecutionPolicy |
+|设置执行策略: Set-Executionpolicy (可选参数: Restricted , AllSigned, RemoteSigned, Unrestricted)|
 
 
 |大小写敏感的比较|
@@ -107,23 +107,23 @@ description: "This is cheatsheet for PowerShell"
 |Foreach($file in dir C:\) {$file.name}	|
 |1..10 foreach{$_}	|
 
-|常见自动变量	|
+|常见自动化变量	|
 |---|---|
-|$$|	Last token of the previous command line|
-|$?|	Boolean status of last command|
-|$^|	First token of the previous command line|
-|$_,| $PSItem	Current pipeline object|
-|$profile|	The standard profile (may not be present)|
-|$PsVersionTable|	Details about the version of PowerShell|
+|$$|	会话最后一行中的最后一个令牌|
+|$?|	最后一个操作的执行状态（TRUE/FALSE）|
+|$^|	会话最后一行中的第一个令牌|
+|$_,| $PSItem	当前管道内的对象|
+|$profile|	标准profile (可能不是当前profile)|
+|$PsVersionTable|	PowerShell版本相关信息|
 
 
 |注释及忽视符号|
 |---|---|
-| ` |	Escape char `, and Line continue|
-|#, <#…#>|	Comment, Multiline Comment|
+| ` |	转义符, 单独使用时作为续行符|
+|#, <#…#>|	注释, 多行注释|
 |`t|	Tab|
-|`n|	New line|
-|&|	The call operator, "invocation operator"|
+|`n|	另起一行|
+|&|	调用操作符|
 
 
 <script type="text/javascript">
