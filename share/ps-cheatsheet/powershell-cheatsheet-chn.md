@@ -4,7 +4,7 @@ permalink: /share/ps-cheatsheet-chn
 description: "This is cheatsheet for PowerShell"
 ---
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/cheatsheet.css" />
-
+<button onclick='location.href="{{ site.url }}/share/ps-cheatsheet"'>English Version</button>
 <!-- <div id='ps-title'>PowerShell CheatSheet 中文版</div> -->
 
 

@@ -1,3 +1,8 @@
+button {
+  position: absolute;
+  font-size: 14px;
+}
+
 /*** Table Styles **/
 #ps-title {
   right: -10%;

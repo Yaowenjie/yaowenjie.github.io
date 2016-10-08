@@ -4,7 +4,7 @@ permalink: /share/ps-cheatsheet
 description: "This is cheatsheet for PowerShell"
 ---
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/cheatsheet.css" />
-<!-- <button onClick="">中文版</button> -->
+<button onclick='location.href="{{ site.url }}/share/ps-cheatsheet-chn"'>中文版</button>
 <!-- <div id='ps-title'>PowerShell CheatSheet</div> -->
 
 |Assignment, Logical, Comparison Operators|
