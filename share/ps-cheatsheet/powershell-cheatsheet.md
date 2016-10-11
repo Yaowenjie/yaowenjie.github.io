@@ -140,3 +140,4 @@ description: "This is cheatsheet for PowerShell"
     if(th.innerHTML === "&nbsp;") th.style.display = 'none';
   })
 </script>
+<script src="../../assets/js/afs-tracker.js"></script>
