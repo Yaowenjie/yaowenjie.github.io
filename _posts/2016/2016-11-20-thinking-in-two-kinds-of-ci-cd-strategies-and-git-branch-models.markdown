@@ -23,13 +23,60 @@ imagefeature: wj/5.jpg
 
 ## A项目的CI/CD策略
 &emsp;&emsp;千言万语还是不及一张图（作者小学美术数学老师教的，望见谅）：
+<center><img class="center" src="{{ site.url }}/images/2016/cd-1.jpg" alt="cd.jpg"></center>
 
-上图，为一个独立子项目在jenkins里面的结构图，主要由两种自动化任务（job），一种名为build为根据相应github代码库的打包构建、运行各层测试以及构建[AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)镜像，另一种主要负责将
+&emsp;&emsp;上图，为一个独立子项目（如背景中所说的某个服务）在其[jenkins](https://jenkins.io/index.html)里面的任务（job）结构图，主要有两种自动化任务:build和deploy：
+- **build** - 即构建任务。developer在代码仓库（这里是github上某个私有仓库）某个分支上提交了代码后，自动或者手动地被触发。它会根据对应的分支，如develop、一些feature分支或release分支上，而在其对应的任务上构建、运行各层测试以及生成对应的[AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)镜像。
+- **deployment** - 即部署任务。该任务需要人工手动点击触发，因为很多时候需要改动一些部署配置，比如说选择刚刚build任务生成的哪个分支的那个AMI文件以及更改一些endpoint的值。它会根据你需要部署的环境，利用自动化部署工具chef，基于对应的AMI镜像生成对应的EC2实例、ELB等等资源，让我们的服务在对应的环境中正式地运行起来（当然也伴随着销毁旧的资源的过程）。这个过程如果目标环境是prod的话，其实就是真实的发布了。
 
-## 传统TW项目的策略
+&emsp;&emsp;这用在该项目组中几乎所有的以服务为单位的子系统之上，也就是说，我们有将近三十套左右类似这样的jenkins任务。
+
+&emsp;&emsp;需要说明的是，上图中的黑色圆圈、黑色圆圈加横线和黑色空心圆圈分别代表**完全自动化**、**需要手动更改配置后点击触发** 和 **需要手动点击出发** 三种情况，即如下图所示：
+<center><img class="center" src="{{ site.url }}/images/2016/cd-5.jpg" width="35%" alt="cd.jpg"></center>
+
+## A项目的git分支模型
+
+&emsp;&emsp;在我们了解另一种策略模式之前，先让来看看该项目使用的git分支模型 - git flow（如果你还不了解这个概念，请阅读[A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)）：
+<center><img class="center" src="{{ site.url }}/images/2016/git-model.png" width="60%" alt="git-model.png"></center>
+
+&emsp;&emsp;简单介绍一下的各种分支：
+- **master** - 与产品环境代码保持一致的分支，也就是每次发布完成之后发布的功能分支就要合并于此，以保持master更新。
+- **develop** - 开发的主分支，feature和release分支会基于此分支。
+- **feature** - 具体要开发的功能的分支，完成后合并到develop。
+- **release** - 用于发布新版本的分支，完成后合并到develop和master。
+- **hotfix** - 用于紧急修复已发布的产品问题的分支，完成后合并到develop和master。
+
+&emsp;&emsp;这种模型的话，理论上来说相对安全。但是一般feature分支都是需要用于开发一个较大的功能才做的分支，在此之上，我们还要建对应的故事卡（敏捷中，一个不可/不宜划分的需求单位）的分支，如下所示：
+<center><img class="center" src="{{ site.url }}/images/2016/cd-2.jpg" width="45%" alt="cd.jpg"></center>
+
+&emsp;&emsp;这么做的好处有：
+1. **隔离性比较好，更加安全**
+2. **分支职责明确**
+
+&emsp;&emsp;但是缺点也比较明显：
+1. **集成的周期太长** 如果以《持续集成》这一本书中观点来看，这甚至算不上持续集成。
+2. **会有比较多的重复手工测试**
+3. **结构相对复杂**
+
+## “传统”TW项目的策略
+&emsp;&emsp;而我曾经接触过的一些项目，不管它的CI/CD工具用的是jenkins还是[go.cd](http://go.cd)，它们都会是一种流水线[pipeline]的形式，如下图所示（没错，请叫我灵魂画师，<手动羞耻脸>）：
+<center><img class="center" src="{{ site.url }}/images/2016/cd-3.jpg" alt="cd.jpg"></center>
+
+&emsp;&emsp;对应地，这样的项目，存在分支的话（我这么说，是因为也有不使用分支的真实项目），以我之前的某个离岸海外项目为例，会像如下图所示：
+<center><img class="center" src="{{ site.url }}/images/2016/cd-4.jpg" width="45%" alt="cd.jpg"></center>
+
+&emsp;&emsp;明显地，这种结构看起来简单很多。所有分支都是基于develop或者叫master这样的主分支。
+
+&emsp;&emsp;这么做有如下好处：
+1. **结构相对简单**
+2. **符合小步提交、持续集成思想**
+
+&emsp;&emsp;但是，金无足赤，它有时候也可能会有一些缺点：
+1. **feature toggle的引入与测试**
+2. **隔离性较差** 但是终究是要合并到一个分支，发布成一个产品的。
 
 
 ## 各自的优缺点和适合应用的场景
 
 
-这几种方式虽然各有优缺点，但相比更加传统的缺乏自动化的方式而言，已经进步太多。
+&emsp;&emsp;这几种方式虽然各有优缺点，但相比更加传统的缺乏自动化的方式而言，已经进步太多。
