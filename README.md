@@ -26,6 +26,8 @@
 
 ### 文章列表
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/devops/thinking-in-two-kinds-of-ci-cd-strategies-and-git-branch-models"><time datetime="2016-11-26T15:00:00+08:00" itemprop="datePublished">November 26, 2016</time> - 关于两种CI/CD策略以及git分支模型的思考 </a></li>
+
     <li><a href="http://yaowenjie.github.io/front-end/powershell-cheatsheet"><time datetime="2016-09-11T20:44:00+08:00" itemprop="datePublished">September 11, 2016</time> - PowerShell CheatSheet </a></li>
 
     <li><a href="http://yaowenjie.github.io/front-end/using-webpack-dashboard"><time datetime="2016-08-28T22:55:00+08:00" itemprop="datePublished">August 28, 2016</time> - 使用webpack命令行工具:webpack-dashboard </a></li>
