@@ -22,6 +22,6 @@ Feature: Test home page
     Then I see the QR code image
     Then I can see the avatar image below share block
     And I can see the textArea
-    Then I enter "Bad Post!" in this textArea
+#    Then I enter "Bad Post!" in this textArea
 #    And I click sticker button to add a smile sticker
     Then I close current window
