@@ -24,7 +24,6 @@ fin_color:        "255,255,255"
 port:             4000
 host:             127.0.0.1
 baseurl:          ""
-url:       		    https://yaowenjie.github.io
 
 # Owner/author information
 owner:
