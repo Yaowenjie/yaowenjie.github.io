@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "数说我的2016"
+description: "My summary of 2016 in numbers"
+date: "2017-01-09 17:06"
+published: false
+comments: true
+category: Life|生活
+tags: [Summary]
+imagefeature: wj/28.jpg
+---
+&emsp;&emsp;2016过去已有几日多，总想像大家一样，给自己的这一年做一些总结回顾。斟酌一二，便不再想花时间过分煽情，还不如列出一些数据，画一些图表，来反映我的**生活**、**工作**以及这个**博客**在过去一年的发展。
+
+<!--more-->
+
+<script type="text/javascript" src="{{ site.url }}/assets/js/plugins/canvasjs.min.js"></script>
+<script type="text/javascript" src="{{ site.url }}/assets/js/chart/2017-01-09.js"></script>
+
+## 生活
+城市：
+
+<div id="cities-pie" style="height: 400px; width: 100%;"></div>
+
+## 工作
+
+
+## 博客
