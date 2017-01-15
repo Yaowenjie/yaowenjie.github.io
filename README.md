@@ -26,6 +26,8 @@
 
 ### 文章列表
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/summary-of-2016"><time datetime="2017-01-15T17:06:00+08:00" itemprop="datePublished">January 09, 2017</time> - 数说我的2016 </a></li>
+
     <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/automatic-testing"><time datetime="2016-12-18T14:31:00+08:00" itemprop="datePublished">December 18, 2016</time> - 华科校园活动讲义 - 自动化测试，从入门到放弃 </a></li>
 
     <li><a href="http://yaowenjie.github.io/devops/thinking-in-two-kinds-of-ci-cd-strategies-and-git-branch-models"><time datetime="2016-11-26T15:00:00+08:00" itemprop="datePublished">November 26, 2016</time> - 关于两种CI/CD策略以及git分支模型的思考 </a></li>

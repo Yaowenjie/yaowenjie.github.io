@@ -7,7 +7,7 @@ published: true
 comments: true
 category: Life|生活
 tags: [Summary, data]
-imagefeature: wj/28.jpg
+imagefeature: wj/wuhan.jpg
 ---
 &emsp;&emsp;2016过去已有半月，总想像大家一样，给自己的这一年做一些总结回顾。斟酌一二，便不再想花时间过分煽情，还不如列出一些数据，画一些图表，来反映我的**生活及工作**和这个**博客**在过去一年的发展，顺便也憧憬下崭新的2017年。
 
@@ -32,7 +32,7 @@ imagefeature: wj/28.jpg
 &emsp;&emsp;2016年在工作之外，主要写了**两**样**开源**的东西，一个是[博客本身](https://github.com/Yaowenjie/yaowenjie.github.io)，这个下文就会介绍，另一个是[针对travis-ci和github的chrome插件](https://github.com/Yaowenjie/travis-github-chrome-extension)。
 
 ## 博客
-&emsp;&emsp;2016年，从**4**月份开始，由于网络以及希望自定义博客的原因，决定将博客从yaowenjie.logdown.com迁移到github上。自**4月6号**第一次提交以来，博客逐步添加、完善了一些小功能，发布了**21**篇新的博客文章，其中**16**篇为技术相关的文章。并且于4月份引入[AFS Analytics](https://www.afsanalytics.com/)以来，我就可以关注博客的访问量以及各项数据了。以下，我便罗列了一些关于该博客2016年有趣的数据。
+&emsp;&emsp;2016年，从**4**月份开始，由于网络以及希望自定义博客的原因，决定将博客从[logdown](http://yaowenjie.logdown.com)迁移到github上。自**4月6号**第一次提交以来，博客逐步添加、完善了一些小功能，发布了**21**篇新的博客文章，其中**16**篇为技术相关的文章。并且于4月份引入[AFS Analytics](https://www.afsanalytics.com/)以来，我就可以关注博客的访问量以及各项数据了。以下，我便罗列了一些关于该博客2016年有趣的数据。
 
 ### 访问量
 &emsp;&emsp;由于是4月份开始引入AFS，但是真实开始宣传自己的博客文章却是7月份，所以可以看出来，**7** 月份才是访问量飞速增长的一个关键时期，并且页面访问量也达到了全年最高点（之后由于项目及环境变动，逐渐放缓了分享的力度，尤其是10月份）。
