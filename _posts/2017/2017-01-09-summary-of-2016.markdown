@@ -1,27 +1,66 @@
 ---
 layout: "post"
 title: "数说我的2016"
-description: "My summary of 2016 in numbers"
-date: "2017-01-09 17:06"
-published: false
+description: "My summary of 2016 in data"
+date: "2017-01-15 17:06"
+published: true
 comments: true
 category: Life|生活
-tags: [Summary]
+tags: [Summary, data]
 imagefeature: wj/28.jpg
 ---
-&emsp;&emsp;2016过去已有几日多，总想像大家一样，给自己的这一年做一些总结回顾。斟酌一二，便不再想花时间过分煽情，还不如列出一些数据，画一些图表，来反映我的**生活**、**工作**以及这个**博客**在过去一年的发展。
+&emsp;&emsp;2016过去已有半月，总想像大家一样，给自己的这一年做一些总结回顾。斟酌一二，便不再想花时间过分煽情，还不如列出一些数据，画一些图表，来反映我的**生活及工作**和这个**博客**在过去一年的发展，顺便也憧憬下崭新的2017年。
 
 <!--more-->
 
 <script type="text/javascript" src="{{ site.url }}/assets/js/plugins/canvasjs.min.js"></script>
 <script type="text/javascript" src="{{ site.url }}/assets/js/chart/2017-01-09.js"></script>
 
-## 生活
-城市：
-
+## 生活及生活
+&emsp;&emsp;今年由于工作的原因，生活足迹主要停留在两座城市，上半年蓉城 - **成都**，下半年江城 - **武汉**。其他时间，除去春节在家乡小城古铜都 - **铜陵** 待过一个春节小长假外，就是一些旅行和外出探访的机会。全年仅仅**2**次旅行，都集中在上半年，包括2月份的**西岭雪山**和4月份的[泸沽湖之行](http://www.mafengwo.cn/i/5464134.html)。
 <div id="cities-pie" style="height: 400px; width: 100%;"></div>
 
-## 工作
+<br/>
+&emsp;&emsp;2016年，完全是托🐙童鞋的福，算是正式学会了**做饭**。做的最多的菜是**青红椒炒肉丝**，其次应该是**青红椒炒鸡蛋**和**手撕包菜**，哈哈，还是单调了点。
+<center><img class="center" src="{{ site.url }}/images/2017/rose.jpg" width="40%" alt="rose.jpg"></center>
 
+&emsp;&emsp;2016年，总共对外做过**2**次**技术演讲**，其中一次在成都的DevOps社区线下交流活动，另外一次是针对华中科技大学的学生们。作为coach参与了公司对外的[“结对编程最佳体验之**男神女神**”活动](https://www.nowcoder.com/activity/thoughtworks-pair)。作为志愿者参与了一次公司组织的公益活动 - “一场为爱出发的旅程——北川香泉小学”，在那里见证了孩子们的单纯与可爱，也有机会亲眼看到了北川震后旧城区的凄怆和新城区的活力与悠闲。
+<center><img class="center" src="{{ site.url }}/images/2017/beichuang.jpg" width="80%" alt="beichuang.jpg"></center>
+
+&emsp;&emsp;2016年，基本上没怎么单纯的跑步，运动主要集中在**篮球**和**羽毛球**上，不过16年打篮球的次数应该不会太高，但至少有**20+** 。3月份计划的5周**2000**个**俯卧撑**计划最后也是搁浅，不过如果没有记错的话，应该至少有练到**1400+** 个。
+
+&emsp;&emsp;2016年在工作之外，主要写了**两**样**开源**的东西，一个是[博客本身](https://github.com/Yaowenjie/yaowenjie.github.io)，这个下文就会介绍，另一个是[针对travis-ci和github的chrome插件](https://github.com/Yaowenjie/travis-github-chrome-extension)。
 
 ## 博客
+&emsp;&emsp;2016年，从**4**月份开始，由于网络以及希望自定义博客的原因，决定将博客从yaowenjie.logdown.com迁移到github上。自**4月6号**第一次提交以来，博客逐步添加、完善了一些小功能，发布了**21**篇新的博客文章，其中**16**篇为技术相关的文章。并且于4月份引入[AFS Analytics](https://www.afsanalytics.com/)以来，我就可以关注博客的访问量以及各项数据了。以下，我便罗列了一些关于该博客2016年有趣的数据。
+
+### 访问量
+&emsp;&emsp;由于是4月份开始引入AFS，但是真实开始宣传自己的博客文章却是7月份，所以可以看出来，**7** 月份才是访问量飞速增长的一个关键时期，并且页面访问量也达到了全年最高点（之后由于项目及环境变动，逐渐放缓了分享的力度，尤其是10月份）。
+<div id="page-views-chart" style="height: 400px; width: 100%;"></div><br/>
+
+&emsp;&emsp;关于**访问来源**，由于我有在某些技术社区分享，所以虽然AFS给出的数据依然是大部分是直接访问，但是我相信里面很大一部分是从其他网站引流过来的，只是它并没有检测到。搜索引擎能够达到**8%** ，个人已经很满意了，毕竟某度贡献度几乎为**0**.
+<div id="sources-pie" style="height: 400px; width: 100%;"></div><br/>
+
+&emsp;&emsp;至于访问的平台，可以看得出来，**桌面** 依然是主流，如我所期望，虽然该博客做了responsive，我个人感觉还是桌面上的体验更好一点。
+<div id="platforms-pie" style="height: 400px; width: 100%;"></div><br/>
+
+### 瞎看数据
+&emsp;&emsp;这里懒得画图啦，直接截图算了。首先，回顾一下，访问量最多的那些页面/文章。看来关注前端的人还是最多，因为出去主页之外，[《使用webpack命令行工具:webpack-dashboard》](http://yaowenjie.github.io/front-end/using-webpack-dashboard)这篇文章获得最多的访问量。
+<center><img class="center" src="{{ site.url }}/images/2017/articles.jpg" width="80%" alt="articles.jpg"></center>
+
+&emsp;&emsp;访问量其实大部分时间需要看那些**引流的网站**，其中某些社区确实做出了很大的帮助。具体的数据如下，不过有些网站（如开发者头条和Segmentfault）的redirect并没有被AFS计入其中，比较遗憾。稍仔细看的话，Google和Bing这两大搜索引擎还是比较良心的，通过这个我甚至发现了一个俄语搜索引擎，就是没有最大的中文搜索引擎某度，毕竟挣钱比搞技术重要（蒙住双眼状）。
+<center><img class="center" src="{{ site.url }}/images/2017/ref.jpg" width="80%" alt="ref.jpg"></center>
+
+&emsp;&emsp;再来看看访问源的**城市**分布，基本就能反映中国IT从业人员分布排行啦，哈哈哈。
+<center><img class="center" src="{{ site.url }}/images/2017/cites.jpg" width="80%" alt="cites.jpg"></center>
+
+&emsp;&emsp;以及访问源的**国家**分布，咳咳，这个多少能反映一点国内IT人士翻*****（对不起，这里哔哔和谐，坏笑脸）。
+<center><img class="center" src="{{ site.url }}/images/2017/countries.jpg" width="80%" alt="countries.jpg"></center>
+
+## 关于2017
+&emsp;&emsp;17年该怎么样过，不想在这里过于严肃、过度具体化讨论，只希望来年回首，能够觉得说的没有多大错，总结一下吧：
+  - 热爱**生活**
+  - 热爱工作和技术
+  - 继续博文文章
+
+&emsp;&emsp;好的，就这样，来吧，2017！
