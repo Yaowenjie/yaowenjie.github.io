@@ -10,7 +10,7 @@ share: true
 imagefeature: wj/28.jpg
 ---
 
-###### 本文翻译自老马(Martin Fowler)的[博客](http://martinfowler.com/bliki/InfrastructureAsCode.html)，该译文现已被[博客原文](http://martinfowler.com/bliki/InfrastructureAsCode.html#footer)收录在其下方翻译处。
+###### 本文翻译自老马(Martin Fowler)的[博客](http://martinfowler.com/bliki/InfrastructureAsCode.html)，该译文现已被[博客原文](http://martinfowler.com/bliki/InfrastructureAsCode.html#footer)收录在其下方中文翻译处。
 
 <br/>
 &emsp;&emsp;“基础设施即代码”是一种通过代码来定义计算和网络基础设施的方法，它可以应用于任何软件系统中。这样的代码放在代码版本控制系统中，具有可审查性、可重用性，并且符合测试惯例，还完全遵从持续交付的原则。该方法已经在过去的十年内广泛应用于快速增长的云计算平台中了，而且也将会成为接下来管理计算机基础设施的主要方式。

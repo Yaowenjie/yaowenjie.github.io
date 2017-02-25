@@ -9,7 +9,7 @@ tags: [function, length]
 share: true
 imagefeature: wj/5.jpg
 ---
-###### 本文翻译自老马(Martin Fowler)的[博客文章](https://martinfowler.com/bliki/FunctionLength.html)。
+###### 本文翻译自老马(Martin Fowler)的[博客文章](https://martinfowler.com/bliki/FunctionLength.html)，该译文现已被[博客原文](https://martinfowler.com/bliki/FunctionLength.html#footer)收录在其下方中文翻译处。
 
 &emsp;&emsp;在我的职业生涯期间，我曾听过很多关于一个方法(或者说函数，本文针对两者将不做区分)应当有多长的争论。这其实引申到另一个更加重要的问题上：我们应该在什么时候把代码封装在它自己的方法内？有些准则会基于方法的长度，比如方法的长度不应该超出屏幕可以容纳的范围[❶](#ref-1)。有些会基于复用，即任何被使用超过两次的代码都应该抽出自己单独的方法，而只在一个地方使用过的代码就应当保留在行内。然而，于我而言，最合乎情理的还是这种论点：那就是**意图和实现的分离**。如果你不得不费点精力查看一段代码，才能弄清楚它具体做了什么，那你就需要把它抽出成一个方法，并且用“它具体做了什么”来为其命名。这样当你再次读到它的时候，这个方法的意图对你来说便一目了然，并且大多数时候你将不再需要关心这个方法是如何实现它的意图的（也就是这个方法的内容）。
 
