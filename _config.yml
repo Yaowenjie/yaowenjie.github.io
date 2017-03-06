@@ -60,17 +60,17 @@ links:
   - title: 归档
     url: /categories
     icon: list
-  # - title: <i class="icon-tags"></i> 标签
-  #   url: /tags
-  - title: 关于作者
-    url: /about-author
-    icon: user
-  - title: 个人收藏
-    url: /favourite
-    icon: heart
   - title: 留言板
     url: /message-board
     icon: comment
+  # - title: <i class="icon-tags"></i> 标签
+  #   url: /tags
+  - title: 个人收藏
+    url: /favourite
+    icon: heart
+  - title: 关于作者
+    url: /about-author
+    icon: user
 
 features:
     afs_tracker:    true
@@ -111,6 +111,6 @@ sass:
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
 
-gems: ['jekyll-paginate']
+gems: ['jekyll-paginate', 'jekyll/tagging', 'jekyll-tagging-related_posts']
 languages: ['en', 'cn']
 language_default: 'cn'
