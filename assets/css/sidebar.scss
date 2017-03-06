@@ -1,6 +1,8 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+$slide-offset: 298px;
+$slide-offset-small: 268px;
 
 a,
 #sidebar,
@@ -45,10 +47,10 @@ a#slide {
   position:fixed;
   overflow-y:scroll;
   height:100%;
-  width:298px;
+  width:$slide-offset;
   padding:40px 30px 0;
   top:0;
-  left:-298px;
+  left:-$slide-offset;
   background:#191918;
   z-index:20;
   h2 {
@@ -83,8 +85,15 @@ a#slide {
         & [class*=" icon-"] {
           margin-right: 5px;
         }
+        @media screen and (max-width:700px) {
+          font:700 20px/1.125em "Cambria";
+        }
       }
     }
+  }
+  @media screen and (max-width:700px) {
+    width:$slide-offset-small;
+    left:-$slide-offset-small;
   }
 }
 
@@ -129,14 +138,22 @@ a#slide {
   left:0;
 }
 
-a#slide.slide {
-  left:308px;
-  pointer-events:none;
+a#slide {
+  &.slide {
+    left:308px;
+    pointer-events:none;
+    @media screen and (max-width:700px) {
+      left:278px;
+    }
+  }
 }
 
 body.slide {
-  left:298px;
+  left:$slide-offset;
   overflow:hidden;
+  @media screen and (max-width:700px) {
+    left:$slide-offset-small;
+  }
 }
 
 #fade {
@@ -148,10 +165,12 @@ body.slide {
   pointer-events:none;
   background:transparent;
   z-index:30;
-}
-
-#fade.slide {
-  pointer-events:auto;
-  left:298px;
-  background:rgba(0,0,0,.2);
+  &.slide {
+    pointer-events:auto;
+    left:$slide-offset;
+    background:rgba(0,0,0,.2);
+    @media screen and (max-width:700px) {
+      left:$slide-offset-small
+    }
+  }
 }

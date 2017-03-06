@@ -3892,8 +3892,7 @@ body{
 
 /*      Responsive      */
 
-@media screen and (max-width:1140px){
-
+@media screen and (max-width:1140px) {
     #header,
     #posts-container,
     .entry .text,
@@ -3905,23 +3904,14 @@ body{
 
 }
 
-@media screen and (max-width:700px){
-
-    #fade.slide{
-        left:298px
-        }
-
-    /*a#slide.slide{*/
-    /*    left:10px*/
-    /*    }*/
-
+@media screen and (max-width:700px) {
     #header,
     #posts-container,
     .entry .text,
     .entry .media,
     .entry .captions,
     .entry .details,
-    #permalink .permalink-box{
+    #permalink .permalink-box {
         width:90%
         }
     .blog-description {
@@ -3929,11 +3919,7 @@ body{
     }
 }
 
-@media screen and (max-width:500px){
-
-    a#slide{
-        position:absolute
-        }
+@media screen and (max-width:500px) {
     button.starme-button {
       display: none;
     }
