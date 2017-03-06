@@ -9,7 +9,10 @@
           {% if link.external %}
             <a href="{{ link.url }}">{{ link.title }}</a>
           {% else %}
-            <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+            <a href="{{ site.url }}{{ link.url }}">
+              <i class="icon-{{ link.icon }} icon-fixed-width"></i>
+              {{ link.title }}
+            </a>
           {% endif %}
         </li>
       {% endfor %}
