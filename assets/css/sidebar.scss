@@ -68,16 +68,20 @@ a#slide {
       margin:11px 0 18px;
     }
     li {
+      padding: 8px 0;
       margin: 8px 0;
       list-style-type:none;
-      border-bottom: 1px outset #DDDDDD;
+      border-bottom: 2px groove #242424;
       a {
         padding:0 0 18px;
-        font:700 20px/1.125em "Cambria";
+        font:700 22px/1.125em "Cambria";
         text-transform: uppercase;;
         color:#b3b3b1;
         &:hover {
-            color:#ffffff
+          color:#ffffff;
+        }
+        & [class*=" icon-"] {
+          margin-right: 5px;
         }
       }
     }
