@@ -5,7 +5,7 @@ description: "Thinking in two CI/CD strategies and git branch models"
 date: "2016-11-26 15:00"
 published: true
 comments: true
-tags: [git, CD]
+tags: [DevOps, git, CD]
 category: DevOps
 imagefeature: wj/5.jpg
 ---

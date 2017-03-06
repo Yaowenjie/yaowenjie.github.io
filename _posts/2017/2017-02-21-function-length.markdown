@@ -5,7 +5,7 @@ description: "Function Length"
 date: "2017-02-21 11:01"
 comments: true
 category: Coding
-tags: [function, length]
+tags: [function, length, quality]
 share: true
 imagefeature: wj/5.jpg
 ---

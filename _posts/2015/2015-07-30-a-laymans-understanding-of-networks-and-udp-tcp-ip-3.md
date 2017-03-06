@@ -4,7 +4,7 @@ title: '[译]一个门外汉对网络和UDP/TCP/IP的理解（3）'
 date: 2015-07-30 17:50
 comments: true
 category: 网络基础
-tags: [端口, 数据报]
+tags: [Network, 端口, 数据报]
 imagefeature: wj/20.jpg
 ---
 ###### 本文源自对文章[Layman’s understanding of Networking & UDP/TCP/IP（点击进入原文）](http://www.microshell.com/sysadmin/networking/laymans-understanding-of-networking-udptcpip/3/)的翻译。

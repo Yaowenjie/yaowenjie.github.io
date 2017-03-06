@@ -4,7 +4,7 @@ title: "[译]如何调试JEST测试？"
 date: "2016-08-24 11:26"
 published: true
 comments: true
-tags: [JEST, React, Debug]
+tags: [JEST, React, Debug, Front-end]
 category: Front-end
 imagefeature: wj/10.jpg
 ---

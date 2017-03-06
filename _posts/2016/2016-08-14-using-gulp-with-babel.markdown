@@ -4,7 +4,7 @@ title: "[译]使用基于Babel的gulp"
 date: "2016-08-14 11:00"
 published: true
 comments: true
-tags: [Gulp, Babel, ES6, Broswerify]
+tags: [Gulp, Babel, ES6, Broswerify, Front-end]
 category: Front-end
 imagefeature: wj/10.jpg
 ---
