@@ -6,6 +6,7 @@ cucumber-test/.gradle
 cucumber-test/out
 cucumber-test/gradle
 cucumber-test/.idea
+.idea
 */*.iml
 */*.ipr
 */*.iws
