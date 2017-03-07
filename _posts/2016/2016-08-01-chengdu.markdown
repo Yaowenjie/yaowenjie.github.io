@@ -5,7 +5,7 @@ description: “Chengdu”
 date: "2016-08-01 16:33"
 published: true
 comments: true
-tags: [成都, Photo]
+tags: [Life, 成都, Photo]
 category: Life|生活
 imagefeature: wj/37.jpg
 ---

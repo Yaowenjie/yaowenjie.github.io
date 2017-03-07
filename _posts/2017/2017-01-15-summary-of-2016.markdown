@@ -6,7 +6,7 @@ date: "2017-01-15 17:06"
 published: true
 comments: true
 category: Life|生活
-tags: [Summary, data]
+tags: [Life, Summary, data]
 imagefeature: wj/wuhan.jpg
 ---
 &emsp;&emsp;2016过去已有半月，总想像大家一样，给自己的这一年做一些总结回顾。斟酌一二，便不再想花时间过分煽情，还不如列出一些数据，画一些图表，来反映我的**生活及工作**和这个**博客**在过去一年的发展，顺便也憧憬下崭新的2017年。

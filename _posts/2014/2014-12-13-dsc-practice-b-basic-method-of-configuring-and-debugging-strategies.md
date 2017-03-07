@@ -4,7 +4,7 @@ title: 'Windows PowerShell DSC实践（二）| 开始动手！'
 date: 2014-12-13 22:31
 comments: true
 category: PowerShell
-tags: [Powershell, DSC, Resource]
+tags: [PowerShell, DSC, Resource]
 imagefeature: wj/16.jpg
 ---
 ## Let's Start!

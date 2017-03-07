@@ -5,7 +5,7 @@ description: "Automatic Testing, From Introduction to Give up"
 date: "2016-12-18 14:31"
 published: true
 comments: true
-tags: [automation, test]
+tags: [automation, test, Sharing]
 category: 编程相关
 imagefeature: wj/88.jpg
 ---

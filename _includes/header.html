@@ -9,12 +9,25 @@
           {% if link.external %}
             <a href="{{ link.url }}">{{ link.title }}</a>
           {% else %}
-            <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+            <a href="{{ site.url }}{{ link.url }}">
+              <i class="icon-{{ link.icon }} icon-fixed-width"></i>
+              {{ link.title }}
+            </a>
           {% endif %}
         </li>
       {% endfor %}
-      <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i>Feed</a></li>
     </nav>
+
+    {% if site.related_posts.size >= 1 %}
+      <div id="related-posts">
+        <h3><i class='icon-bookmark'></i> 相关文章</h3>
+        <ul>
+        {% for related_post in site.related_posts limit: 5 %}
+          <li><a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
 </aside>
 
 {% if page.imagefeature %}

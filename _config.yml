@@ -53,22 +53,24 @@ bing_verify:
 # Links to include in footer navigation
 # For external links add external: true
 links:
-  - title: <i class="icon-home"></i> - 主页
+  - title: 主页
     url: /
     external: false
     icon: home
-  # - title: <i class="icon-book"></i> Documentation
-  #   url: /documentation
-  - title: <i class="icon-list"></i> - 归档
+  - title: 归档
     url: /categories
+    icon: list
+  - title: 留言板
+    url: /message-board
+    icon: comment
   # - title: <i class="icon-tags"></i> 标签
   #   url: /tags
-  - title: <i class="icon-user"></i> - 关于作者
-    url: /about-author
-  - title: <i class="icon-heart"></i> - 个人收藏
+  - title: 个人收藏
     url: /favourite
-  - title: <i class="icon-comment"></i> - 留言板
-    url: /message-board
+    icon: heart
+  - title: 关于作者
+    url: /about-author
+    icon: user
 
 features:
     afs_tracker:    true
@@ -109,6 +111,6 @@ sass:
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
 
-gems: ['jekyll-paginate']
+gems: ['jekyll-paginate', 'jekyll/tagging', 'jekyll-tagging-related_posts']
 languages: ['en', 'cn']
 language_default: 'cn'

@@ -7,7 +7,7 @@ comments: true
 share: true
 imagefeature: wj/14.jpg
 category: Cloud
-tags: [ECS, Consul, 服务发现, Docker]
+tags: [ECS, Consul, AWS, 服务发现, Docker]
 published: true
 ---
 ###### 本文翻译自文章[Service Discovery via Consul with Amazon ECS](https://aws.amazon.com/blogs/compute/service-discovery-via-consul-with-amazon-ecs/)

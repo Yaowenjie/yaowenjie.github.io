@@ -5,7 +5,7 @@ description: "Code analyzing practice with SonarQube"
 date: "2016-07-19 16:56"
 published: true
 category: DevOps
-tags: [SonarQube, 代码质量]
+tags: [SonarQube, quality]
 comments: true
 imagefeature: wj/29.jpg
 ---

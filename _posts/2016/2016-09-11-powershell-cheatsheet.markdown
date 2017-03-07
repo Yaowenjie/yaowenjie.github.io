@@ -4,7 +4,7 @@ title: "PowerShell CheatSheet"
 date: "2016-09-11 20:44"
 published: true
 comments: true
-tags: [PowerShell, Cheatsheet]
+tags: [PowerShell, Cheatsheet, Sharing]
 category: Front-end
 imagefeature: wj/30.jpg
 ---
