@@ -15,16 +15,6 @@ comments: true
 
 > 走过，路过，言语两句：
 
-<div class="ds-thread" data-thread-key="{{ page.title }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
-
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script>
+{% if site.duoshuo_shortname and page.comments == true %}
+  {% include duoshuo_comment.html %}
+{% endif %}

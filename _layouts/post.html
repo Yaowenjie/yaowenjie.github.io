@@ -68,40 +68,15 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
                         {% include signoff.html %}
                         {% if site.disqus_shortname and page.comments == true %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
                         {% if site.duoshuo_shortname and page.comments == true %}
-                          <div class="ds-thread" data-thread-key="{{ page.title }}" data-title="{{ page.title }}" data-url="{{ page.url }}"></div>
+                          {% include duoshuo_comment.html %}
                         {% endif %}
+                        {% if page.comments and site.features.netease_comment %}{% include netease_comment.html %}{% endif %}
                     </footer>
             </article>
-            <!-- <button class="arrow left">
-              <svg width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
-                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
-              45.63,75.8 0.375,38.087 45.63,0.375 "/>
-              </svg>
-            </button>
-            <button class="arrow right">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
-                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
-              0.375,0.375 45.63,38.087 0.375,75.8 "/>
-              </svg>
-            </button> -->
     </div>
 </div>
 
 {% include footer.html %}
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-
-var duoshuoQuery = {short_name:"{{ site.duoshuo_shortname }}"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script>
 
 {% include scripts.html %}
 
