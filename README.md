@@ -1,5 +1,7 @@
 ## Yao Wenjie的博客  -   Bu ・ Log
 
+[![Join the chat at https://gitter.im/yaowenjie/yaowenjie.github.io](https://badges.gitter.im/yaowenjie/yaowenjie.github.io.svg)](https://gitter.im/yaowenjie/yaowenjie.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### 快捷方式
 > [主页](http://yaowenjie.github.io)  - 开始的开始哦 <br/>
 > [归档](http://yaowenjie.github.io/categories) - 我就分类给你看哈 <br/>
