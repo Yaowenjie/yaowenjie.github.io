@@ -29,6 +29,7 @@
 ### 文章列表
 
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/cloud/several-pit-on-aws-china"><time datetime="2017-03-26T16:11:00+08:00" itemprop="datePublished">March 26, 2017</time> - 使用 AWS China 的几个坑 </a></li>
     <li><a href="http://yaowenjie.github.io/devops/thought-on-devopsdays-beijing"><time datetime="2017-03-19T14:35:00+08:00" itemprop="datePublished">March 19, 2017</time> - DevOpsDays有感 - DevOps概谈 </a></li>
     <li><a href="http://yaowenjie.github.io/coding/function-length"><time datetime="2017-02-21T11:01:00+08:00" itemprop="datePublished">February 21, 2017</time> - [译]方法的长度 </a></li>
     <li><a href="http://yaowenjie.github.io/life%7C%E7%94%9F%E6%B4%BB/summary-of-2016"><time datetime="2017-01-15T17:06:00+08:00" itemprop="datePublished">January 15, 2017</time> - 数说我的2016 </a></li>
