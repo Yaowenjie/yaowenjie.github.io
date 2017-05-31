@@ -67,8 +67,8 @@ Description: ℳƴ ηαмε ḯṧ Шℯηנїℯ Ẏαø ḟґ◎μ ℃ℌ☤�
                         {% if site.share %}{% include share.html %}{% endif %}
                         {% include signoff.html %}
                         {% if site.disqus_shortname and page.comments == true %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
-                        {% if site.duoshuo_shortname and page.comments == true %}
-                          {% include duoshuo_comment.html %}
+                        {% if page.comments == true %}
+                          {% include likee_comment.html %}
                         {% endif %}
                         {% if page.comments and site.features.netease_comment %}{% include netease_comment.html %}{% endif %}
                     </footer>

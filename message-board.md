@@ -15,6 +15,6 @@ comments: true
 
 > 走过，路过，言语两句：
 
-{% if site.duoshuo_shortname and page.comments == true %}
-  {% include duoshuo_comment.html %}
+{% if page.comments == true %}
+  {% include likee_comment.html %}
 {% endif %}
