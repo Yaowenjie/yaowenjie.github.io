@@ -43,10 +43,10 @@ ____
  *.yml filter=_config
 ```
 
-&emsp;&emsp;这表明将要过滤所有名为_config的yml文件。
+&emsp;&emsp;这表明针对所有的yml文件将要应用名为_config的过滤器。
 
 #### **第三步及简要解释原理**
-&emsp;&emsp;在你的gitconfig里定义对应的过滤规则，这里我需要在push/add代码时将localhost:4000替换成yaowenjie.github.io，所以利用sed指令可以这么配置：
+&emsp;&emsp;在你的gitconfig里定义对应的过滤规则(可以是全局，也可以只在该项目下)，这里我需要在push/add代码时将localhost:4000替换成yaowenjie.github.io，所以利用sed指令可以这么配置：
 
 ```sh
 git config --global filter._config.clean 'sed "s/localhost:4000/yaowenjie.github.io/g"'
@@ -58,7 +58,15 @@ git config --global filter._config.clean 'sed "s/localhost:4000/yaowenjie.github
 git config --global filter._config.smudge 'sed "s/yaowenjie.github.io/localhost:4000/g"'
 ```
 
-&emsp;&emsp;同样的，但是这次用的不是clean，而是smudge，它会在git checkout时被触发。显然，要实现我之前说的让git忽略这一行必须同时加上这两个配置，当然，实际上它是通过git的这种过滤规则来实现的。
+&emsp;&emsp;同样的，但是这次用的不是clean，而是smudge，它会在git checkout时被触发。当然，你也可以直接在全局的.gitconfig或者项目下.git/config里面添加如下内容（和前文两条指令等效）：
+
+```sh
+[filter "_config"]
+	smudge = sed \"s/yaowenjie.github.io/localhost:4000/g\"
+	clean = sed \"s/localhost:4000/yaowenjie.github.io/g\"
+```
+
+&emsp;&emsp;显然，要实现我之前说的让git忽略这一行必须同时加上clean和smudge这两个过滤器配置，当然，实际上它是通过git的这种过滤规则来实现的。
 <center><img class="center" src="{{ site.url }}/images/2016/smudge.png" alt="smudge.png"></center>
 &emsp;&emsp;smudge过滤器会在checkout时执行。
 <center><img class="center" src="{{ site.url }}/images/2016/clean.png" alt="clean.png"></center>
