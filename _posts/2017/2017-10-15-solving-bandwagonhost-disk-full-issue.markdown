@@ -7,7 +7,7 @@ published: true
 comments: true
 category: 编程相关
 tags: [搬瓦工, VPS, nginx]
-imagefeature: wj/13.jpg
+imagefeature: wj/44.jpg
 ---
 
 &emsp;&emsp;已经很久没有关注自己的博客了，待回来细看时，发现文章下面自己写的评论服务已经挂了。虽然之前的大部分功能并没有完全完成，但作为一个有追求的developer，怎么能坐视不管呢。接下来就大致简单复现一下发现和解决问题的过程。
