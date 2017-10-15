@@ -12,7 +12,7 @@
 ### 关于本博客 - 技术篇
 - **博客模板**：使用的jekyll的模板 - 出自Hossain Mohd Faysal的[HMFAYSAL OMEGA THEME](https://github.com/hmfaysal/hmfaysal-omega-theme)，有自定义的更改
 - **样式**：主要是bootstrap和fontawesome，部分样式用sass（jekyll默认支持sass）编写
-- **评论系统**：使用国内评论系统duoshuo，后期期望增加disqus（分区域显示）
+- **评论系统**：前期使用了国内评论系统多说，多说倒下后自己重建了一个评论系统（仍在建设中）
 - **动态效果**：部分服务和效果（比如主页的背景图刷新变化）由javascript实现，主要为ES5语法。
 - **功能测试**：根目录下的cucumber-test目录为博客的功能测试脚本（初期纯为练手，后期可能会扩展），并借助[travis-ci](https://travis-ci.org/Yaowenjie/yaowenjie.github.io/builds/)(详情请看.travis-ci.yml文件)在每次提交代码时能够自动执行对应的测试
 - **API**：现博客已更新API接口，可通过“/api/index.json”或“api/posts.json”这样的相对地址获取相应API的json文件
@@ -29,6 +29,7 @@
 ### 文章列表
 
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/solving-bandwagonhost-disk-full-issue"><time datetime="2017-10-15T16:21:00+08:00" itemprop="datePublished">October 15, 2017</time> - 解决搬瓦工磁盘满载的问题 </a></li>
     <li><a href="http://yaowenjie.github.io/cloud/several-pit-on-aws-china"><time datetime="2017-03-26T16:11:00+08:00" itemprop="datePublished">March 26, 2017</time> - 使用 AWS China 的几个坑 </a></li>
     <li><a href="http://yaowenjie.github.io/devops/thought-on-devopsdays-beijing"><time datetime="2017-03-19T14:35:00+08:00" itemprop="datePublished">March 19, 2017</time> - DevOpsDays有感 - DevOps概谈 </a></li>
     <li><a href="http://yaowenjie.github.io/coding/function-length"><time datetime="2017-02-21T11:01:00+08:00" itemprop="datePublished">February 21, 2017</time> - [译]方法的长度 </a></li>
