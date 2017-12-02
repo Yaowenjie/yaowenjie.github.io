@@ -29,6 +29,7 @@
 ### 文章列表
 
 <ul class="post-list">
+    <li><a href="http://yaowenjie.github.io/front-end/8-key-react-component-decisions"><time datetime="2017-12-02T15:22:00+08:00" itemprop="datePublished">December 02, 2017</time> - [译]React组件的8项关键决策 - 标准化React开发 </a></li>
     <li><a href="http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/solving-bandwagonhost-disk-full-issue"><time datetime="2017-10-15T16:21:00+08:00" itemprop="datePublished">October 15, 2017</time> - 解决搬瓦工磁盘满载的问题 </a></li>
     <li><a href="http://yaowenjie.github.io/cloud/several-pit-on-aws-china"><time datetime="2017-03-26T16:11:00+08:00" itemprop="datePublished">March 26, 2017</time> - 使用 AWS China 的几个坑 </a></li>
     <li><a href="http://yaowenjie.github.io/devops/thought-on-devopsdays-beijing"><time datetime="2017-03-19T14:35:00+08:00" itemprop="datePublished">March 19, 2017</time> - DevOpsDays有感 - DevOps概谈 </a></li>
