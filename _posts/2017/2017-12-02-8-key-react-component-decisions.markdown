@@ -15,17 +15,17 @@ imagefeature: wj/43.jpg
 
 <!--more-->
 
-### 决策1：开发环境（或者说脚手架）
+### 决策1：开发环境
 
-&emsp;&emsp;在你编写第一个组件之前，你的团队往往需要在开发环境上达成共识。存在很多观点。。。
+&emsp;&emsp;在你编写第一个组件之前，你的团队往往需要在开发环境上达成共识。这里存在很多观点。。。
 
 <center><img class="center" src="{{ site.url }}/images/2017/react-1.png" alt="react.png"></center>
 
-&emsp;&emsp;当然，你可以[从头构建一个JS的开发环境](https://www.pluralsight.com/courses/javascript-development-environment)。25%的React开发者这么做。我当前的团队使用了create-react-app的一个fork版本，不过添加了一些额外的功能，比如[支持CRUD逼真的mock API](https://medium.freecodecamp.org/rapid-development-via-mock-apis-e559087be066),[可复用的组件库](https://www.pluralsight.com/courses/react-creating-reusable-components)，以及一些代码检查优化处理措施（我们也检查测试文件，而create-react-app是忽略的）。我享受着create-react-app的好处，但是[这个工具会帮助你比较众多具有竞争力的替代方案](https://www.andrewhfarmer.com/starter-project/)。想在服务器端渲染？你可以看看[Gatsby](http://gatsbyjs.org)和[Next.js](https://github.com/zeit/next.js/)。你甚至可以考虑使用像[CodeSandbox](https://codesandbox.io)这样的线上编辑器。
+&emsp;&emsp;当然，你可以[从头构建一个JS的开发环境](https://www.pluralsight.com/courses/javascript-development-environment)。25%的React开发者这么做。我当前的团队使用了create-react-app的一个fork版本，不过添加了一些额外的功能，比如[支持CRUD逼真的mock API](https://medium.freecodecamp.org/rapid-development-via-mock-apis-e559087be066),[可复用的组件库](https://www.pluralsight.com/courses/react-creating-reusable-components)，以及一些代码检查优化处理措施（我们也检查测试文件，而create-react-app是忽略的）。我喜欢create-react-app，但是[这个工具会帮助你比较众多具有竞争力的替代方案](https://www.andrewhfarmer.com/starter-project/)。想在服务器端渲染？你可以看看[Gatsby](http://gatsbyjs.org)和[Next.js](https://github.com/zeit/next.js/)。你甚至可以考虑使用像[CodeSandbox](https://codesandbox.io)这样的线上编辑器。
 
 ### 决策2：Types
 
-&emsp;&emsp;你可以忽略类型，可以使用[prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html), 使用[Flow](https://flow.org)，或者使用[TypeScript](https://www.typescriptlang.org)。请注意prop-type在React 15.5中被抽成了一个[独立的库](https://www.npmjs.com/package/prop-types)，所以一些旧文章告诉你的一些import已不再起作用了。
+&emsp;&emsp;你可以忽略类型，可以使用[prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html)，使用[Flow](https://flow.org)，或者使用[TypeScript](https://www.typescriptlang.org)。请注意prop-type在React 15.5中被抽成了一个[独立的库](https://www.npmjs.com/package/prop-types)，所以一些旧文章告诉你的一些import已不再起作用了。
 
 &emsp;&emsp;在这个问题上，社区上仍然存在分歧：
 
@@ -35,9 +35,9 @@ imagefeature: wj/43.jpg
 
 ### 决策3：createClass还是ES的Class
 
-&emsp;&emsp;React.createClass是最初的API，在15.5版本中，它就被弃用了。有些人会觉得[我们已经转战到ES的class上面去了](https://medium.com/dailyjs/we-jumped-the-gun-moving-react-components-to-es2015-class-syntax-2b2bb6f35cb3)。但不管怎样，createClass风格已经从React的核心库中移出去了，取而代之的是React官方文档中[“React without ES6”](https://reactjs.org/docs/react-without-es6.html)这一页内容。所以这就很清楚了：ES的class才是未来。你也可以使用[react-codemod](https://github.com/reactjs/react-codemod)把createClass简单地转化成ES的class。
+&emsp;&emsp;React.createClass是最初的API，在15.5版本中，它就被弃用了。有些人会觉得[我们已经转战到ES的class上面去了](https://medium.com/dailyjs/we-jumped-the-gun-moving-react-components-to-es2015-class-syntax-2b2bb6f35cb3)。但不管怎样，createClass风格已经从React的核心库中移出去了，取而代之的是React官方文档中[“React without ES6”](https://reactjs.org/docs/react-without-es6.html)这一页内容。所以这就很清楚了：ES(ECMAScript)的class才是未来。你也可以使用[react-codemod](https://github.com/reactjs/react-codemod)把createClass简单地转化成ES的class。
 
-### 决策4：Class还是Functional
+### 决策4：Class还是Function
 
 &emsp;&emsp;你可以使用class或者function来定义React组件。Class用在使用ref和生命周期方法的时候。这里是[在可能的情况下考虑使用function的9个理由](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc)。不过，[function组件也有一些缺点](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc)。
 
@@ -47,8 +47,9 @@ imagefeature: wj/43.jpg
 
 <center><img class="center" src="{{ site.url }}/images/2017/react-3.png" alt="react.png"></center>
 
-&emsp;&emsp;[我是Redux的粉丝](https://www.pluralsight.com/courses/react-redux-react-router-es6)，但是我经常使用自带的React只因为他更加简单。在我当前的角色下，我们已经交付了一打React应用了，决定使用Redux是值得的。我更喜欢在单个大型应用上发布许多个小型自治的应用。
-顺便要提到的是，如果你对不可变状态感兴趣，至少有[4种状态不可变的状态](https://medium.com/@housecor/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5)。
+&emsp;&emsp;[我是Redux的粉丝](https://www.pluralsight.com/courses/react-redux-react-router-es6)，但是我经常使用自带的React只因为他更加简单。在我当前的角色下，我们已经交付了几十个React应用了，其中决定使用Redux是值得的。我更喜欢在单个大型应用上发布许多个小型自治应用。
+
+&emsp;&emsp;顺便要提到的是，如果你对不可变状态感兴趣，至少有[4种状态不可变的状态](https://medium.com/@housecor/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5)。
 
 ### 决策6： 绑定(Binding)
 
@@ -88,22 +89,22 @@ imagefeature: wj/43.jpg
 
 &emsp;&emsp;这里还有更多的决策需要考虑：
 
- - 用[js还是jsx扩展名](https://github.com/facebookincubator/create-react-app/issues/87#issuecomment-234627904)？
- - 是否把[每个组件放在各自的目录下](https://medium.com/styled-components/component-folder-pattern-ee42df37ec68)？
-    - 是否是一个组件对应一个文件？要不要[采用每个目录下放置一个index.js文件这样让人抓狂的形式](https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed)？
-    - 如果使用propTypes，那是在class自身内使用[静态属性](https://michalzalecki.com/react-components-and-class-properties/#static-fields)，还是在底部声明它们？是否要将[propType定义的足够深](https://iamakulov.com/notes/deep-proptypes/?utm_content=buffer57abf&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)？
-    - 是按传统的方式在constructor里面初始化state，还是利用[属性初始化器语法](http://stackoverflow.com/questions/35662932/react-constructor-es6-vs-es7)？
+- 用[js还是jsx扩展名](https://github.com/facebookincubator/create-react-app/issues/87#issuecomment-234627904)？
+- 是否把[每个组件放在各自的目录下](https://medium.com/styled-components/component-folder-pattern-ee42df37ec68)？
+- 是否是一个组件对应一个文件？要不要[采用每个目录下放置一个index.js文件这样让人抓狂的形式](https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed)？
+- 如果使用propTypes，那是在class自身内使用[静态属性](https://michalzalecki.com/react-components-and-class-properties/#static-fields)，还是在底部声明它们？是否要将[propType定义的足够深](https://iamakulov.com/notes/deep-proptypes/?utm_content=buffer57abf&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)？
+- 是按传统的方式在constructor里面初始化state，还是利用[属性初始化器语法](http://stackoverflow.com/questions/35662932/react-constructor-es6-vs-es7)？
 
-&emsp;&emsp;因为React大部分情况下还是JavaScript，你同样需要考虑一份长长的JS开发规则的常规决策清单，比如[分号](https://eslint.org/docs/rules/semi)，[逗号](https://eslint.org/docs/rules/comma-dangle)，[格式](https://github.com/prettier/prettier)，以及[事件处理器的命名](https://jaketrent.com/post/naming-event-handlers-react/)等等。
+&emsp;&emsp;因为React大多数情况下还是JavaScript，你同样需要考虑一份JS开发规则的常规决策清单，比如[分号](https://eslint.org/docs/rules/semi)，[逗号](https://eslint.org/docs/rules/comma-dangle)，[格式](https://github.com/prettier/prettier)，以及[事件处理器的命名](https://jaketrent.com/post/naming-event-handlers-react/)等等。
 
 
 ### 选择一个标准，然后自动化执行
-&emsp;&emsp;关于上面的所有这些内容，你在野蛮生长的现如今可能会看到几十种组合。
+&emsp;&emsp;关于上面的这些内容，你在野蛮生长的现如今可能会看到几十种组合。
 
-&emsp;&emsp;于是，接下来几步就是关键了：
+&emsp;&emsp;那么，接下来几步就是关键了：
 
-1. **在团队内讨论这些决策，并且将标准定义成你的文档。**
-2. **不要在代码审查（code review）时浪费时间人工检查这些。只用像[ESLint](https://eslint.org), [react-codemod](https://github.com/yannickcr/eslint-plugin-react)，[prettier](https://github.com/prettier/prettier)这样的工具执行验证你的标准。**
-3. **需要重建已有的React组件? 使用[react-codemod](https://github.com/reactjs/react-codemod)来自动这个过程。**
+1. **在团队内讨论这些决策，并且将标准定义成文档。**
+2. **不要在代码审查（code review）时浪费时间人工检查这些。应该用像[ESLint](https://eslint.org), [react-codemod](https://github.com/yannickcr/eslint-plugin-react)，[prettier](https://github.com/prettier/prettier)这样的工具执行验证你的标准。**
+3. **需要重建已有的React组件? 使用[react-codemod](https://github.com/reactjs/react-codemod)来自动化这个过程。**
 
-&emsp;&emsp;如果我还忽略什么关键决策，请在下面的评论中指出。
+&emsp;&emsp;如果我还忽略了什么关键决策，请在下面的评论中指出。
