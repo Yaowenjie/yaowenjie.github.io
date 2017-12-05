@@ -77,11 +77,11 @@ imagefeature: wj/43.jpg
 
 ### 决策8：可复用逻辑
 
-&emsp;&emsp;React最初接受[mixin](https://reactjs.org/docs/react-without-es6.html#mixins)作为组件间分享代码的一种机制。但是mixin导致了一些问题，并且现在[被视为是有害的](https://reactjs.org/blog/2016/07/13/mixins-considered-harmful.html)。你不能在ES的class组件中使用mixin，因此现在人们使用[高阶组件](https://reactjs.org/docs/higher-order-components.html)和[render props](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)(又称function as child)来在组件间共享代码。
+&emsp;&emsp;React最初接受[mixin](https://reactjs.org/docs/react-without-es6.html#mixins)作为组件间分享代码的一种机制。但是mixin导致了一些问题，并且现在[被视为是有害的](https://reactjs.org/blog/2016/07/13/mixins-considered-harmful.html)。你不能在ES的class组件中使用mixin，因此现在人们使用[高阶组件](https://reactjs.org/docs/higher-order-components.html)和[render 属性](https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce)(又称function as child)来在组件间共享代码。
 
 <center><img class="center" src="{{ site.url }}/images/2017/react-7.png" alt="react.png"></center>
 
-&emsp;&emsp;高阶组件现在越来越流行，但是我更喜欢使用render props，因为它们往往更加易读易写。Michael Jackson最近给我推销了这个(译者注：youtube，翻不了的话请留言，我后期再换成国内源)：
+&emsp;&emsp;高阶组件现在越来越流行，但是我更喜欢使用render 属性，因为它们往往更加易读易写。Michael Jackson最近给我推销了这个(译者注：youtube，翻不了的话请留言，我后期再换成国内源)：
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BcVAq3YFiuc" frameborder="0" allowfullscreen></iframe>
 
 
