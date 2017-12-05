@@ -53,8 +53,8 @@ imagefeature: wj/43.jpg
 
 ### 决策6： 绑定(Binding)
 
-&emsp;&emsp;在React组件中，至少有[六种处理绑定的方法](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56)。这主要是因为现代JS语言提供了多种处理绑定的方式。你可以在构造方法（constuctor）里面做绑定，也可以在渲染时做绑定，在渲染方法中使用箭头方法做绑定，使用class属性做绑定，甚至使用修饰符做绑定。可以阅读[这篇文章的评论](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56)了解更多的选项！每种方法都有它自己的优点，但是假如你可以接受试验性的功能，[我建议你使用默认的class属性(又叫做属性初始值)](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56)。
-这个投票是从2016年8月份开始的。到目前为止，它显示了使用class属性的人数的增长，以及createClass使用人数的减少。
+&emsp;&emsp;在React组件中，至少有[六种处理绑定的方法](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56)。这主要是因为现代JS语言提供了多种处理绑定的方式。你可以在构造方法（constuctor）里面做绑定，也可以在渲染时做绑定，在渲染方法中使用箭头方法做绑定，使用class属性做绑定，甚至使用修饰符做绑定。可以阅读[这篇文章的评论](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56)了解更多的选项！每种方法都有它自己的优点，但是假如你可以接受试验性的功能，[我建议你使用默认的class属性(又叫做property initializers)](https://medium.freecodecamp.org/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56)。
+这个投票是从2016年8月份开始的。到目前为止，它显示了class属性使用人数的增长，以及createClass使用人数的减少。
 
 <center><img class="center" src="{{ site.url }}/images/2017/react-4.png" alt="react.png"></center>
 
