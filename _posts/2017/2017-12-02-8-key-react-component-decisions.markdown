@@ -35,7 +35,7 @@ imagefeature: wj/43.jpg
 
 ### 决策3：createClass还是ES的Class
 
-&emsp;&emsp;React.createClass是最初的API，在15.5版本中，它就被弃用了。有些人会觉得[我们已经转战到ES的class上面去了](https://medium.com/dailyjs/we-jumped-the-gun-moving-react-components-to-es2015-class-syntax-2b2bb6f35cb3)。但不管怎样，createClass风格已经从React的核心库中移出去了，取而代之的是React官方文档中[“React without ES6”](https://reactjs.org/docs/react-without-es6.html)这一页内容。所以这就很清楚了：ES(ECMAScript)的class才是未来。你也可以使用[react-codemod](https://github.com/reactjs/react-codemod)把createClass简单地转化成ES的class。
+&emsp;&emsp;React.createClass是最初的API，在15.5版本中，它就被弃用了。有些人会觉得[转战到ES的class上去有些为时过早](https://medium.com/dailyjs/we-jumped-the-gun-moving-react-components-to-es2015-class-syntax-2b2bb6f35cb3)。但不管怎样，createClass风格已经从React的核心库中移出去了，取而代之的是React官方文档中[“React without ES6”](https://reactjs.org/docs/react-without-es6.html)这一页内容。所以这就很清楚了：ES(ECMAScript)的class才是未来。你也可以使用[react-codemod](https://github.com/reactjs/react-codemod)把createClass简单地转化成ES的class。
 
 ### 决策4：Class还是Function
 
@@ -47,7 +47,7 @@ imagefeature: wj/43.jpg
 
 <center><img class="center" src="{{ site.url }}/images/2017/react-3.png" alt="react.png"></center>
 
-&emsp;&emsp;[我是Redux的粉丝](https://www.pluralsight.com/courses/react-redux-react-router-es6)，但是我经常使用自带的React只因为他更加简单。在我当前的角色下，我们已经交付了几十个React应用了，其中决定使用Redux是值得的。我更喜欢在单个大型应用上发布许多个小型自治应用。
+&emsp;&emsp;[我是Redux的粉丝](https://www.pluralsight.com/courses/react-redux-react-router-es6)，但是我经常使用自带的React只因为他更加简单。在我当前的角色下，已经交付了十几个React应用了，其中只有两个值得使用Redux。我更喜欢在单个大型应用上发布许多个小型自治应用。
 
 &emsp;&emsp;顺便要提到的是，如果你对不可变状态感兴趣，至少有[4种状态不可变的状态](https://medium.com/@housecor/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5)。
 
@@ -62,7 +62,7 @@ imagefeature: wj/43.jpg
 
 ### 决策7：样式
 
-&emsp;&emsp;这里选项就变得非常紧张。有50+种的方式来定义组件的样式，其中包括React的内联样式，传统CSS，Ssss/Less，[CSS模块](https://github.com/css-modules/css-modules)，以及[56个CSS-in-JS的选项](https://github.com/MicheleBertoli/css-in-js)。不是开玩笑，在[样式模块的这门课](https://www.pluralsight.com/courses/react-creating-reusable-components)里我探索了React定义样式的集中方法，一下就是对应的总结：
+&emsp;&emsp;在这一点上，选项之间的角逐就变得非常紧张了。有50+种的方式来定义组件的样式，其中包括React的内联样式，传统CSS，Ssss/Less，[CSS模块](https://github.com/css-modules/css-modules)，以及[56个CSS-in-JS的选项](https://github.com/MicheleBertoli/css-in-js)。不是开玩笑，在[样式模块的这门课](https://www.pluralsight.com/courses/react-creating-reusable-components)里，我探索了React定义样式的几种方法，以下就是对应的总结：
 
 <center><img class="center" src="{{ site.url }}/images/2017/react-5.png" alt="react.png" style="margin-bottom: 0;">
 <p style="font-size: 12px; color: grey; text-align: center;">红色表示差，绿色表示好，灰色表示警告。</p></center>
@@ -104,7 +104,7 @@ imagefeature: wj/43.jpg
 &emsp;&emsp;那么，接下来几步就是关键了：
 
 1. **在团队内讨论这些决策，并且将标准定义成文档。**
-2. **不要在代码审查（code review）时浪费时间人工检查这些。应该用像[ESLint](https://eslint.org), [react-codemod](https://github.com/yannickcr/eslint-plugin-react)，[prettier](https://github.com/prettier/prettier)这样的工具执行验证你的标准。**
+2. **不要在代码审查（code review）时浪费时间人工检查这些。应该用像[ESLint](https://eslint.org), [react-codemod](https://github.com/yannickcr/eslint-plugin-react)，[prettier](https://github.com/prettier/prettier)这样的工具自动验证你的标准。**
 3. **需要重建已有的React组件? 使用[react-codemod](https://github.com/reactjs/react-codemod)来自动化这个过程。**
 
 &emsp;&emsp;如果我还忽略了什么关键决策，请在下面的评论中指出。
