@@ -12,9 +12,9 @@ comments: true
   <div id="walk"></div>
 </div>
 
-
+> ##### 目前，作者仅提供了**gitment**评论接口，请登录github账户参与评论，原**多说**评论数据点击可见（由于懒，暂时未加评论提交功能）。
+> 
 > 走过，路过，言语两句：
-
 {% if page.comments == true %}
-  {% include likee_comment.html %}
+  {% include comments.html %}
 {% endif %}
