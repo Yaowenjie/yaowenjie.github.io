@@ -45,3 +45,8 @@ task serve(type: Exec) {
     commandLine 'jekyll'
     args 'serve', '--detach'
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1' 
+}
+
