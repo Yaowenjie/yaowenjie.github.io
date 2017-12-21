@@ -8,6 +8,11 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   - cd ./cucumber-test/
+  - wget http://services.gradle.org/distributions/gradle-2.2.1-bin.zip
+  - unzip gradle-2.2.1-bin.zip
+  - export GRADLE_HOME=$PWD/gradle-2.2.1
+  - export PATH=$GRADLE_HOME/bin:$PATH
+  - gradle -v
 script:
   - pwd
-  - gradle test
+  # - gradle test
