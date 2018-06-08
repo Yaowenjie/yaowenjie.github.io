@@ -14,7 +14,7 @@ imagefeature: wj/8.jpg
 <!--more-->
 
 <figure class="third">
-	<a href="{{ site.url }}/images/wj/17.jpg"><img src="{{ site.url }}/images/wj/1.jpg"></a>
+	<a href="{{ site.url }}/images/wj/47.jpg"><img src="{{ site.url }}/images/wj/47.jpg"></a>
 	<a href="{{ site.url }}/images/wj/94.jpg"><img src="{{ site.url }}/images/wj/94.jpg"></a>
 	<a href="{{ site.url }}/images/wj/27.jpg"><img src="{{ site.url }}/images/wj/27.jpg"></a>
 </figure>
@@ -26,12 +26,12 @@ imagefeature: wj/8.jpg
 	<a href="{{ site.url }}/images/wj/6.jpg"><img src="{{ site.url }}/images/wj/6.jpg"></a>
 </figure>
 <figure class="half">
-	<a href="{{ site.url }}/images/wj/20.jpg"><img src="{{ site.url }}/images/wj/20.jpg"></a>
+	<a href="{{ site.url }}/images/wj/50.jpg"><img src="{{ site.url }}/images/wj/50.jpg"></a>
 	<a href="{{ site.url }}/images/wj/8.jpg"><img src="{{ site.url }}/images/wj/8.jpg"></a>
 </figure>
 <figure class="third">
 	<a href="{{ site.url }}/images/wj/96.jpg"><img src="{{ site.url }}/images/wj/96.jpg"></a>
 	<a href="{{ site.url }}/images/wj/97.jpg"><img src="{{ site.url }}/images/wj/97.jpg"></a>
-	<a href="{{ site.url }}/images/wj/16.jpg"><img src="{{ site.url }}/images/wj/16.jpg"></a>
+	<a href="{{ site.url }}/images/wj/46.jpg"><img src="{{ site.url }}/images/wj/46.jpg"></a>
 	<figcaption>剪影・成都・北京・武汉・合肥</figcaption>
 </figure>

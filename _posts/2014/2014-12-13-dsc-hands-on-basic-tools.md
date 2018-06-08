@@ -5,7 +5,7 @@ date: 2014-12-13 00:07
 comments: true
 category: PowerShell
 tags: [PowerShell, DSC, Vagrant, Chocolatey, 自动化配置管理, Virtualbox]
-imagefeature: wj/16.jpg
+imagefeature: wj/46.jpg
 ---
 ## DSC? Who are you？| 什么叫DSC
 <hr/>

@@ -5,7 +5,7 @@ date: 2014-12-13 22:31
 comments: true
 category: PowerShell
 tags: [PowerShell, DSC, Resource]
-imagefeature: wj/16.jpg
+imagefeature: wj/46.jpg
 ---
 ## Let's Start!
 <hr/>

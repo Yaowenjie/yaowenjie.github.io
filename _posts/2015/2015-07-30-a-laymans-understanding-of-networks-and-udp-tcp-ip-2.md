@@ -5,7 +5,7 @@ date: 2015-07-30 16:14
 comments: true
 category: 网络基础
 tags: [Network, IP, DNS, 域名解析]
-imagefeature: wj/20.jpg
+imagefeature: wj/50.jpg
 ---
 ###### 本文源自对文章[Layman’s understanding of Networking & UDP/TCP/IP（点击进入原文）](http://www.microshell.com/sysadmin/networking/laymans-understanding-of-networking-udptcpip/2//)的翻译。
 

@@ -6,7 +6,7 @@ description: Git ignore specific lines
 comments: true
 category: 编程相关
 tags: [git, ignore, gitattributes, filter]
-imagefeature: wj/20.jpg
+imagefeature: wj/50.jpg
 mathjax: true
 share: true
 ---
