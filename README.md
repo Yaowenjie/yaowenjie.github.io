@@ -10,7 +10,7 @@
 > [关于作者](http://yaowenjie.github.io/about-author) - 哈哈哈哈哈哈哈哈啊
 
 ### 关于本博客 - 技术篇
-- **博客模板**：使用的jekyll的模板 - 出自Hossain Mohd Faysal的[HMFAYSAL OMEGA THEME](https://github.com/hmfaysal/hmfaysal-omega-theme)，有自定义的更改
+- **博客模板**：使用的jekyll的模板 - 出自Hossain Mohd Faysal的[HMFAYSAL OMEGA THEME](https://github.com/hmfaysal/hmfaysal-omega-theme)，另有自定义的更改
 - **样式**：主要是bootstrap和fontawesome，部分样式用sass（jekyll默认支持sass）编写
 - **评论系统**：前期使用了国内评论系统多说，多说倒下后自己重建了一个评论系统（仍在建设中）
 - **动态效果**：部分服务和效果（比如主页的背景图刷新变化）由javascript实现，主要为ES5语法。
