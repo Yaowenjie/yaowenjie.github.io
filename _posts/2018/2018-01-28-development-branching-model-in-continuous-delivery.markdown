@@ -11,6 +11,8 @@ imagefeature: wj/88.jpg
 ---
 &emsp;&emsp;1月28号在**ThoughtWorks武汉office**做的一次演讲，题目为《持续交付下的开发分支模型》，分享一下slide:
 
+<!--more-->
+
 <center><iframe src="{{site.url}}/share/PDFs/branching-model.pdf" width="960" height="480" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe></center>
 
 **Reference:**
