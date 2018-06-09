@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "滤镜时光 - 欧洲三国游"
+title: "滤静时光 - 欧洲三国游"
 date: "2018-06-08 18:00"
 description: "Highlights when travel in Europe"
 comments: true
