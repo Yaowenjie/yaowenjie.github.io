@@ -1,23 +1,22 @@
-
-  <div class="tabs">
+<div class="tabs">
     <input type="radio" name="tab" id="tab1" checked="checked">
     <label for="tab1">Gitment</label>
     <input type="radio" name="tab" id="tab2">
-    <label for="tab2">多说评论</label>
-    <!-- <input type="radio" name="tab" id="tab3">
-    <label for="tab3">Disqus</label> -->
+    <label for="tab2">Disqus</label>
+    <input type="radio" name="tab" id="tab3">
+    <label for="tab3">多说评论</label>
 
     <div class="tab-content-wrapper">
-      <div id="tab-content-1" class="tab-content">
-        {% include gitment_comment.html %}
-      </div>
-      <div id="tab-content-2" class="tab-content">
-        {% include likee_comment.html %}
-      </div>
-      <!-- <div id="tab-content-3" class="tab-content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur mattis nibh, non ornare neque. In bibendum consequat imperdiet. Duis eros ex, vestibulum vel fermentum ut, gravida at turpis. Etiam porta sem dolor, at finibus metus consequat a. Aliquam erat volutpat. Donec sollicitudin metus quis magna faucibus, vitae ultrices libero ultrices. Sed ut dui vitae velit laoreet commodo. Nam suscipit purus a ultricies auctor. </p>
-      </div> -->
+        <div id="tab-content-1" class="tab-content">
+            {% include gitment_comment.html %}
+        </div>
+        <div id="tab-content-2" class="tab-content">
+            {% include disqus_comments.html %}
+        </div>
+        <div id="tab-content-3" class="tab-content">
+            {% include likee_comment.html %}
+        </div>
     </div>
-  </div>
+</div>
 
-<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/comments.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/comments.css"/>
